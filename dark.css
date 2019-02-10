@@ -83,12 +83,12 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Landing page. */
-.app ._1Iexl ._3qlW9 {
+.app .I3S-C .C7QbQ {
     /* box-shadow: 1px -3px 2px 0 var(--shadow) inset; */
     border: none;
     background-color: var(--dark); }
 /* Status update. */
-/* .app ._3q4NP ._3qlW9::before {
+/* .app ._3q4NP .C7QbQ::before {
   content: 'Rewrite is done! A few old and a few new features coming up. Let me know if something is still broken. ^-^';
   left: 0;
   top: 0;
@@ -104,17 +104,17 @@ span[class="_3CSsZ"] > svg > rect {
   color: var(--light);
   background: var(--dark); } /**/
 /* Image. */
-.app ._1Iexl ._3qlW9 ._3BqNZ ._2Uo0Z {
+.app .I3S-C .C7QbQ ._2gydQ .bklGI {
     max-width: 200px;
     max-height: 200px; }
 /* Text color. */
-.app ._1Iexl ._3qlW9 ._2MnNk * {
+.app .I3S-C .C7QbQ ._2MnNk * {
     color: var(--light); }
 /* Accent bar. */
-.app ._1Iexl ._3qlW9:after {
+.app .I3S-C .C7QbQ:after {
     border-top-color: var(--accent); }
 /* Version. */
-.app ._1Iexl ._1ClcF::after {
+.app .I3S-C ._1ClcF::after {
     display: block;
     margin-top: 10px;
     padding-top: 10px;
@@ -139,22 +139,22 @@ span[class="_3CSsZ"] > svg > rect {
     color: var(--lighter); }
 
 /* Search or start new chat. */
-#side ._3CPl4 {
+#side ._2F7fE {
     border-bottom: 0px solid var(--dark);
     background-color: var(--darker) !important;
     background-color: transparent !important; }
 /* Label background. */
-#side ._3CPl4 .gQzdc label,
-.gQzdc._3sdhb,
-._2dA13 ._15JHr .gQzdc {
+#side ._2F7fE ._1RmSA label,
+._1RmSA._3qnBM,
+._2dA13 ._15JHr ._1RmSA {
     border: 0px solid var(--dark);
     background-color: var(--dark) !important; }
 /* Input element. */
-#side ._3CPl4 .gQzdc label input {
+#side ._2F7fE ._1RmSA label input {
     color: var(--light);
     background-color: transparent; }
 /* Active. */
-#side ._3CPl4 .gQzdc._3sdhb {
+#side ._2F7fE ._1RmSA._3qnBM {
     background-color: var(--dark) !important; }
 
 /* New group and group info buttons. */
@@ -172,18 +172,18 @@ span[class="_3CSsZ"] > svg > rect {
     color: var(--accent) !important; }
 
 /* Contacts wrapper. */
-#side ._1NrpZ, ._2fq0t ._1lIXT {
+#side ._3HpJq, ._2fq0t ._1lIXT {
     background-color: transparent !important; }
 /* Contacts. */
-#side ._1NrpZ ._2EXPL, ._2fq0t ._66JgU {
+#side ._3HpJq ._2EXPL, ._2fq0t ._66JgU {
     transition: 200ms ease-in-out;
     background-color: transparent !important; }
 /* On event. */
-#side ._1NrpZ ._2EXPL._1f1zm,
-#side ._1NrpZ ._2EXPL:hover {
+#side ._3HpJq ._2EXPL._1f1zm,
+#side ._3HpJq ._2EXPL:hover {
     background-color: var(--dark) !important; }
 /* Text color. */
-#side ._1NrpZ [class*="_3j7s9"] * {
+#side ._3HpJq [class*="_3j7s9"] * {
     color: var(--light); }
 /* Avatar wrapper background. */
 ._1WliW {
@@ -252,11 +252,11 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark); }
 
 /* New chat section. */
-._2fq0t .gQzdc label {
+._2fq0t ._1RmSA label {
     border: none;
     background-color: var(--dark); }
 /* Input element. */
-._2fq0t .gQzdc label input {
+._2fq0t ._1RmSA label input {
     background-color: transparent; }
 
 /* New group. */
@@ -277,20 +277,20 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Dropdown menu. */
-._2uLFU, ._1ArIP {
+.kdYjy, ._1ArIP {
     box-shadow: 0 2px 8px 0 var(--shadow), 0 2px 16px 0 var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* On event. */
-._2uLFU li:hover, ._2ULFU li._28zBA {
+.kdYjy li:hover, .kdYjy li._28zBA {
     background-color: var(--dark) !important; }
 /* Text color. */
-._2uLFU div, _1ArIP div {
+.kdYjy div, _1ArIP div {
     color: var(--light); }
 
 
 
 /* Middle drawer. */
-.app ._1Iexl ._1GX8_ {
+.app .I3S-C ._1GX8_ {
     background-color: var(--dark); }
 /* Doodle background. TODO: Plans for the future. */
 /*[[doodles]]*/
@@ -304,15 +304,15 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--accent) !important; }
 
 /* Header. */
-._1Iexl #main header {
+.I3S-C #main header {
     border: none;
     background-color: var(--dark); }
 /* Text color. */
-._1Iexl #main header ._1WBXd * {
+.I3S-C #main header ._1WBXd * {
     color: var(--light); }
 
 /* Footer. */
-._1Iexl #main footer {
+.I3S-C #main footer {
     background-color: var(--darker); }
 /* Input wrapper. */
 #main footer > div {
@@ -412,13 +412,13 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Search messages. TODO: Apply this to all search elements. */
-._2yeJ5 ._1iMEz, ._1iopp /*, ._2yeJ5 ._1iMEz._3sdhb*/ {
+._2yeJ5 ._1iMEz, ._1iopp /*, ._2yeJ5 ._1iMEz._3qnBM*/ {
     background-color: var(--darker) !important; }
 /* Input wrapper. */
 ._1iMEz label {
     border: 0px solid var(--dark) !important;
     background-color: var(--dark) !important; }
-._1iMEz ._3sdhb label {
+._1iMEz ._3qnBM label {
     background-color: transparent !important; }
 /* Input element. */
 ._1iMEz label input {
@@ -922,7 +922,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 /* REMOVE STUFF. */
 /* Remove pseudo elements. */
 [class*="chat"]:before, [class*="chat"]:after,
-.gQzdc:after, ._1CkkN:before, ._3AwwN:after,
+._1RmSA:after, ._1CkkN:before, ._3AwwN:after,
 .MS-DH:before, .MS-DH:after, ._3YwRO {
     display: none !important; }
 /* Remove ONLY borders. */
