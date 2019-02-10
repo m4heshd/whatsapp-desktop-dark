@@ -1,3 +1,5 @@
+/* WhatsApp Desktop Dark mode by m4heshd */
+
 :root {
     --dark: #272c35;
     --darker: #1f232a;
@@ -169,7 +171,7 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark) !important; }
 
 /* Search results. */
-#side ._1AKfk {
+#side .gHiUI {
     color: var(--accent);
     background-color: var(--dark); }
 /* Matching results. */
@@ -196,7 +198,7 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: transparent !important; }
 
 /* New message indicator. */
-#side .OUeyt {
+#side ._3_4ol {
     color: var(--accent2) !important;
     background-color: var(--darker) !important;
     box-shadow: inset 0 0 0 2px var(--accent2); }
@@ -268,7 +270,7 @@ span[class="_3CSsZ"] > svg > rect {
 ._2fq0t ._39pS- {
     background-color: transparent !important; }
 /* Header. */
-._2fq0t ._1AKfk {
+._2fq0t .gHiUI {
     background-color: var(--darker) !important; }
 /* On event. */
 .k1feT ._2fq0t ._1Qelh._9m0_C,
@@ -388,6 +390,10 @@ span[class="_3CSsZ"] > svg > rect {
     margin-bottom: 10px;
     color: var(--light);
     border-bottom: 2px solid var(--accent) !important; }
+/* Unknown User's name. */
+html[dir=ltr] ._1aUEJ {
+    color: var(--light) !important;
+}
 /* User's name. */
 .app ._2yeJ5 .copyable-text {
     color: var(--light); }
@@ -540,7 +546,7 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     color: var(--light) !important; }
 
 /* Forwarded message. */
-._15aTv {
+.aXccw {
     color: var(--lighter) !important; }
 
 /* Phone numbers of users that aren't your contacts. */
@@ -574,6 +580,9 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
 ._2VaSD {
     /*transition: 200ms ease-in-out;/**/
     background: linear-gradient(to right, transparent 0%, var(--darker) 40%) !important; }
+.message-out ._2VaSD {
+    /*transition: 200ms ease-in-out;/**/
+    background: linear-gradient(to right, transparent 0%, var(--msgout) 40%) !important; }
 /* Smooth transition. */
 .message span:last-child div {
     transition: 50ms ease-in-out !important; }
@@ -619,7 +628,7 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
 ._1sGGp.JY9bh *, ._2QAax.JY9bh *, ._20-p9.JY9bh * {
     color: var(--light); }
 /* Link options. */
-._3Fs97._2Cju4, ._1ykUM._2Cju4 {
+._3Fs97._3y2-J, ._1ykUM._3y2-J {
     background: none !important; }
 
 
