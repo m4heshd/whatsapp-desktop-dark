@@ -166,7 +166,7 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark) !important; }
 
 /* New group and group info buttons. */
-._1Qelh .JQHIK ._1jJLh,
+._1Qelh .JQHIK ._34mgb,
 ._1Qelh .JQHIK ._2fwCN {
     box-shadow: 0 0 8px -1px var(--shadow) !important;
     background-color: var(--dark) !important; }
@@ -255,7 +255,7 @@ span[class="_3CSsZ"] > svg > rect {
 .dISnq ._1arra ._1Qelh {
     background-color: transparent; }
 /* On event. TODO: Fixed, but it might still overlap somewhere. */
-.k1feT ._2sNbV > ._1CkkN:hover,
+._1pzng ._2sNbV > ._1CkkN:hover,
 .dISnq ._2sNbV ._1CkkN:hover {
     background-color: var(--dark); }
 
@@ -268,14 +268,14 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: transparent; }
 
 /* New group. */
-.dISnq ._39pS- {
+.dISnq .ktxPy {
     background-color: transparent !important; }
 /* Header. */
 .dISnq .gHiUI {
     background-color: var(--darker) !important; }
 /* On event. */
-.k1feT .dISnq ._1Qelh._9m0_C,
-.k1feT .dISnq ._1Qelh:hover {
+._1pzng .dISnq ._1Qelh._9m0_C,
+._1pzng .dISnq ._1Qelh:hover {
     background-color: var(--dark) !important; }
 /* Search element */
 ._66JgU ._3_3Rs {
@@ -953,7 +953,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 /* Remove pseudo elements. */
 [class*="chat"]:before, [class*="chat"]:after,
 ._1RmSA:after, ._1CkkN:before, ._2rNOJ:after,
-.MS-DH:before, .MS-DH:after, ._3YwRO {
+.MS-DH:before, .MS-DH:after, ._1ndYW {
     display: none !important; }
 /* Remove ONLY borders. */
 ._1CkkN ._10xEB, ._14oqx .DcItJ,
