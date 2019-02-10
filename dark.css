@@ -237,7 +237,7 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark); }
 
 /* Archived chat image. */
-.dISnq ._2Lev2 {
+.dISnq ._3Hkuc {
     background-color: var(--dark) !important; }
 
 /* Body. */
@@ -442,14 +442,17 @@ html[dir=ltr] ._1aUEJ {
     background-color: transparent !important; }
 
 /* Starred messages. */
-._2yeJ5 .ZwkQK, .ZwkQK {
+._2yeJ5 ._3EuGX, ._3EuGX {
     background-color: var(--dark) !important; }
 /* On event. */
-.starred-msg-wrapper, .MS-DH {
+.starred-msg-wrapper, ._1StcS {
     transition: 200ms ease-in-out !important; }
 /* On event. */
-.MS-DH._2-mCk, .MS-DH._1baOM, .MS-DH.ZuHmv {
+._1StcS._19ZEA {
     background-color: var(--dark) !important; }
+
+._1StcS._48d_G, ._1StcS._3c4So {
+    background-color: var(--darker) !important; }
 
 
 /* Message info. */
@@ -720,11 +723,11 @@ footer ._2EJZE > div:last-child > div svg {
 /* Disable tails everywhere except in chat. */
 .starred-msg-wrapper .tail-container,
 .message-gallery .tail-container,
-.MS-DH .tail-container {
+._1StcS .tail-container {
     display: none !important; }
 /* Rounded corners. */
 .message-gallery.tail-override-left,
-.MS-DH .tail-override-left {
+._1StcS .tail-override-left {
     border-radius: 7.5px !important; }
 
 /** Stickers. */
@@ -951,7 +954,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 /* Remove pseudo elements. */
 [class*="chat"]:before, [class*="chat"]:after,
 ._1RmSA:after, ._1CkkN:before, ._2rNOJ:after,
-.MS-DH:before, .MS-DH:after, ._1ndYW {
+._1StcS:before, ._1StcS:after, ._1ndYW {
     display: none !important; }
 /* Remove ONLY borders. */
 ._1CkkN ._10xEB, ._14oqx .DcItJ,
