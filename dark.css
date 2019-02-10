@@ -11,6 +11,7 @@
     --mred: #dd3b4f;
     --mgreen: #70A352;
     --mblue: #527AA3;
+    --msgout: #131a25;
 }
 
 
@@ -300,11 +301,11 @@ span[class="_3CSsZ"] > svg > rect {
 /*[[doodles]]*/
 
 /* Jump to present button. */
-._298R6 {
+._3g0ao {
     box-shadow: 0 4px 8px 2px var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Number of messages. */
-._298R6 .OUeyt {
+._3g0ao ._3_4ol {
     background-color: var(--accent) !important; }
 
 /* Header. */
@@ -481,6 +482,13 @@ span[class="_3CSsZ"] > svg > rect {
 .D6ZWG ._1S4i5,
 ._2Mvo8.fyJXn {
     color: var(--lighter); }
+/* Link preview */
+._2XYi9._1bG6t {
+    background-color: var(--bgcol) !important; }
+._2FGrI, ._1R4vY {
+    color: var(--light) !important; }
+._3KvLd {
+    color: var(--lighter) !important; }
 
 /* Media viewer. */
 #app ._1zcz2, ._3_R6X {
@@ -521,6 +529,8 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
 /* Message bubbles. */
 .message-in, .message-out, .message {
     background-color: var(--darker) !important; }
+.message-out {
+    background-color: var(--msgout) !important; }
 
 /* Message text color. */
 .message-in .selectable-text,
@@ -582,11 +592,11 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     text-shadow: none !important;
     color: var(--lighter) !important; }
 /* New message. */
-#main ._1mq8g {
+#main .Ka9Pk {
     border: none !important;
     background-color: transparent !important; }
 /* X unread messages. */
-#main ._1mq8g .L89LI {
+#main .Ka9Pk ._1XMBw {
     box-shadow: 0 0 8px 0 var(--shadow) !important;
     color: var(--light) !important;
     background-color: var(--darker) !important; }
@@ -603,10 +613,10 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     color: var(--light); }
 
 /* Link embeds. */
-._1sGGp.JY9bh, ._2QAax.JY9bh {
+._1sGGp.JY9bh, ._20-p9.JY9bh {
     background-color: var(--dark) !important; }
 /* Text color. */
-._1sGGp.JY9bh *, ._2QAax.JY9bh * {
+._1sGGp.JY9bh *, ._2QAax.JY9bh *, ._20-p9.JY9bh * {
     color: var(--light); }
 /* Link options. */
 ._3Fs97._2Cju4, ._1ykUM._2Cju4 {
@@ -651,7 +661,7 @@ footer ._2EJZE > div:last-child > div svg {
 
 
 /* Select messages. */
-#main ._3D9Wd {
+#main .btZiv {
     background-color: var(--shadow); }
 /* Hover over messages. */
 #main ._1o1sm {
@@ -661,19 +671,20 @@ footer ._2EJZE > div:last-child > div svg {
     background-color: var(--shadow) !important; }
 
 /* Selected icon. */
-#main ._1VD7W {
+#main ._3gPJf {
     border-color: var(--accent) !important;
-    background-color: var(--accent) !important; }
+    /*background-color: var(--accent) !important; */
+}
 /* Checkmark. */
-#main ._1VD7W ._1KfC8 {
+#main ._3gPJf ._3KRSo {
     border-bottom-color: var(--accent);
     border-right-color: var(--accent); }
 
 /* Footer/control/options. */
-#main ._2FsQ8, #main ._3PWNn, #main ._3XpR2 {
+#main ._3KCu4, #main ._3PWNn, #main ._2-Uk7 {
     background-color: var(--darker); }
 /* Text color. */
-#main ._2FsQ8 span, #main ._3XpR2 {
+#main ._3KCu4 span, #main ._2-Uk7 {
     color: var(--light); }
 
 
@@ -692,6 +703,7 @@ footer ._2EJZE > div:last-child > div svg {
 .tail.message-out .tail-container {
     right: -10px !important; top: 0px;
     border-right: 10px solid transparent;
+    border-top: 12px solid var(--msgout);
     border-radius: 0 5px 0 0; }
 
 /* Disable tails everywhere. */
@@ -845,9 +857,9 @@ footer ._2EJZE > div:last-child > div svg {
     color: var(--lighter) !important;
     background-color: var(--accent) !important; }
 /* Muted checkbox color. */
-._1VD7W {
+._3gPJf {
     border-color: var(--accent);
-    background-color: var(--accent); }
+    background-color: transparent; }
 /* Buttons. */
 .PNlAR:hover, ._1WZqU:hover {
     background-color: var(--dark) !important; }
