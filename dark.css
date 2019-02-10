@@ -17,6 +17,17 @@
     --msgout: #131a25;
 }
 
+/* Title bar */
+#windows-title-bar {
+    background-color: var(--accent) !important; }
+#windows-title-minimize:hover, #windows-title-maximize:hover {
+    transition: 200ms ease-in-out !important;
+    background-color: var(--darker) !important; }
+#windows-title-close:hover {
+    transition: 200ms ease-in-out !important;
+    background-color: #dd3b4f !important; }
+
+/* Background doodle */
 .app ._1wm9T {
     filter: invert(100%) opacity(0.45) !important; }
 
@@ -60,21 +71,24 @@ progress[value]::-webkit-progress-value {
 
 
 /* Log-in page. */
-._2NbD3 {
+.LbOiO {
     border: 1px solid var(--shadow);
     box-shadow: 0 8px 32px 0 var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Text color. */
-._2NbD3 * {
+.LbOiO * {
     color: var(--light); }
+/* Top color stripe */
+._2Hf8i:before {
+    background-color: var(--dark) !important; }
 /* Reload QR code. */
-.HnNfm {
+._2zufR {
     background-color: var(--darker) !important; }
 /* Fix QR code. */
-._2NbD3 .XSdna {
+.LbOiO .XSdna {
     border: 3px solid white !important; }
 /* Tutorial. */
-._2NbD3 > div:last-child {
+.LbOiO > div:last-child {
     background-color: var(--darker); }
 /* Loader. */
 #startup svg > circle {
@@ -85,7 +99,7 @@ progress[value]::-webkit-progress-value {
     display: none !important; }
 
 /* Icon color. */
-span[class="_3CSsZ"] > svg > rect {
+span[class="_1DOO2"] > svg > rect {
     fill: var(--dark) !important; }
 
 
@@ -1033,7 +1047,7 @@ span[data-icon="ptt-out-blue"] svg path:first-child {
     fill: transparent !important; }
 
 /* Logo. */
-._3CSsZ > svg > path:first-child {
+._1DOO2 > svg > path:first-child {
     fill: var(--accent) !important; }
 span[data-icon="logo"] svg path:nth-child(1) {
     fill: white !important; }
