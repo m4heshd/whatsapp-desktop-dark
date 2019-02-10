@@ -304,7 +304,8 @@ span[class="_3CSsZ"] > svg > rect {
 /* Header. */
 .I3S-C #main header {
     border: none;
-    background-color: var(--dark); }
+    background-color: var(--dark);
+    box-shadow: 0px 0px 3px 0px var(--accent); }
 /* Text color. */
 .I3S-C #main header ._2F-NA * {
     color: var(--light); }
@@ -359,25 +360,25 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Right drawer. */
-.app ._2yeJ5 .dISnq {
+.app .Och61 .dISnq {
     background-color: var(--darker); }
 /* Border-color. */
-.app ._2yeJ5 {
+.app .Och61 {
     border-left-color: transparent !important; }
 /* Header. */
-.app ._2yeJ5 .dISnq header {
+.app .Och61 .dISnq header {
     background-color: var(--darker); }
 /* Text color. */
-.app ._2yeJ5 .dISnq header div {
+.app .Och61 .dISnq header div {
     color: var(--light); }
 
 /* Group info sections. */
-.app ._2yeJ5 .dISnq ._3g9Jx {
+.app .Och61 .dISnq ._3g9Jx {
     /*box-shadow: 0 1px 3px shadow /**/
     box-shadow: none;
     background-color: transparent; }
 /* Group name. */
-.app ._2yeJ5 ._3g9Jx ._4elAm, .media-body .CzI8E {
+.app .Och61 ._3g9Jx ._4elAm, .media-body .CzI8E {
     margin-bottom: 10px;
     color: var(--light);
     border-bottom: 2px solid var(--accent) !important; }
@@ -386,35 +387,35 @@ html[dir=ltr] ._1aUEJ {
     color: var(--light) !important;
 }
 /* User's name. */
-.app ._2yeJ5 .copyable-text {
+.app .Och61 .copyable-text {
     color: var(--light); }
 /* Accent color text. */
-.app ._2yeJ5 ._3g9Jx ._1sYdX {
+.app .Och61 ._3g9Jx ._1sYdX {
     font-weight: 400;
     color: var(--accent) !important; }
 /* Mute/Starred Messages. */
-.app ._2yeJ5 ._3g9Jx ._3LL06 {
+.app .Och61 ._3g9Jx ._3LL06 {
     color: var(--light); }
 
 /* Group options. */
-.app ._2yeJ5 ._3g9Jx ._1Qelh,
-.app ._2yeJ5 ._3g9Jx ._3_gw3 {
+.app .Och61 ._3g9Jx ._1Qelh,
+.app .Och61 ._3g9Jx ._3_gw3 {
     transition: 200ms ease-in-out;
     background-color: transparent; }
 /* On event. */
-.app ._2yeJ5 ._3g9Jx ._1Qelh._3xj48:hover,
-.app ._2yeJ5 ._3g9Jx ._3_gw3:hover {
+.app .Och61 ._3g9Jx ._1Qelh._3xj48:hover,
+.app .Och61 ._3g9Jx ._3_gw3:hover {
     background-color: var(--dark); }
 /* Text color. */
-.app ._2yeJ5 ._3g9Jx ._1Qelh * {
+.app .Och61 ._3g9Jx ._1Qelh * {
     color: var(--light); }
 /* Admin color. */
-.app ._2yeJ5 ._3g9Jx ._2e8Mu {
+.app .Och61 ._3g9Jx ._2e8Mu {
     border: 2px solid var(--accent); }
 
 
 /* Search messages. TODO: Apply this to all search elements. */
-._2yeJ5 ._1iMEz, ._1iopp /*, ._2yeJ5 ._1iMEz._3qnBM*/ {
+.Och61 ._1iMEz, ._3KY0N /*, .Och61 ._1iMEz._3qnBM*/ {
     background-color: var(--darker) !important; }
 /* Input wrapper. */
 ._1iMEz label {
@@ -427,14 +428,14 @@ html[dir=ltr] ._1aUEJ {
     background-color: transparent !important; }
 
 /* Search messages body. */
-.YAPQk {
+._1RJvX {
     background-color: var(--darker) !important; }
 /* Matching results. */
-._2yeJ5 .matched-text {
+.Och61 .matched-text {
     color: var(--accent) !important; }
 /* On event. */
-.YAPQk ._9m0_C > ._2oMll,
-.YAPQk ._2oMll:hover {
+._1RJvX ._9m0_C > ._2oMll,
+._1RJvX ._2oMll:hover {
     background-color: var(--dark) !important; }
 
 /* Search messages. */
@@ -442,7 +443,7 @@ html[dir=ltr] ._1aUEJ {
     background-color: transparent !important; }
 
 /* Starred messages. */
-._2yeJ5 ._3EuGX, ._3EuGX {
+.Och61 ._3EuGX, ._3EuGX {
     background-color: var(--dark) !important; }
 /* On event. */
 .starred-msg-wrapper, ._1StcS {
@@ -462,15 +463,15 @@ html[dir=ltr] ._1aUEJ {
 ._3FAwT .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
-._2yeJ5 ._1arra ._2HDl5 ._2wP_Y > div {
+.Och61 ._1arra ._2HDl5 ._2wP_Y > div {
     background-color: var(--dark) !important; }
 
 
 /* Media/docs/links section. */
-._2yeJ5 ._3b2Cf {
+.Och61 ._3b2Cf {
     background-color: var(--darker) !important; }
 /* Active indicator. */
-._2yeJ5 ._3b2Cf:before {
+.Och61 ._3b2Cf:before {
     background-color: var(--accent) !important; }
 /* Selected image. */
 .P85aN ._3xJ94 {
