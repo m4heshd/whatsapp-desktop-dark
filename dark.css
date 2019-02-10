@@ -13,6 +13,10 @@
     --mblue: #527AA3;
 }
 
+
+.app ._1wm9T {
+    filter: invert(100%) opacity(0.45) !important; }
+
 /* Body reset. */
 body {
     background: none;
@@ -290,7 +294,7 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Middle drawer. */
-.app .I3S-C ._1GX8_ {
+.app .I3S-C ._3siyV {
     background-color: var(--dark); }
 /* Doodle background. TODO: Plans for the future. */
 /*[[doodles]]*/
@@ -308,7 +312,7 @@ span[class="_3CSsZ"] > svg > rect {
     border: none;
     background-color: var(--dark); }
 /* Text color. */
-.I3S-C #main header ._1WBXd * {
+.I3S-C #main header ._2F-NA * {
     color: var(--light); }
 
 /* Footer. */
@@ -922,7 +926,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 /* REMOVE STUFF. */
 /* Remove pseudo elements. */
 [class*="chat"]:before, [class*="chat"]:after,
-._1RmSA:after, ._1CkkN:before, ._3AwwN:after,
+._1RmSA:after, ._1CkkN:before, ._2rNOJ:after,
 .MS-DH:before, .MS-DH:after, ._3YwRO {
     display: none !important; }
 /* Remove ONLY borders. */
