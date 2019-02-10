@@ -480,7 +480,7 @@ html[dir=ltr] ._1aUEJ {
 ._2yeJ5 ._3b2Cf:before {
     background-color: var(--accent) !important; }
 /* Selected image. */
-._2Ry6_ ._2mlDB {
+.P85aN ._3xJ94 {
     border-color: var(--accent) !important; }
 /* Selected links. */
 .D6ZWG {
@@ -498,36 +498,36 @@ html[dir=ltr] ._1aUEJ {
     color: var(--lighter) !important; }
 
 /* Media viewer. */
-#app ._1zcz2, ._3_R6X {
+#app ._1zcz2, ._212qn {
     background-color: rgba(0,0,0,0.85) !important; }
 /* Chevron background. */
-._2-IeP {
+.w6Ywu {
     background-color: var(--darker) !important; }
 /* Preloader. */
 ._3dGYA {
     background-color: var(--darker) !important; }
 
 /* Header. */
-#app ._1zcz2 ._2YdsD, ._3_R6X ._1XwnX {
+#app ._1zcz2 ._2YdsD, ._212qn .bJP_g {
     background-color: var(--dark) !important; }
 /* Inner element. */
 #app ._1zcz2 ._1Qelh {
     background-color: transparent !important; }
 /* Text color. */
 #app ._1zcz2 ._1Qelh ._2oMll *,
-._3_R6X ._12oAB,
-._1XwnX * {
+._212qn ._12oAB,
+.bJP_g * {
     color: var(--light); }
 
 /* Footer. */
-._3Qh77 {
+._1M5So {
     border: none !important;
     background-color: var(--darker) !important; }
 /* Selected image. */
-._3Qh77 ._1xQmx {
+._1M5So ._3E86i {
     transform: scale(1) !important;
     border: 3px solid var(--accent) !important }
-html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
+html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
     border: 0px solid var(--accent);
     outline: 3px solid var(--accent) !important; }
 
