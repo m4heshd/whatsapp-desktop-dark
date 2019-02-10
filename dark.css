@@ -550,18 +550,18 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     color: var(--light); }
 
 /* Image/gif/video meta wrapper. */
-.KYpDv ._3IGZs {
+.BmK5Q ._3IGZs {
     bottom: 8px;
     padding: 2px 5px;
     border-radius: 4px;
     background-color: var(--shadow); }
 /* Text color. */
-.KYpDv ._3IGZs ._3EFt_ {
+.BmK5Q ._3IGZs ._3EFt_ {
     margin-top: 0px;
     color: var(--lighter); }
 
 /* Message options. */
-._1i1U7 {
+._2VaSD {
     /*transition: 200ms ease-in-out;/**/
     background: linear-gradient(to right, transparent 0%, var(--darker) 40%) !important; }
 /* Smooth transition. */
@@ -603,34 +603,34 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     color: var(--light); }
 
 /* Link embeds. */
-._1sGGp._2nFG1, ._2lwig._2nFG1 {
+._1sGGp.JY9bh, ._2QAax.JY9bh {
     background-color: var(--dark) !important; }
 /* Text color. */
-._1sGGp._2nFG1 *, ._2lwig._2nFG1 * {
+._1sGGp.JY9bh *, ._2QAax.JY9bh * {
     color: var(--light); }
 /* Link options. */
-._2DNgV._2Cju4, .jZ4tp._2Cju4 {
+._3Fs97._2Cju4, ._1ykUM._2Cju4 {
     background: none !important; }
 
 
 /* Reply section. (= */
-footer .rstyJ {
+footer ._2EJZE {
     box-shadow: 0 0px 8px 0 var(--darker) !important;
     background-color: var(--darker) !important; }
 /* Fix margins. */
-footer .rstyJ > div:first-child {
+footer ._2EJZE > div:first-child {
     margin: 0 0 5px 10px !important;
     background-color: transparent !important; }
 /* Reply content. */
-footer .rstyJ > div:first-child > div {
+footer ._2EJZE > div:first-child > div {
     background-color: var(--dark) !important; }
 /* Close button. */
-footer .rstyJ > div:last-child {
+footer ._2EJZE > div:last-child {
     position: relative;
     margin: 0 8px 5px 8px !important;
     background-color: transparent !important; }
 /* Make the button larger. */
-footer .rstyJ > div:last-child > div svg {
+footer ._2EJZE > div:last-child > div svg {
     padding: 18px;
     border-radius: 6px;
     background-color: var(--dark); }
@@ -708,16 +708,18 @@ footer .rstyJ > div:last-child > div svg {
     border-radius: 7.5px !important; }
 
 /** Stickers. */
-._1rK-b {
+._2HEGP {
     background: none !important; }
+._2bBHP {
+    display: none !important; }
 /* Sender. */
-._3JaNE ._2R8MP {
+.mFVOk ._3vofN {
     background-color: var(--darker) !important; }
 /* Time/status. */
-._3JaNE ._2Ll5c {
+.mFVOk ._3YQeS {
     background-color: var(--darker) !important; }
 /* Reset message menu. */
-._1qhoQ {
+._36oqf {
     top: 0 !important;
     right: 0 !important;
     background: none !important; }
