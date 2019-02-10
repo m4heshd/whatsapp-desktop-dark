@@ -2,6 +2,7 @@
 
 :root {
     --dark: #272c35;
+    --dark_alpha: rgba(39, 44, 53, 0.89);
     --darker: #1f232a;
     --bgcol: #101318;
     --light: #d1d1d1;
@@ -153,7 +154,7 @@ span[class="_3CSsZ"] > svg > rect {
 /* Label background. */
 #side ._2F7fE ._1RmSA label,
 ._1RmSA._3qnBM,
-._2dA13 ._15JHr ._1RmSA {
+._2lczh ._1AxuS ._1RmSA {
     border: 0px solid var(--dark);
     background-color: var(--dark) !important; }
 /* Input element. */
@@ -837,24 +838,24 @@ footer ._2EJZE > div:last-child > div svg {
 
 
 /* Backdrop. */
-._3gUiM, #startup, #initial_startup {
-    background-color: var(--dark) !important; }
+.SPF80, #startup, #initial_startup {
+    background-color: var(--dark_alpha) !important; }
 /* Modal. */
-._3gUiM ._2dA13 ._1CnF3,
-._2dA13 ._18wuJ, ._2dA13 .IuYNx {
+.SPF80 ._2lczh ._1Zpxt,
+._2lczh ._18wuJ, ._2lczh .IuYNx {
     box-shadow: 0 0 0 1px var(--darker), 0 8px 16px 0px var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Selected contact. */
-._3gUiM ._1Qelh._9m0_C,
-._3gUiM ._1Qelh:hover,
+.SPF80 ._1Qelh._9m0_C,
+.SPF80 ._1Qelh:hover,
 ._1Qelh._3ntaf:hover {
     background-color: var(--dark) !important; }
 /* Text color. */
-._3gUiM ._1CnF3 * {
+.SPF80 ._1Zpxt * {
     color: var(--light); }
 /* Header/footer. */
-._2dA13 header,
-._2dA13 .iHLo1 {
+._2lczh header,
+._2lczh .iHLo1 {
     background-color: var(--darker) !important; }
 /* Empty element below search bar. */
 ._2fq0t span._3fOoY {
@@ -862,7 +863,7 @@ footer ._2EJZE > div:last-child > div svg {
 
 
 /* Buttons. */
-.PNlAR, ._3hV1n, ._2Gki6, ._13iu_ {
+._2QzpG, ._3hV1n, ._2Gki6, ._13iu_ {
     color: var(--lighter) !important;
     background-color: var(--accent) !important; }
 /* Muted checkbox color. */
@@ -870,7 +871,7 @@ footer ._2EJZE > div:last-child > div svg {
     border-color: var(--accent);
     background-color: transparent; }
 /* Buttons. */
-.PNlAR:hover, ._1WZqU:hover {
+._2QzpG:hover, ._3PhYy:hover {
     background-color: var(--dark) !important; }
 
 /* Drop items. (-: */
