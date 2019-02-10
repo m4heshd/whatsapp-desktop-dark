@@ -544,19 +544,19 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     color: var(--accent) !important; }
 
 /* Message meta text color. */
-[class*="message-"] ._2f-RV *, [class*="message-"] ._2f-RV *,
+[class*="message-"] ._3wVZ5 *, [class*="message-"] ._3wVZ5 *,
 [class*="message-"] ._1_Gu6 *, [class*="message-"] ._27K_5 *,
-[class*="message-"] ._1DZAH *, [class*="message-"] ._3cMIj * {
+[class*="message-"] ._3IGZs *, [class*="message-"] ._3cMIj * {
     color: var(--light); }
 
 /* Image/gif/video meta wrapper. */
-.KYpDv ._1DZAH {
+.KYpDv ._3IGZs {
     bottom: 8px;
     padding: 2px 5px;
     border-radius: 4px;
     background-color: var(--shadow); }
 /* Text color. */
-.KYpDv ._1DZAH ._3EFt_ {
+.KYpDv ._3IGZs ._3EFt_ {
     margin-top: 0px;
     color: var(--lighter); }
 
@@ -573,12 +573,12 @@ html[dir=ltr] .UPNDG:hover:not(._1xQmx) {
     color: var(--accent) !important; }
 
 /* System messages. */
-.Zq3Mc {
+._1FasD {
     box-shadow: 0 2px 8px 0px var(--shadow) !important;
     border-bottom: 3px solid var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Text color and shadows. */
-.Zq3Mc * {
+._1FasD * {
     text-shadow: none !important;
     color: var(--lighter) !important; }
 /* New message. */
@@ -728,37 +728,37 @@ footer .rstyJ > div:last-child > div svg {
 #main footer > div:nth-child(2) > div {
     border: 0; }
 /* Emoji/gif/stickers background. */
-._1UbeR, ._2HBs4, ._3Jgri, ._3Jgri > ._2z7kg {
+._1KwWc, ._2-bkE, ._3b3vC, ._3b3vC > ._2UD13 {
     background-color: var(--dark) !important; }
 
 /* Emoji menu. */
-._3ZkhL .Sbkt2,
-._3ZkhL .Sbkt2 > span > div,
+.DWACj .Sbkt2,
+.DWACj .Sbkt2 > span > div,
 ._3ETD3, .R0lQ6 {
     background-color: var(--dark) !important; }
 /* Emoji tabs. */
-._3ZkhL ._2ByZq,
-._3ZkhL ._1qUma,
-._1qUma {
+.DWACj ._2ByZq,
+.DWACj ._59Mfb,
+._59Mfb {
     background: var(--darker) !important; }
 /* Tab indicator. */
 ._2NQtS,
 .YbzIC .YGHyX,
-._1Wbpa {
+._1EQzB {
     background-color: var(--accent) !important; }
 /* Active button. */
 ._1x_c3.bRYFY path {
     fill: var(--accent) !important; }
 
 /* Search emojis. */
-._3ZkhL label,
-._2rR_l,
-._2vjPO {
+.DWACj label,
+._19iwE,
+.YMJXW {
     background-color: var(--dark) !important; }
 /* Text color. */
-._3ZkhL label input,
-._2vjPO input,
-.GclUX,
+.DWACj label input,
+.YMJXW input,
+._3wfs2,
 ._3Ztfl {
     color: var(--light) !important; }
 
@@ -1053,21 +1053,5 @@ span svg > path[fill="#00BFA5"] {
     #app .app {
         border-radius: 5px;
         box-shadow: 0 4px 24px -2px var(--shadow); }
-
-    /* Fullscreen. */
-    /*[[fullscreen]]*/
-
-    /* App background. */
-    /*[[background]]*/
 }
-
-/* "Privacy mode." */
-/*[[blurContacts]]*/
-/*[[blurImages]]*/
-
-/* Compact mode. */
-/*[[compactMode]]*/
-
-/* Custom CSS rules. */
-/*[[customRules]]*/
 
