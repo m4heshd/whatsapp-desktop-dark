@@ -96,22 +96,6 @@ span[class="_3CSsZ"] > svg > rect {
     border: none;
     background-color: var(--dark); }
 /* Status update. */
-/* .app ._3q4NP .C7QbQ::before {
-  content: 'Rewrite is done! A few old and a few new features coming up. Let me know if something is still broken. ^-^';
-  left: 0;
-  top: 0;
-  bottom: 6px;
-  right: 0;
-  position: absolute;
-  z-index: 98;
-  width: 90%;
-  margin: 0 5%;
-  padding-top: 40vh;
-  text-align: center;
-  font-size: 20px;
-  color: var(--light);
-  background: var(--dark); } /**/
-/* Image. */
 .app .I3S-C .C7QbQ ._2gydQ .bklGI {
     max-width: 200px;
     max-height: 200px; }
@@ -136,6 +120,10 @@ span[class="_3CSsZ"] > svg > rect {
 
 /* Chat list. */
 #side > header {
+    background-color: var(--darker) !important; }
+
+/* Chat preloader */
+._10lQY {
     background-color: var(--darker) !important; }
 
 /* Notifications && more!! */
@@ -170,6 +158,9 @@ span[class="_3CSsZ"] > svg > rect {
 ._1Qelh .JQHIK ._2fwCN {
     box-shadow: 0 0 8px -1px var(--shadow) !important;
     background-color: var(--dark) !important; }
+/* Remove participant button */
+._2ItjF ._1R9FX:hover {
+    background-color: var(--accent) !important; }
 
 /* Search results. */
 #side .gHiUI {
@@ -180,10 +171,10 @@ span[class="_3CSsZ"] > svg > rect {
     color: var(--accent) !important; }
 
 /* Contacts wrapper. */
-#side ._3HpJq, .dISnq ._1lIXT {
+#side ._3HpJq, .dISnq ._3IyB2 {
     background-color: transparent !important; }
 /* Contacts. */
-#side ._3HpJq ._1Qelh, .dISnq ._66JgU {
+#side ._3HpJq ._1Qelh, .dISnq ._1bIFL {
     transition: 200ms ease-in-out;
     background-color: transparent !important; }
 /* On event. */
@@ -278,9 +269,9 @@ span[class="_3CSsZ"] > svg > rect {
 ._1pzng .dISnq ._1Qelh:hover {
     background-color: var(--dark) !important; }
 /* Search element */
-._66JgU ._3_3Rs {
+._1bIFL ._1yBeH {
     border-bottom: none !important; }
-._66JgU ._3_3Rs input, ._66JgU ._3_3Rs ::placeholder {
+._1bIFL ._1yBeH input, ._1bIFL ._1yBeH ::placeholder {
     color: var(--lighter) !important; }
 
 
@@ -656,10 +647,19 @@ footer ._2EJZE > div:last-child > div svg {
     background-color: var(--dark); }
 
 /* Mention group members. */
-.Uukb4 {
+.Uukb4, .AiI_S.vg0uI {
     color: var(--light);
     border-left: none !important;
+    background-color: var(--darker) !important;
+    transition: 300ms ease-in-out !important; }
+
+.tzmti {
+    border: none !important;
+    background-color: var(--darker) !important; }
+
+.AiI_S.vg0uI:hover {
     background-color: var(--dark) !important; }
+
 /* Wrapper. */
 .Uukb4 ._3v_lq {
     transition: 300ms ease-in-out !important;
@@ -668,7 +668,6 @@ footer ._2EJZE > div:last-child > div svg {
 .Uukb4 .j5Hcb._3v_lq,
 .Uukb4 ._3v_lq:hover {
     background-color: var(--darker) !important; }
-
 
 /* Select messages. */
 #main .btZiv {
@@ -865,7 +864,7 @@ footer ._2EJZE > div:last-child > div svg {
 
 
 /* Buttons. */
-._2QzpG, ._2JDHp, ._2Gki6, ._13iu_ {
+._2QzpG, ._2JDHp, ._2Gki6, ._2MNzO {
     color: var(--lighter) !important;
     background-color: var(--accent) !important; }
 /* Muted checkbox color. */
