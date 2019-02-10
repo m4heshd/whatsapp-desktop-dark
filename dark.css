@@ -180,10 +180,10 @@ span[class="_3CSsZ"] > svg > rect {
     color: var(--accent) !important; }
 
 /* Contacts wrapper. */
-#side ._3HpJq, ._2fq0t ._1lIXT {
+#side ._3HpJq, .dISnq ._1lIXT {
     background-color: transparent !important; }
 /* Contacts. */
-#side ._3HpJq ._1Qelh, ._2fq0t ._66JgU {
+#side ._3HpJq ._1Qelh, .dISnq ._66JgU {
     transition: 200ms ease-in-out;
     background-color: transparent !important; }
 /* On event. */
@@ -206,35 +206,35 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Settings. */
-._2fq0t {
+.dISnq {
     background-color: var(--darker) !important; }
 /* Header color. */
-._2fq0t header {
+.dISnq header {
     min-height: 50px;
     height: auto;
     background-color: var(--darker) !important; }
 /* Reset header height. */
-._2fq0t header > div:first-child {
+.dISnq header > div:first-child {
     padding: 12px 0 !important;
     height: auto; }
 /* Reset header title in left/right drawers. */
-._2fq0t ._1xGbt {
+.dISnq ._1xGbt {
     margin-top: 2px !important;
     font-size: 16px; }
 /* Transparent sections. */
-._2fq0t ._1CRb5 {
+.dISnq ._1CRb5 {
     box-shadow: none !important;
     background-color: transparent !important; }
 /* Highlighted sections. */
-._2fq0t ._3hhmj ._1CkkN,
+.dISnq ._3hhmj ._1CkkN,
 ._3UUn3 {
     background-color: var(--dark) !important; }
 /* Change profile picture. */
-._2fq0t .WX_XW,
-._2fq0t ._2Lbqu {
+.dISnq .WX_XW,
+.dISnq ._2Lbqu {
     background-color: rgba(0,0,0,0.5) !important; }
 /* Text color. */
-._2fq0t * {
+.dISnq * {
     color: var(--light); }
 /* Zoom in/out. */
 ._2LALH {
@@ -247,35 +247,35 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark); }
 
 /* Archived chat image. */
-._2fq0t ._2Lev2 {
+.dISnq ._2Lev2 {
     background-color: var(--dark) !important; }
 
 /* Body. */
-._2fq0t ._2sNbV ._1CkkN,
-._2fq0t ._2sNbV ._1Qelh {
+.dISnq ._2sNbV ._1CkkN,
+.dISnq ._1arra ._1Qelh {
     background-color: transparent; }
 /* On event. TODO: Fixed, but it might still overlap somewhere. */
 .k1feT ._2sNbV > ._1CkkN:hover,
-._2fq0t ._2sNbV ._1CkkN:hover {
+.dISnq ._2sNbV ._1CkkN:hover {
     background-color: var(--dark); }
 
 /* New chat section. */
-._2fq0t ._1RmSA label {
+.dISnq ._1RmSA label {
     border: none;
     background-color: var(--dark); }
 /* Input element. */
-._2fq0t ._1RmSA label input {
+.dISnq ._1RmSA label input {
     background-color: transparent; }
 
 /* New group. */
-._2fq0t ._39pS- {
+.dISnq ._39pS- {
     background-color: transparent !important; }
 /* Header. */
-._2fq0t .gHiUI {
+.dISnq .gHiUI {
     background-color: var(--darker) !important; }
 /* On event. */
-.k1feT ._2fq0t ._1Qelh._9m0_C,
-.k1feT ._2fq0t ._1Qelh:hover {
+.k1feT .dISnq ._1Qelh._9m0_C,
+.k1feT .dISnq ._1Qelh:hover {
     background-color: var(--dark) !important; }
 /* Search element */
 ._66JgU ._3_3Rs {
@@ -369,20 +369,20 @@ span[class="_3CSsZ"] > svg > rect {
 
 
 /* Right drawer. */
-.app ._2yeJ5 ._2fq0t {
+.app ._2yeJ5 .dISnq {
     background-color: var(--darker); }
 /* Border-color. */
 .app ._2yeJ5 {
     border-left-color: transparent !important; }
 /* Header. */
-.app ._2yeJ5 ._2fq0t header {
+.app ._2yeJ5 .dISnq header {
     background-color: var(--darker); }
 /* Text color. */
-.app ._2yeJ5 ._2fq0t header div {
+.app ._2yeJ5 .dISnq header div {
     color: var(--light); }
 
 /* Group info sections. */
-.app ._2yeJ5 ._2fq0t ._1CRb5 {
+.app ._2yeJ5 .dISnq ._1CRb5 {
     /*box-shadow: 0 1px 3px shadow /**/
     box-shadow: none;
     background-color: transparent; }
@@ -804,7 +804,7 @@ footer ._2EJZE > div:last-child > div svg {
 ._1drQ- .media-collection {
     background-color: var(--darker); }
 /* Button. */
-._1drQ- .media-collection .btn-fill, ._1drQ- ._3hV1n {
+._1drQ- .media-collection .btn-fill, ._1drQ- ._2JDHp {
     color: var(--lighter);
     background-color: var(--accent) !important; }
 
@@ -857,13 +857,15 @@ footer ._2EJZE > div:last-child > div svg {
 ._2lczh header,
 ._2lczh .iHLo1 {
     background-color: var(--darker) !important; }
+._1yRGz .p7ynF {
+    background-color: var(--dark) !important; }
 /* Empty element below search bar. */
-._2fq0t span._3fOoY {
+.dISnq span._3fOoY {
     display: none !important; }
 
 
 /* Buttons. */
-._2QzpG, ._3hV1n, ._2Gki6, ._13iu_ {
+._2QzpG, ._2JDHp, ._2Gki6, ._13iu_ {
     color: var(--lighter) !important;
     background-color: var(--accent) !important; }
 /* Muted checkbox color. */
