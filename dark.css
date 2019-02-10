@@ -216,7 +216,7 @@ span[class="_3CSsZ"] > svg > rect {
     box-shadow: none !important;
     background-color: transparent !important; }
 /* Highlighted sections. */
-.dISnq ._3hhmj ._1CkkN,
+.dISnq ._1RUhe ._3_gw3,
 ._3UUn3 {
     background-color: var(--dark) !important; }
 /* Change profile picture. */
@@ -231,9 +231,9 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark) !important; }
 
 /* Option/select elements. */
-.uyEaY select {
+._1IUJU select {
     border-color: var(--accent); }
-.uyEaY select option {
+._1IUJU select option {
     background-color: var(--dark); }
 
 /* Archived chat image. */
@@ -241,12 +241,12 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark) !important; }
 
 /* Body. */
-.dISnq ._2sNbV ._1CkkN,
+.dISnq ._1arra ._3_gw3,
 .dISnq ._1arra ._1Qelh {
     background-color: transparent; }
 /* On event. TODO: Fixed, but it might still overlap somewhere. */
-._1pzng ._2sNbV > ._1CkkN:hover,
-.dISnq ._2sNbV ._1CkkN:hover {
+._1pzng ._1arra > ._3_gw3:hover,
+.dISnq ._1arra ._3_gw3:hover {
     background-color: var(--dark); }
 
 /* New chat section. */
@@ -398,12 +398,12 @@ html[dir=ltr] ._1aUEJ {
 
 /* Group options. */
 .app ._2yeJ5 ._3g9Jx ._1Qelh,
-.app ._2yeJ5 ._3g9Jx ._1CkkN {
+.app ._2yeJ5 ._3g9Jx ._3_gw3 {
     transition: 200ms ease-in-out;
     background-color: transparent; }
 /* On event. */
 .app ._2yeJ5 ._3g9Jx ._1Qelh._3xj48:hover,
-.app ._2yeJ5 ._3g9Jx ._1CkkN:hover {
+.app ._2yeJ5 ._3g9Jx ._3_gw3:hover {
     background-color: var(--dark); }
 /* Text color. */
 .app ._2yeJ5 ._3g9Jx ._1Qelh * {
@@ -462,7 +462,7 @@ html[dir=ltr] ._1aUEJ {
 ._3FAwT .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
-._2yeJ5 ._2sNbV ._2HDl5 ._2wP_Y > div {
+._2yeJ5 ._1arra ._2HDl5 ._2wP_Y > div {
     background-color: var(--dark) !important; }
 
 
@@ -953,13 +953,13 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 /* REMOVE STUFF. */
 /* Remove pseudo elements. */
 [class*="chat"]:before, [class*="chat"]:after,
-._1RmSA:after, ._1CkkN:before, ._2rNOJ:after,
+._1RmSA:after, ._3_gw3:before, ._2rNOJ:after,
 ._1StcS:before, ._1StcS:after, ._1ndYW {
     display: none !important; }
 /* Remove ONLY borders. */
-._1CkkN ._10xEB, ._14oqx .DcItJ,
+._3_gw3 ._2EDVV, ._14oqx .DcItJ,
 html[dir] ._1Qelh:after, ._2oMll,
-._1fkhx, .chat-body, ._3hhmj, ._2nmDZ {
+._1fkhx, .chat-body, ._1RUhe, ._2nmDZ {
     border: none !important; }
 /* Some random iframe? */
 object { display: none !important; }
