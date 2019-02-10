@@ -158,8 +158,8 @@ span[class="_3CSsZ"] > svg > rect {
     background-color: var(--dark) !important; }
 
 /* New group and group info buttons. */
-._2EXPL .dIyEr ._1jJLh,
-._2EXPL .dIyEr ._1WliW {
+._1Qelh .JQHIK ._1jJLh,
+._1Qelh .JQHIK ._2fwCN {
     box-shadow: 0 0 8px -1px var(--shadow) !important;
     background-color: var(--dark) !important; }
 
@@ -175,18 +175,18 @@ span[class="_3CSsZ"] > svg > rect {
 #side ._3HpJq, ._2fq0t ._1lIXT {
     background-color: transparent !important; }
 /* Contacts. */
-#side ._3HpJq ._2EXPL, ._2fq0t ._66JgU {
+#side ._3HpJq ._1Qelh, ._2fq0t ._66JgU {
     transition: 200ms ease-in-out;
     background-color: transparent !important; }
 /* On event. */
-#side ._3HpJq ._2EXPL._1f1zm,
-#side ._3HpJq ._2EXPL:hover {
+#side ._3HpJq ._1Qelh._9m0_C,
+#side ._3HpJq ._1Qelh:hover {
     background-color: var(--dark) !important; }
 /* Text color. */
-#side ._3HpJq [class*="_3j7s9"] * {
+#side ._3HpJq [class*="_2oMll"] * {
     color: var(--light); }
 /* Avatar wrapper background. */
-._1WliW {
+._2fwCN {
     box-shadow: 0 0 8px -1px var(--shadow) !important;
     background-color: transparent !important; }
 
@@ -244,7 +244,7 @@ span[class="_3CSsZ"] > svg > rect {
 
 /* Body. */
 ._2fq0t ._2sNbV ._1CkkN,
-._2fq0t ._2sNbV ._2EXPL {
+._2fq0t ._2sNbV ._1Qelh {
     background-color: transparent; }
 /* On event. TODO: Fixed, but it might still overlap somewhere. */
 .k1feT ._2sNbV > ._1CkkN:hover,
@@ -266,8 +266,8 @@ span[class="_3CSsZ"] > svg > rect {
 ._2fq0t ._1AKfk {
     background-color: var(--darker) !important; }
 /* On event. */
-.k1feT ._2fq0t ._2EXPL._1f1zm,
-.k1feT ._2fq0t ._2EXPL:hover {
+.k1feT ._2fq0t ._1Qelh._9m0_C,
+.k1feT ._2fq0t ._1Qelh:hover {
     background-color: var(--dark) !important; }
 /* Search element */
 ._66JgU ._3_3Rs {
@@ -395,16 +395,16 @@ span[class="_3CSsZ"] > svg > rect {
     color: var(--light); }
 
 /* Group options. */
-.app ._2yeJ5 ._1CRb5 ._2EXPL,
+.app ._2yeJ5 ._1CRb5 ._1Qelh,
 .app ._2yeJ5 ._1CRb5 ._1CkkN {
     transition: 200ms ease-in-out;
     background-color: transparent; }
 /* On event. */
-.app ._2yeJ5 ._1CRb5 ._2EXPL._3xj48:hover,
+.app ._2yeJ5 ._1CRb5 ._1Qelh._3xj48:hover,
 .app ._2yeJ5 ._1CRb5 ._1CkkN:hover {
     background-color: var(--dark); }
 /* Text color. */
-.app ._2yeJ5 ._1CRb5 ._2EXPL * {
+.app ._2yeJ5 ._1CRb5 ._1Qelh * {
     color: var(--light); }
 /* Admin color. */
 .app ._2yeJ5 ._1CRb5 ._2e8Mu {
@@ -431,12 +431,12 @@ span[class="_3CSsZ"] > svg > rect {
 ._2yeJ5 .matched-text {
     color: var(--accent) !important; }
 /* On event. */
-.YAPQk ._1f1zm > ._3j7s9,
-.YAPQk ._3j7s9:hover {
+.YAPQk ._9m0_C > ._2oMll,
+.YAPQk ._2oMll:hover {
     background-color: var(--dark) !important; }
 
 /* Search messages. */
-#pane-side ._2EXPL {
+#pane-side ._1Qelh {
     background-color: transparent !important; }
 
 /* Starred messages. */
@@ -492,10 +492,10 @@ span[class="_3CSsZ"] > svg > rect {
 #app ._1zcz2 ._2YdsD, ._3_R6X ._1XwnX {
     background-color: var(--dark) !important; }
 /* Inner element. */
-#app ._1zcz2 ._2EXPL {
+#app ._1zcz2 ._1Qelh {
     background-color: transparent !important; }
 /* Text color. */
-#app ._1zcz2 ._2EXPL ._3j7s9 *,
+#app ._1zcz2 ._1Qelh ._2oMll *,
 ._3_R6X ._12oAB,
 ._1XwnX * {
     color: var(--light); }
@@ -818,9 +818,9 @@ footer .rstyJ > div:last-child > div svg {
     box-shadow: 0 0 0 1px var(--darker), 0 8px 16px 0px var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Selected contact. */
-._3gUiM ._2EXPL._1f1zm,
-._3gUiM ._2EXPL:hover,
-._2EXPL._3ntaf:hover {
+._3gUiM ._1Qelh._9m0_C,
+._3gUiM ._1Qelh:hover,
+._1Qelh._3ntaf:hover {
     background-color: var(--dark) !important; }
 /* Text color. */
 ._3gUiM ._1CnF3 * {
@@ -927,7 +927,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
     display: none !important; }
 /* Remove ONLY borders. */
 ._1CkkN ._10xEB, ._14oqx .DcItJ,
-html[dir] ._2EXPL:after, ._3j7s9,
+html[dir] ._1Qelh:after, ._2oMll,
 ._1fkhx, .chat-body, ._3hhmj, ._2nmDZ {
     border: none !important; }
 /* Some random iframe? */
