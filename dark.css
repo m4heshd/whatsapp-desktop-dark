@@ -85,7 +85,7 @@ progress[value]::-webkit-progress-value {
 ._2zufR {
     background-color: var(--darker) !important; }
 /* Fix QR code. */
-.LbOiO .XSdna {
+.LbOiO ._3qfVh {
     border: 3px solid white !important; }
 /* Tutorial. */
 .LbOiO > div:last-child {
@@ -111,19 +111,22 @@ span[class="_1DOO2"] > svg > rect {
 /* Status update. */
 .app .I3S-C .C7QbQ ._2gydQ .bklGI {
     max-width: 200px;
-    max-height: 200px; }
+    max-height: 200px;
+    border-radius: 50%; }
 /* Text color. */
-.app .I3S-C .C7QbQ ._2MnNk * {
-    color: var(--light); }
+.app .I3S-C .C7QbQ ._3cyUx * {
+    color: var(--light) !important; }
 /* Accent bar. */
 .app .I3S-C .C7QbQ:after {
     border-top-color: var(--accent); }
-/* Version. */
-.app .I3S-C ._1ClcF::after {
-    display: block;
-    margin-top: 10px;
+/* Author info */
+._23fWC::after, ._1Aq73::after {
+    display: block !important;
+    margin-top: 17px;
     padding-top: 10px;
-    content: "WhatsApp by Mew v1.2.5" !important;
+    content: "~ WhatsApp Desktop Dark by m4heshd ~" !important;
+    font-size: 20px;
+    color: var(--accent);
     border-top: 1px solid var(--darker);
 }
 
@@ -347,12 +350,12 @@ span[class="_1DOO2"] > svg > rect {
     color: var(--light) !important; }
 
 /* Unknown contact. */
-.TYhk9 {
+._2odss {
     border-color: var(--darker) !important;
     background-color: var(--dark) !important;
     box-shadow: 0 0px 8px 2px var(--shadow) !important; }
 /* Buttons. */
-.TYhk9 ._1sB6s {
+._2odss ._1EL2G {
     color: var(--light) !important;
     background-color: var(--darker) !important; }
 
@@ -574,7 +577,7 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
 
 /* Message meta text color. */
 [class*="message-"] ._3wVZ5 *, [class*="message-"] ._3wVZ5 *,
-[class*="message-"] ._1_Gu6 *, [class*="message-"] ._27K_5 *,
+[class*="message-"] ._1DI_4 *, [class*="message-"] ._27K_5 *,
 [class*="message-"] ._3IGZs *, [class*="message-"] ._3cMIj * {
     color: var(--light); }
 
