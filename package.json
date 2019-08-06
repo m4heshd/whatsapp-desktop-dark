@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-desktop-dark",
+  "version": "0.3.3793",
+  "description": "Dark UI for WhatsApp desktop by m4heshd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "whatsapp",
+    "dark",
+    "night"
+  ],
+  "author": "Mahesh Bandara Wijerathna",
+  "license": "MIT"
+}
