@@ -245,8 +245,9 @@ span[class="_1DOO2"] > svg > rect {
 .dISnq ._2Lbqu {
     background-color: rgba(0,0,0,0.5) !important; }
 /* Text color. */
-.dISnq * {
-    color: var(--light); }
+.dISnq *, ._1UZ7n._33sjE {
+    color: var(--light);
+}
 /* Zoom in/out. */
 ._2LALH {
     background-color: var(--dark) !important; }
@@ -296,17 +297,23 @@ span[class="_1DOO2"] > svg > rect {
 
 
 /* Dropdown menu. */
-.kdYjy, ._1ArIP {
+._2sFJf, ._1ArIP {
     box-shadow: 0 2px 8px 0 var(--shadow), 0 2px 16px 0 var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* On event. */
-.kdYjy li:hover, .kdYjy li._28zBA {
+._2sFJf li:hover, ._2sFJf li._28zBA {
     background-color: var(--dark) !important; }
 /* Text color. */
-.kdYjy div, _1ArIP div {
+._2sFJf div, ._1ArIP div {
     color: var(--light); }
 
-
+/**********VIEW PROFILE PICTURE************/
+html[dir] .xoYz5 {
+    background-color: var(--dark_alpha) !important;
+}
+html[dir] ._1Qelh, html[dir] ._68FFp {
+    background-color: var(--darker) !important;
+}
 
 /* Middle drawer. */
 .app .I3S-C ._3siyV {
@@ -359,6 +366,12 @@ span[class="_1DOO2"] > svg > rect {
     color: var(--light) !important;
     background-color: var(--darker) !important; }
 
+/* Send contact to & Shared contact */
+._36ApL, ._1vhOZ {
+    background-color: var(--dark) !important; }
+/* Shared multiple contacts preview */
+._3B8lS {
+    color: var(--light) !important; }
 /* Shared contact button colors. */
 .b332w {
     color: var(--accent) !important; }
@@ -368,6 +381,10 @@ span[class="_1DOO2"] > svg > rect {
 /* View contact. */
 ._36ApL {
     background-color: transparent !important; }
+
+/* Live Location */
+._35OHC {
+    color: var(--light) !important; }
 
 /* Hide 'Type a message' once focused. */
 ._3F6QL._2WovP.focused ._39LWd {
@@ -408,15 +425,15 @@ html[dir=ltr] ._1aUEJ {
     color: var(--light) !important;
 }
 /* User's name. */
-.app .Och61 .copyable-text {
-    color: var(--light); }
+.app .Och61 .copyable-text, .WygJD, ._2Kq5m {
+    color: var(--light) !important; }
 /* Accent color text. */
 .app .Och61 ._3g9Jx ._3AZJF {
     font-weight: 400;
     color: var(--accent) !important; }
 /* Mute/Starred Messages. */
 .app .Och61 ._3g9Jx ._3LL06 {
-    color: var(--light); }
+    color: var(--light) !important; }
 
 /* Group options. */
 .app .Och61 ._3g9Jx ._1Qelh,
@@ -478,10 +495,10 @@ html[dir=ltr] ._1aUEJ {
 
 
 /* Message info. */
-._3FAwT {
+._2eMOD {
     background-color: var(--dark) !important; }
 /* Doodle image. */
-._3FAwT .pane-chat-tile {
+._2eMOD .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
 .Och61 ._1arra ._2HDl5 ._2wP_Y > div {
@@ -505,7 +522,7 @@ html[dir=ltr] ._1aUEJ {
 ._2Mvo8.fyJXn {
     color: var(--lighter); }
 /* Link preview */
-._2XYi9._1bG6t {
+._2XYi9._1bG6t, .CDNUW._1bG6t {
     background-color: var(--bgcol) !important; }
 ._2FGrI, ._1R4vY {
     color: var(--light) !important; }
@@ -524,7 +541,7 @@ html[dir=ltr] ._1aUEJ {
 
 /* Header. */
 #app ._1zcz2 ._2YdsD, ._212qn .bJP_g {
-    background-color: var(--dark) !important; }
+    background-color: var(--darker) !important; }
 /* Inner element. */
 #app ._1zcz2 ._1Qelh {
     background-color: transparent !important; }
@@ -1041,12 +1058,13 @@ span[data-icon="new-group"] svg path,
 span[data-icon="add-user-light"] svg path,
 span[data-icon="link"] svg path,
 span[data-icon="ptt-in-blue"] svg path:first-child,
-span[data-icon="ptt-out-blue"] svg path:first-child {
+span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }
 
 /* Audio message icons. */
 span[data-icon="ptt-in-blue"] svg path:first-child,
-span[data-icon="ptt-out-blue"] svg path:first-child {
+span[data-icon="ptt-out-blue"] svg path:first-child,
+span[data-icon="ptt-out-gray"] svg path:first-child {
     fill: transparent !important; }
 
 /* Logo. */
