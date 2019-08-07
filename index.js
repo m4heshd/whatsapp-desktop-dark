@@ -74,6 +74,11 @@ function startProcess(procPath) {
                     console.log('Replacing files..');
                     try {
                         fs.copySync(newAsar, fullpath);
+
+                        console.log('Cleaning up..');
+                        fs.removeSync(extPath);
+                        fs.removeSync(newAsar);
+
                         console.log('\x1b[32m%s\x1b[0m', '\nAll done. Enjoy WhatsApp Dark.. :)\n');
                         let WAPP = spawn(procPath, [], {
                             detached: true,
@@ -83,6 +88,9 @@ function startProcess(procPath) {
                         process.exit(0);
                     } catch (error) {
                         console.log(error);
+                        console.log('\x1b[31m%s\x1b[0m', 'An error occurred. Cleaning up..');
+                        fs.removeSync(extPath);
+                        fs.removeSync(newAsar);
                     }
                 });
             } catch (error) {
