@@ -12,5 +12,8 @@
     "night"
   ],
   "author": "Mahesh Bandara Wijerathna",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ps-node": "0.1.6"
+  }
 }
