@@ -67,3 +67,8 @@ fabric.properties
 
 # Node
 node_modules/
+
+# Project
+extracted/
+backup/
+app.asar

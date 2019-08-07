@@ -14,6 +14,8 @@
   "author": "Mahesh Bandara Wijerathna",
   "license": "MIT",
   "dependencies": {
+    "asar": "0.14.6",
+    "fs-extra": "8.1.0",
     "ps-node": "0.1.6"
   }
 }
