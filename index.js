@@ -24,7 +24,7 @@ if (fs.existsSync(bkPath)) {
             checkProcess();
         }, function () {
             console.log('\x1b[32m%s\x1b[0m', '\nHope you\'re enjoying WhatsApp dark.. :)\n');
-            process.exit(0);
+            endApp();
         });
     });
 } else {
@@ -53,7 +53,8 @@ function checkProcess() {
                         applyDarkStyles(WAPath);
                     }
                 } else {
-                    console.log('\x1b[31m%s\x1b[0m', 'WhatsApp process not found. Make sure WhatsApp desktop is running before installing dark mode.');
+                    console.log('\x1b[31m%s\x1b[0m', 'WhatsApp process not found. Make sure WhatsApp desktop is running before installing dark mode.\n');
+                    endApp();
                 }
             }
 
@@ -108,7 +109,7 @@ function applyDarkStyles(procPath) {
                             stdio: ['ignore', 'ignore', 'ignore']
                         });
                         WAPP.unref();
-                        process.exit(0);
+                        endApp();
                     } catch (error) {
                         console.log(error);
                         console.log('\x1b[31m%s\x1b[0m', 'An error occurred. Cleaning up..');
@@ -118,12 +119,15 @@ function applyDarkStyles(procPath) {
                 });
             } catch (error) {
                 console.log(error);
+                endApp();
             }
         } else {
             console.log('\x1b[31m%s\x1b[0m', 'Failed to extract WhatsApp source.');
+            endApp();
         }
     } catch (error) {
         console.log(error);
+        endApp();
     }
 }
 
@@ -140,10 +144,11 @@ function restoreBackup(procPath) {
             stdio: ['ignore', 'ignore', 'ignore']
         });
         WAPP.unref();
-        process.exit(0);
+        endApp();
     } catch (error) {
         console.log('\x1b[31m%s\x1b[0m', 'An error occurred while restoring.\n');
         console.log(error);
+        endApp();
     }
 }
 
@@ -163,7 +168,15 @@ function ask(question, yes, no) {
                 break;
             default:
                 console.log('\x1b[31m%s\x1b[0m', '\nInvalid response. Ending application.\n');
-                process.exit(0);
+                endApp();
         }
     });
+}
+
+function endApp() {
+    process.stdout.write('Press any key to exit.. ');
+
+    process.stdin.setRawMode(true);
+    process.stdin.resume();
+    process.stdin.on('data', process.exit.bind(process, 0));
 }
