@@ -142,8 +142,11 @@ span[class="_3PxOr"] > svg > rect {
     background-color: var(--darker) !important; }
 
 /* Chat preloader */
-._10lQY {
+._2sOZc {
     background-color: var(--darker) !important; }
+.XqrVN {
+    stroke: var(--accent) !important;
+}
 
 /* Notifications && more!! */
 #side ._3YewW {
@@ -213,7 +216,7 @@ span[class="_3PxOr"] > svg > rect {
     background-color: transparent !important; }
 
 /* New message indicator. */
-#side ._3_4ol {
+#side .P6z4j {
     color: var(--accent2) !important;
     background-color: var(--darker) !important;
     box-shadow: inset 0 0 0 2px var(--accent2); }
@@ -800,7 +803,7 @@ footer ._2EJZE > div:last-child > div svg {
 #main footer > div:nth-child(2) > div {
     border: 0; }
 /* Emoji/gif/stickers background. */
-._1mJO-, ._2-bkE, ._3b3vC, ._3b3vC > ._2UD13 {
+._1mJO-, ._20KNO, ._3b3vC, ._3LFRS > .RxbUw {
     background-color: var(--dark) !important; }
 
 /* Emoji menu. */
