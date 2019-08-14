@@ -204,7 +204,7 @@ span[class="_3PxOr"] > svg > rect {
     transition: 200ms ease-in-out;
     background-color: transparent !important; }
 /* On event. */
-#side ._1RYPC ._2UaNq._9m0_C,
+#side ._1RYPC ._2UaNq._3mMX1,
 #side ._1RYPC ._2UaNq:hover {
     background-color: var(--dark) !important; }
 /* Text color. */
@@ -292,7 +292,7 @@ span[class="_3PxOr"] > svg > rect {
 ._1KDYa .r7sRK {
     background-color: var(--darker) !important; }
 /* On event. */
-._3kF8H ._1KDYa ._2UaNq._9m0_C,
+._3kF8H ._1KDYa ._2UaNq._3mMX1,
 ._3kF8H ._1KDYa ._2UaNq:hover {
     background-color: var(--dark) !important; }
 /* Search element */
@@ -364,16 +364,16 @@ html[dir] ._2UaNq._3fAgu {
     color: var(--light);
     background-color: var(--darker) !important; }
 /* Voice message duration. */
-._30ie- {
+._3HwRC {
     color: var(--light) !important; }
 
 /* Unknown contact. */
-._2odss {
+._2Pown {
     border-color: var(--darker) !important;
     background-color: var(--dark) !important;
     box-shadow: 0 0px 8px 2px var(--shadow) !important; }
 /* Buttons. */
-._2odss ._1EL2G {
+._2Pown ._2ZZub {
     color: var(--light) !important;
     background-color: var(--darker) !important; }
 
@@ -394,7 +394,7 @@ html[dir] ._2UaNq._3fAgu {
     background-color: transparent !important; }
 
 /* Live Location */
-._35OHC {
+._2ofvs {
     color: var(--light) !important; }
 
 /* Hide 'Type a message' once focused. */
@@ -483,7 +483,7 @@ html[dir=ltr] ._1aUEJ {
 .Och61 .matched-text {
     color: var(--accent) !important; }
 /* On event. */
-._1RJvX ._9m0_C > ._2WP9Q,
+._1RJvX ._3mMX1 > ._2WP9Q,
 ._1RJvX ._2WP9Q:hover {
     background-color: var(--dark) !important; }
 
@@ -533,11 +533,11 @@ html[dir=ltr] ._1aUEJ {
 ._2Mvo8.fyJXn {
     color: var(--lighter); }
 /* Link preview */
-._2XYi9._1bG6t, .CDNUW._1bG6t {
+._2nZ2E.HNuTV, .Lhd3q.HNuTV {
     background-color: var(--bgcol) !important; }
-._2FGrI, ._1R4vY {
+._3JxFB, ._23MBZ {
     color: var(--light) !important; }
-._3KvLd {
+._2IHkF {
     color: var(--lighter) !important; }
 
 /* Media viewer. */
@@ -590,7 +590,7 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
     color: var(--light) !important; }
 
 /* Forwarded message. */
-.aXccw {
+._8fE-g {
     color: var(--lighter) !important; }
 
 /* Phone numbers of users that aren't your contacts. */
@@ -666,34 +666,38 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
     color: var(--light); }
 
 /* Link embeds. */
-._1sGGp.JY9bh, ._20-p9.JY9bh, ._2QAax.JY9bh * {
+._1sGGp._1SsXF, ._1AUdd._1SsXF, ._3qblR._1SsXF {
     background-color: var(--dark) !important; }
 /* Text color. */
-._1sGGp.JY9bh *, ._2QAax.JY9bh *, ._20-p9.JY9bh * {
+._1sGGp._1SsXF *, ._3qblR._1SsXF *, ._1AUdd._1SsXF * {
     color: var(--light); }
 /* Link options. */
-._3Fs97._3y2-J, ._1ykUM._3y2-J {
+._2Nkc4._3WZEQ, ._1ykUM._3WZEQ {
     background: none !important; }
+/* Link without thumbnails. */
+html[dir] ._3_nIn {
+    background-color: var(--darker) !important;
+}
 
 
 /* Reply section. (= */
-footer ._2EJZE {
+footer ._1ebw2 {
     box-shadow: 0 0px 8px 0 var(--darker) !important;
     background-color: var(--darker) !important; }
 /* Fix margins. */
-footer ._2EJZE > div:first-child {
+footer ._1ebw2 > div:first-child {
     margin: 0 0 5px 10px !important;
     background-color: transparent !important; }
 /* Reply content. */
-footer ._2EJZE > div:first-child > div {
+footer ._1ebw2 > div:first-child > div {
     background-color: var(--dark) !important; }
 /* Close button. */
-footer ._2EJZE > div:last-child {
+footer ._1ebw2 > div:last-child {
     position: relative;
     margin: 0 8px 5px 8px !important;
     background-color: transparent !important; }
 /* Make the button larger. */
-footer ._2EJZE > div:last-child > div svg {
+footer ._1ebw2 > div:last-child > div svg {
     padding: 18px;
     border-radius: 6px;
     background-color: var(--dark); }
@@ -897,7 +901,7 @@ footer ._2EJZE > div:last-child > div svg {
     box-shadow: 0 0 0 1px var(--darker), 0 8px 16px 0px var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Selected contact. */
-._3Fq9Y ._2UaNq._9m0_C,
+._3Fq9Y ._2UaNq._3mMX1,
 ._3Fq9Y ._2UaNq:hover,
 ._2UaNq.s49Nq:hover {
     background-color: var(--dark) !important; }
@@ -908,7 +912,7 @@ footer ._2EJZE > div:last-child > div svg {
 .-peIt header,
 .-peIt .iHLo1 {
     background-color: var(--darker) !important; }
-._1yRGz .p7ynF {
+._2-yrI ._22oFl {
     background-color: var(--dark) !important; }
 /* Empty element below search bar. */
 ._1KDYa span._3fOoY {
@@ -1068,12 +1072,13 @@ span[data-icon="audio-file"] svg path:last-child,
 span[data-icon="new-group"] svg path,
 span[data-icon="add-user-light"] svg path,
 span[data-icon="link"] svg path,
-span[data-icon="ptt-in-blue"] svg path:first-child,
+span[data-icon="pinned"] svg path,
+span[data-icon="ptt-in-green"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }
 
 /* Audio message icons. */
-span[data-icon="ptt-in-blue"] svg path:first-child,
+span[data-icon="ptt-in-green"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child,
 span[data-icon="ptt-out-gray"] svg path:first-child {
     fill: transparent !important; }
