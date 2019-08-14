@@ -322,7 +322,7 @@ html[dir] ._2UaNq, html[dir] .s4BtI {
 	height: 72px;
 }
 /*Settings prof pic*/
-html[dir] .rK2ei ._2UaNq {
+html[dir] ._2UaNq._3fAgu {
 	height: auto !important;
 }
 
@@ -378,7 +378,7 @@ html[dir] .rK2ei ._2UaNq {
     background-color: var(--darker) !important; }
 
 /* Send contact to & Shared contact */
-._36ApL, ._1vhOZ {
+._36ApL, ._1VwzF {
     background-color: var(--dark) !important; }
 /* Shared multiple contacts preview */
 ._3B8lS {
@@ -492,16 +492,16 @@ html[dir=ltr] ._1aUEJ {
     background-color: transparent !important; }
 
 /* Starred messages. */
-.Och61 ._3EuGX, ._3EuGX {
+.Och61 .BfrqJ, .BfrqJ {
     background-color: var(--dark) !important; }
 /* On event. */
-.starred-msg-wrapper, ._1StcS {
+.starred-msg-wrapper, ._1WMT2 {
     transition: 200ms ease-in-out !important; }
 /* On event. */
-._1StcS._19ZEA {
+._1WMT2._2nA3s {
     background-color: var(--dark) !important; }
 
-._1StcS._48d_G, ._1StcS._3c4So {
+._1WMT2._1lakC, ._1WMT2._2V_Wj {
     background-color: var(--darker) !important; }
 
 
@@ -722,7 +722,7 @@ footer ._2EJZE > div:last-child > div svg {
     background-color: var(--darker) !important; }
 
 /* Select messages. */
-#main .btZiv {
+#main ._2AqZl {
     background-color: var(--shadow); }
 /* Hover over messages. */
 #main ._1o1sm {
@@ -742,10 +742,10 @@ footer ._2EJZE > div:last-child > div svg {
     border-right-color: var(--accent); }
 
 /* Footer/control/options. */
-#main ._3KCu4, #main ._3PWNn, #main ._2-Uk7 {
+#main ._1hhkM, #main ._3PWNn, #main ._2-Uk7 {
     background-color: var(--darker); }
 /* Text color. */
-#main ._3KCu4 span, #main ._2-Uk7 {
+#main ._1hhkM span, #main ._2-Uk7 {
     color: var(--light); }
 
 
@@ -773,20 +773,20 @@ footer ._2EJZE > div:last-child > div svg {
 /* Disable tails everywhere except in chat. */
 .starred-msg-wrapper .tail-container,
 .message-gallery .tail-container,
-._1StcS .tail-container {
+._1WMT2 .tail-container {
     display: none !important; }
 /* Rounded corners. */
 .message-gallery.tail-override-left,
-._1StcS .tail-override-left {
+._1WMT2 .tail-override-left {
     border-radius: 7.5px !important; }
 
 /** Stickers. */
-.PJFFv {
+.PJFFv, .a81-s {
     background: none !important; }
 ._1j7jW {
     display: none !important; }
 /* Sender. */
-.mFVOk ._3vofN {
+._2Hp95 ._3Mf7Z {
     background-color: var(--darker) !important; }
 /* Time/status. */
 ._2Hp95 ._3qAvH {
@@ -924,7 +924,7 @@ footer ._2EJZE > div:last-child > div svg {
     border-color: var(--accent);
     background-color: transparent; }
 /* Buttons. */
-._3PQ7V:hover, ._3PhYy:hover {
+._3PQ7V:hover, ._2eK7W:hover {
     background-color: var(--dark) !important; }
 
 /* Drop items. (-: */
@@ -1004,7 +1004,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 /* Remove pseudo elements. */
 [class*="chat"]:before, [class*="chat"]:after,
 .ZP8RM:after, ._26JG5:before, ._2rNOJ:after,
-._1StcS:before, ._1StcS:after, ._2DxRd {
+._1WMT2:before, ._1WMT2:after, ._2DxRd {
     display: none !important; }
 /* Remove ONLY borders. */
 ._26JG5 ._27Ie2, ._22a6F ._1sQ7h,
