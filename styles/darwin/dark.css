@@ -183,8 +183,8 @@ span[class="_3PxOr"] > svg > rect {
 /* Remove participant button */
 ._2ItjF ._1R9FX:hover {
     background-color: var(--accent) !important; }
-/* Remove participant button */
-._1SvoX {
+/* Group members area */
+.I72vi {
     background-color: var(--dark) !important; }
 
 
@@ -301,7 +301,6 @@ span[class="_3PxOr"] > svg > rect {
 ._1w-mX ._39cGk input, ._1w-mX ._39cGk ::placeholder {
     color: var(--lighter) !important; }
 
-
 /* Dropdown menu. */
 ._2hHc6, ._1ArIP {
     box-shadow: 0 2px 8px 0 var(--shadow), 0 2px 16px 0 var(--shadow) !important;
@@ -409,25 +408,25 @@ html[dir] ._2UaNq._3fAgu {
 
 
 /* Right drawer. */
-.app .Och61 ._1KDYa {
+.app ._1C9rS ._1KDYa {
     background-color: var(--darker); }
 /* Border-color. */
-.app .Och61 {
+.app ._1C9rS {
     border-left-color: transparent !important; }
 /* Header. */
-.app .Och61 ._1KDYa header {
+.app ._1C9rS ._1KDYa header {
     background-color: var(--darker); }
 /* Text color. */
-.app .Och61 ._1KDYa header div {
+.app ._1C9rS ._1KDYa header div {
     color: var(--light); }
 
 /* Group info sections. */
-.app .Och61 ._1KDYa ._2LSbZ {
+.app ._1C9rS ._1KDYa ._2LSbZ {
     /*box-shadow: 0 1px 3px shadow /**/
     box-shadow: none;
     background-color: transparent; }
 /* Group name. */
-.app .Och61 ._2LSbZ ._3hnO5, .media-body .CzI8E {
+.app ._1C9rS ._2LSbZ ._3hnO5, .media-body .CzI8E {
     margin-bottom: 10px;
     color: var(--light);
     border-bottom: 2px solid var(--accent) !important; }
@@ -436,35 +435,35 @@ html[dir=ltr] ._1aUEJ {
     color: var(--light) !important;
 }
 /* User's name. */
-.app .Och61 .copyable-text, ._19vo_, ._3H4MS {
+.app ._1C9rS .copyable-text, ._19vo_, ._3H4MS {
     color: var(--light) !important; }
 /* Accent color text. */
-.app .Och61 ._2LSbZ ._3AZJF {
+.app ._1C9rS ._2LSbZ ._3he1q {
     font-weight: 400;
     color: var(--accent) !important; }
 /* Mute/Starred Messages. */
-.app .Och61 ._2LSbZ ._3LL06 {
+.app ._1C9rS ._2LSbZ ._3LL06 {
     color: var(--light) !important; }
 
 /* Group options. */
-.app .Och61 ._2LSbZ ._2UaNq,
-.app .Och61 ._2LSbZ ._26JG5 {
+.app ._1C9rS ._2LSbZ ._2UaNq,
+.app ._1C9rS ._2LSbZ ._26JG5 {
     transition: 200ms ease-in-out;
     background-color: transparent; }
 /* On event. */
-.app .Och61 ._2LSbZ ._2UaNq._3xj48:hover,
-.app .Och61 ._2LSbZ ._26JG5:hover {
+.app ._1C9rS ._2LSbZ ._2UaNq._3xj48:hover,
+.app ._1C9rS ._2LSbZ ._26JG5:hover {
     background-color: var(--dark); }
 /* Text color. */
-.app .Och61 ._2LSbZ ._2UaNq * {
+.app ._1C9rS ._2LSbZ ._2UaNq * {
     color: var(--light); }
 /* Admin color. */
-.app .Och61 ._2LSbZ ._2e8Mu {
+.app ._1C9rS ._2LSbZ ._2e8Mu {
     border: 2px solid var(--accent); }
 
 
 /* Search messages. TODO: Apply this to all search elements. */
-.Och61 ._1iMEz, ._3KY0N /*, .Och61 ._1iMEz._19OGD*/ {
+._1C9rS ._1iMEz, .a5vst /*, ._1C9rS ._1iMEz._19OGD*/ {
     background-color: var(--darker) !important; }
 /* Input wrapper. */
 ._1iMEz label {
@@ -477,14 +476,14 @@ html[dir=ltr] ._1aUEJ {
     background-color: transparent !important; }
 
 /* Search messages body. */
-._1RJvX {
+._1Kstu {
     background-color: var(--darker) !important; }
 /* Matching results. */
-.Och61 .matched-text {
+._1C9rS .matched-text {
     color: var(--accent) !important; }
 /* On event. */
-._1RJvX ._3mMX1 > ._2WP9Q,
-._1RJvX ._2WP9Q:hover {
+._1Kstu ._3mMX1 > ._2WP9Q,
+._1Kstu ._2WP9Q:hover {
     background-color: var(--dark) !important; }
 
 /* Search messages. */
@@ -492,7 +491,7 @@ html[dir=ltr] ._1aUEJ {
     background-color: transparent !important; }
 
 /* Starred messages. */
-.Och61 .BfrqJ, .BfrqJ {
+._1C9rS .BfrqJ, .BfrqJ {
     background-color: var(--dark) !important; }
 /* On event. */
 .starred-msg-wrapper, ._1WMT2 {
@@ -512,15 +511,15 @@ html[dir=ltr] ._1aUEJ {
 ._2eMOD .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
-.Och61 .rK2ei ._2HDl5 ._2wP_Y > div {
+._1C9rS .rK2ei ._2HDl5 ._2wP_Y > div {
     background-color: var(--dark) !important; }
 
 
 /* Media/docs/links section. */
-.Och61 ._1M44b {
+._1C9rS ._27U_m {
     background-color: var(--darker) !important; }
 /* Active indicator. */
-.Och61 ._1M44b:before {
+._1C9rS ._27U_m:before {
     background-color: var(--accent) !important; }
 /* Selected image. */
 .P85aN ._3xJ94 {
@@ -1011,7 +1010,7 @@ span[data-icon="status-v3-unread"] > svg > path:first-child {
 ._1WMT2:before, ._1WMT2:after, ._2DxRd {
     display: none !important; }
 /* Remove ONLY borders. */
-._26JG5 ._27Ie2, ._22a6F ._1sQ7h,
+._26JG5 ._27Ie2, ._3_-Si ._2x2XP,
 html[dir] ._2UaNq:after, ._2WP9Q,
 ._1fkhx, .chat-body, ._2TLLH, ._2nmDZ {
     border: none !important; }
