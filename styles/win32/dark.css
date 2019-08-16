@@ -1,5 +1,7 @@
 /* WhatsApp Desktop Dark mode by m4heshd */
 
+/* Windows Styles */
+
 :root {
     --dark: #272c35;
     --dark_alpha: rgba(39, 44, 53, 0.89);
@@ -71,24 +73,24 @@ progress[value]::-webkit-progress-value {
 
 
 /* Log-in page. */
-.LbOiO {
+.landing-window {
     border: 1px solid var(--shadow);
     box-shadow: 0 8px 32px 0 var(--shadow) !important;
     background-color: var(--darker) !important; }
 /* Text color. */
-.LbOiO * {
+.landing-window * {
     color: var(--light); }
 /* Top color stripe */
-._2Hf8i:before {
-    background-color: var(--dark) !important; }
+.landing-wrapper:before {
+    background-color: var(--accent) !important; }
 /* Reload QR code. */
 ._2zufR {
     background-color: var(--darker) !important; }
 /* Fix QR code. */
-.LbOiO ._3qfVh {
+.landing-window ._3qfVh {
     border: 3px solid white !important; }
 /* Tutorial. */
-.LbOiO > div:last-child {
+.landing-window > div:last-child {
     background-color: var(--darker); }
 /* Loader. */
 #startup svg > circle {
@@ -141,6 +143,9 @@ span[class="_1DOO2"] > svg > rect {
 /* Chat preloader */
 ._10lQY {
     background-color: var(--darker) !important; }
+._1i4_9 {
+    stroke: var(--accent) !important;
+}
 
 /* Notifications && more!! */
 #side ._3YewW {
@@ -291,7 +296,7 @@ span[class="_1DOO2"] > svg > rect {
     background-color: var(--dark) !important; }
 /* Search element */
 ._1bIFL ._1yBeH {
-    border-bottom: none !important; }
+    border-bottom: 1px solid var(--accent) !important; }
 ._1bIFL ._1yBeH input, ._1bIFL ._1yBeH ::placeholder {
     color: var(--lighter) !important; }
 
@@ -313,6 +318,11 @@ html[dir] .xoYz5 {
 }
 html[dir] ._1Qelh, html[dir] ._68FFp {
     background-color: var(--darker) !important;
+    height: 72px;
+}
+/*Settings prof pic*/
+html[dir] ._1arra ._1Qelh {
+    height: auto !important;
 }
 
 /* Middle drawer. */
@@ -353,7 +363,7 @@ html[dir] ._1Qelh, html[dir] ._68FFp {
     color: var(--light);
     background-color: var(--darker) !important; }
 /* Voice message duration. */
-._30ie- {
+.zFs-M {
     color: var(--light) !important; }
 
 /* Unknown contact. */
@@ -511,6 +521,9 @@ html[dir=ltr] ._1aUEJ {
 /* Active indicator. */
 .Och61 ._1M44b:before {
     background-color: var(--accent) !important; }
+/* Selection Header. */
+html[dir] ._2prFz {
+    background-color: var(--accent) !important; }
 /* Selected image. */
 .P85aN ._3xJ94 {
     border-color: var(--accent) !important; }
@@ -542,6 +555,9 @@ html[dir=ltr] ._1aUEJ {
 /* Header. */
 #app ._1zcz2 ._2YdsD, ._212qn .bJP_g {
     background-color: var(--darker) !important; }
+._1Qelh._2jrQv.HJ9U2 {
+    height: 60px !important;
+}
 /* Inner element. */
 #app ._1zcz2 ._1Qelh {
     background-color: transparent !important; }
@@ -655,7 +671,7 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
     color: var(--light); }
 
 /* Link embeds. */
-._1sGGp.JY9bh, ._20-p9.JY9bh, ._2QAax.JY9bh * {
+._1sGGp.JY9bh, ._20-p9.JY9bh, ._2QAax.JY9bh {
     background-color: var(--dark) !important; }
 /* Text color. */
 ._1sGGp.JY9bh *, ._2QAax.JY9bh *, ._20-p9.JY9bh * {
@@ -663,7 +679,10 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
 /* Link options. */
 ._3Fs97._3y2-J, ._1ykUM._3y2-J {
     background: none !important; }
-
+/* Link without thumbnails. */
+html[dir] ._20Hdr {
+    background-color: var(--darker) !important;
+}
 
 /* Reply section. (= */
 footer ._2EJZE {
@@ -935,7 +954,7 @@ footer ._2EJZE > div:last-child > div svg {
     background-color: var(--accent) !important; }
 
 /* Accent border. */
-.CzI8E, ._36V4s ._4elAm {
+.CzI8E, ._2LpwP ._1K71l {
     border-bottom-color: var(--accent) !important; }
 /* Text color. */
 ._7HWvs {
@@ -1013,6 +1032,9 @@ span:not([data-icon="image"]) > svg > path {
 span:not([data-icon="image"]):hover > svg > path {
     /* fill: var(--accent) !important; */
     opacity: 0.3 !important; }
+/* Selection check circle */
+span[data-icon="checkbox-round-checked"] svg circle{
+    fill: var(--accent) !important; }
 
 /* Upload files. */
 .GK4Lv::after {
@@ -1057,6 +1079,7 @@ span[data-icon="audio-file"] svg path:last-child,
 span[data-icon="new-group"] svg path,
 span[data-icon="add-user-light"] svg path,
 span[data-icon="link"] svg path,
+span[data-icon="pinned"] svg path,
 span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }

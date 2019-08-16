@@ -1,5 +1,7 @@
 /* WhatsApp Desktop Dark mode by m4heshd */
 
+/* macOS Styles */
+
 :root {
     --dark: #272c35;
     --dark_alpha: rgba(39, 44, 53, 0.89);
@@ -16,16 +18,6 @@
     --mblue: #527AA3;
     --msgout: #131a25;
 }
-
-/* Title bar */
-#windows-title-bar {
-    background-color: var(--accent) !important; }
-#windows-title-minimize:hover, #windows-title-maximize:hover {
-    transition: 200ms ease-in-out !important;
-    background-color: var(--darker) !important; }
-#windows-title-close:hover {
-    transition: 200ms ease-in-out !important;
-    background-color: #dd3b4f !important; }
 
 /* Background doodle */
 .app .fzCXy {
@@ -300,7 +292,7 @@ html[dir] ._5UNoc ._3hnO5 {
     background-color: var(--dark) !important; }
 /* Search element */
 ._1w-mX ._39cGk {
-    border-bottom: none !important; }
+    border-bottom: 1px solid var(--accent) !important; }
 ._1w-mX ._39cGk input, ._1w-mX ._39cGk ::placeholder {
     color: var(--lighter) !important; }
 
