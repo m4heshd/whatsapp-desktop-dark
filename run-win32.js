@@ -94,7 +94,7 @@ function applyDarkStyles(procPath) {
             try {
                 fs.copySync(stylePath, extPath);
                 let newAsar = path.join(__dirname, 'app.asar');
-                asar.createPackage(extPath, 'app.asar', function () {
+                asar.createPackage(extPath, newAsar, function () {
                     console.log('Replacing files..');
                     try {
                         fs.copySync(newAsar, fullpath);
