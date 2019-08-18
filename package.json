@@ -17,5 +17,8 @@
     "asar": "0.14.6",
     "fs-extra": "8.1.0",
     "ps-node": "0.1.6"
+  },
+  "devDependencies": {
+    "nexe": "3.3.2"
   }
 }
