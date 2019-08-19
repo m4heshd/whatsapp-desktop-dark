@@ -21,6 +21,7 @@
     "ps-node": "0.1.6"
   },
   "devDependencies": {
-    "nexe": "3.3.2"
+    "nexe": "3.3.2",
+    "resourcehacker": "4.2.51"
   }
 }
