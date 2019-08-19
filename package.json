@@ -4,7 +4,9 @@
   "description": "Dark UI for WhatsApp desktop by m4heshd",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist-win": "node build.js win32",
+    "dist-mac": "node build.js darwin"
   },
   "keywords": [
     "whatsapp",

@@ -72,3 +72,4 @@ node_modules/
 extracted/
 backup/
 app.asar
+dist/
