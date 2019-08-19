@@ -11,26 +11,25 @@ let WAPath = null;
 let restore = false;
 let bkPath = path.join(__dirname, 'backup', 'app.asar');
 
-console.log('\x1b[40m\x1b[4m\x1b[1m\x1b[36m%s\x1b[0m', '\n~~~~ WhatsApp Desktop Dark Mode by m4heshd ~~~~\n\n');
+exports.start = function () {
+    console.log('\x1b[33m%s\x1b[0m', 'This process takes at least a minute to complete. So please be patient and let it do the magic..\n');
 
-console.log('\x1b[33m%s\x1b[0m', 'This process takes at least a minute to complete. So please be patient and let it do the magic..\n');
-
-if (fs.existsSync(bkPath)) {
-    ask('A backup file was found. Do you want to restore WhatsApp? (Y or N) : ', function () {
-        restore = true;
-        checkProcess();
-    }, function () {
-        ask('Current backup will be replaced and it cannot be undone. Are you sure want to continue? (Y or N) : ', function () {
+    if (fs.existsSync(bkPath)) {
+        ask('A backup file was found. Do you want to restore WhatsApp? (Y or N) : ', function () {
+            restore = true;
             checkProcess();
         }, function () {
-            console.log('\x1b[32m%s\x1b[0m', '\nHope you\'re enjoying WhatsApp dark.. :)\n');
-            endApp();
+            ask('Current backup will be replaced and it cannot be undone. Are you sure want to continue? (Y or N) : ', function () {
+                checkProcess();
+            }, function () {
+                console.log('\x1b[32m%s\x1b[0m', '\nHope you\'re enjoying WhatsApp dark.. :)\n');
+                endApp();
+            });
         });
-    });
-} else {
-    checkProcess();
-}
-
+    } else {
+        checkProcess();
+    }
+};
 
 function checkProcess() {
     ps.lookup({
@@ -174,5 +173,13 @@ function ask(question, yes, no) {
 }
 
 function endApp() {
-    process.exit(0);
+    process.stdout.write('Press any key to exit.. ');
+
+    try {
+        process.stdin.setRawMode(true);
+    } catch (error) {
+
+    }
+    process.stdin.resume();
+    process.stdin.on('data', process.exit.bind(process, 0));
 }
