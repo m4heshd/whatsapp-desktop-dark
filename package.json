@@ -1,7 +1,11 @@
 {
   "name": "whatsapp-desktop-dark",
-  "version": "0.3.3793",
+  "version": "0.3.4375",
   "description": "Dark UI for WhatsApp desktop by m4heshd",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/m4heshd/whatsapp-desktop-dark.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
