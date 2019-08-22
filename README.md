@@ -8,7 +8,9 @@ WhatsApp Desktop Dark Mode by <a href="https://github.com/m4heshd">m4heshd</a>
 
 Stable version: [**`0.3.4375`**](https://github.com/m4heshd/whatsapp-desktop-dark/releases/tag/0.3.4375) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
 
-This mod is a simple tweak for WhatsApp Desktop **Official** version to make it look awesomely dark.
+This mod is a simple tweak for [WhatsApp Desktop **Official** version](https://www.whatsapp.com/download/) to make it look awesomely dark.
+
+**Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**
 <h4 align="center"> Windows <h4>
 
 ![WhatsApp Desktop Dark Mode Windows](https://i.ibb.co/fnrk4p4/Screenshot.png)
@@ -27,21 +29,27 @@ The answer is right there on the top. **This is an open source project**. which 
 
 # Downloads
 
-**NOTE:** *THIS IS NOT A MODDED VERSION OF WhatsApp*. WhatsApp Desktop Dark Mode is a simple set of styling that needs to be injected to the source files of your current installation of WhatsApp. I've made it much easier by creating a installation script using NodeJS and made it easier furthermore by creating a simple executable file using [nexe](https://github.com/nexe/nexe). If you don't trust the executable I've provided below, you can build and run it from the source code itself by following the instructions in the next section.
+**NOTE:** *THIS IS NOT A MODDED VERSION OF WhatsApp*. WhatsApp Desktop Dark Mode is a simple set of styling that needs to be injected to the source files of your current installation of WhatsApp. I've made it much easier by creating a installation script using NodeJS and made it easier furthermore by creating simple executable files using [nexe](https://github.com/nexe/nexe). If you don't trust the executable files I've provided below, you can build and run it from the source code itself by following the instructions in the next section.
 
  - [All releases (with source)](https://github.com/m4heshd/whatsapp-desktop-dark/releases)
- - Windows (x86 & x64) - [Download](ADD_LINK)
- -  macOS (x64) - [Download](ADD_LINK)
-
-Download the corresponding file for your OS and extract the zip file. Then simply run the `WADark.exe` or `WADark` and wait for the process to finish. That's it.
+ - Windows (x86 & x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4375/WADark-0.3.4375-Windows.zip)
+ -  macOS (x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4375/WADark-0.3.4375-macOS.zip)
 
 ## Installation
-Simply extract the downloaded ZIP file and run the `WADark.exe` or `WADark` in the root of extracted directory. Make sure WhatsApp Desktop is running before you start the installation. Then wait for the process to finish. That's it.
+
+Make sure you have [WhatsApp Desktop](https://www.whatsapp.com/download/) installed in your PC or mac first.
+
+**Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**
+
+Simply extract the downloaded ZIP file and run `WADark.exe` or `WADark` in the root of extracted directory. Make sure WhatsApp Desktop is running before you start the installation. Then wait for the process to finish. That's it.
 
 **NOTE:** It's recommended not to delete the script folder after the installation because the script automatically creates a backup of your original WhatsApp source in case you need to revert back to the original version.
 
 ### How to remove the mod?
-Simply rerun the script and it will ask you to restore the backup made by any previous installation.
+Simply rerun the script and it will ask you to restore the backup made by any previous installations.
+
+### My WhatsApp turned back to light theme after sometime. What to do?
+This means that your WhatsApp build is probably auto updated to a newer version. Please check back here to see if i have released a newer version of the dark mode. Even if the dark mode version is not updated, just rerun the script and install the dark mode again.
 
 # Build the installation script yourself
 
@@ -74,7 +82,9 @@ Or you can buy me a "ko-fi" by clicking this button
 
 # Got an Issue?
 
-There can be a numerous amount of issues in the mod since I can't be testing every single corner in the styles of this huge program. That specially applies to macOS version because I'm doing all the mac development and testing on a macOS VM. [Follow this link](https://github.com/m4heshd/whatsapp-desktop-dark/issues) to submit your issues and please remember to be descriptive when submitting issues. Also don't forget to attach a small screenshot if the issue is style/GUI related.
+There can be a numerous amount of issues in the mod since I can't be testing every single corner in the styles of this huge program. That specially applies to macOS version because I'm doing all the mac development and testing on a macOS VM.
+
+[Follow this link](https://github.com/m4heshd/whatsapp-desktop-dark/issues) to submit your issues and please remember to be descriptive when submitting issues. Also don't forget to attach a small screenshot if the issue is style/GUI related.
 
 # Known issues
 
