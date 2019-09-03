@@ -595,6 +595,12 @@ html[dir] ._3cukQ ._1mrMQ, html[dir] ._1o6AT ._1mrMQ {
 ._1upWv {
     color: var(--light) !important; }
 
+/* Message link text color */
+.message-out .selectable-text a,
+.message-in .selectable-text a {
+    color: var(--accent) !important;
+}
+
 /* Forwarded message. */
 ._8fE-g {
     color: var(--lighter) !important; }

@@ -609,6 +609,12 @@ html[dir] ._2iTjt ._33TLc, html[dir] ._2e5OK ._33TLc {
 ._1upWv {
     color: var(--light) !important; }
 
+/* Message link text color */
+.message-out .selectable-text a,
+.message-in .selectable-text a {
+    color: var(--accent) !important;
+}
+
 /* Forwarded message. */
 .aXccw {
     color: var(--lighter) !important; }
