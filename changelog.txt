@@ -1,1 +1,20 @@
 /* All the things that were broken and fixed in each version will go in here */
+
+----- v0.3.4479 -----
+
+All platforms
+-------------
+* Fix dropdown menu white bg when using arrow keys
+* Fix issue message info white backgrounds
+* Fix shared files having white thumbnail backgrounds issue
+* Change message URL text color to accent color
+
+Windows
+-------
+* Update "index.html" for new version
+* Fix odd item size issue on new message and new group lists
+
+macOS
+-----
+* Fix selected tab indicator accent color
+* Fix unknown user name text color on message bubbles in group conversations
