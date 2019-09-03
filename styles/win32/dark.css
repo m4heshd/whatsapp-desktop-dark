@@ -513,8 +513,13 @@ html[dir=ltr] ._1aUEJ {
 ._2eMOD .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
-.Och61 ._1arra ._2HDl5 ._2wP_Y > div {
-    background-color: var(--dark) !important; }
+.Och61 ._1arra ._1pguo ._1E8X1 > div {
+    background-color: var(--dark) !important;
+}
+/* Item height override */
+html[dir] .Och61 ._1Qelh {
+    height: 72px !important;
+}
 
 
 /* Media/docs/links section. */
