@@ -594,6 +594,14 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
 .message-out {
     background-color: var(--msgout) !important; }
 
+/* File messages (shared files) */
+html[dir] ._2iTjt ._33TLc, html[dir] ._2e5OK ._33TLc {
+    background-color: var(--dark) !important;
+}
+._2kfKt, ._2jHHj, ._2e5OK .TRe7j:before {
+    color: var(--light) !important;
+}
+
 /* Message text color. */
 .message-in .selectable-text,
 .message-out .selectable-text,

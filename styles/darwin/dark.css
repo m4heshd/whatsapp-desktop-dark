@@ -580,6 +580,14 @@ html[dir=ltr] ._1LdNS:hover:not(.cJP5q) {
 .message-out {
     background-color: var(--msgout) !important; }
 
+/* File messages (shared files) */
+html[dir] ._3cukQ ._1mrMQ, html[dir] ._1o6AT ._1mrMQ {
+    background-color: var(--dark) !important;
+}
+._1NeOh, ._1o0MN, ._1o6AT ._35Zop:before {
+    color: var(--light) !important;
+}
+
 /* Message text color. */
 .message-in .selectable-text,
 .message-out .selectable-text,
