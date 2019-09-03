@@ -73,3 +73,5 @@ extracted/
 backup/
 app.asar
 dist/
+styles/win32/main.js
+styles/darwin/main.js
