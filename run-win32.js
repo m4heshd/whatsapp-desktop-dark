@@ -9,6 +9,7 @@ const readline = require('readline').createInterface({
 });
 let WAPath = null;
 let restore = false;
+let customize = false;
 let bkPath = path.join(__dirname, 'backup', 'app.asar');
 
 exports.start = function () {
@@ -49,7 +50,9 @@ function checkProcess() {
                     if (restore) {
                         restoreBackup(WAPath);
                     } else {
-                        applyDarkStyles(WAPath);
+                        ask('\nWould you like to customize the accent color? Default is blue (Y or N) : ', customAccent, function () {
+                            applyDarkStyles(WAPath);
+                        });
                     }
                 } else {
                     console.log('\x1b[31m%s\x1b[0m', 'WhatsApp process not found. Make sure WhatsApp desktop is running before installing dark mode.\n');
@@ -102,6 +105,14 @@ function applyDarkStyles(procPath) {
                         fs.removeSync(extPath);
                         fs.removeSync(newAsar);
 
+                        if (customize) {
+                            let bkPath = path.join(__dirname, 'styles', 'win32', 'bk');
+
+                            fs.copySync(path.join(bkPath, 'dark.css'), path.join(stylePath, 'dark.css'));
+                            fs.copySync(path.join(bkPath, 'index.html'), path.join(stylePath, 'index.html'));
+                            fs.removeSync(bkPath);
+                        }
+
                         console.log('\x1b[32m%s\x1b[0m', '\nAll done. May your beautiful eyes burn no more.. Enjoy WhatsApp Dark mode!! :)\n');
                         let WAPP = spawn(procPath, [], {
                             detached: true,
@@ -149,6 +160,62 @@ function restoreBackup(procPath) {
         console.log(error);
         endApp();
     }
+}
+
+function customAccent() {
+    let stylePath = path.join(__dirname, 'styles', 'win32', 'dark.css');
+    let htmlPath = path.join(__dirname, 'styles', 'win32', 'index.html');
+    let bkPath = path.join(__dirname, 'styles', 'win32', 'bk');
+
+    fs.copySync(stylePath, path.join(bkPath, 'dark.css'));
+    fs.copySync(htmlPath, path.join(bkPath, 'index.html'));
+
+    customize = true;
+
+    readline.question('Insert a valid CSS color value : ', function (resp) {
+        resp = resp.trim();
+        if (require('is-color')(resp)) {
+            fs.readFile(stylePath, 'utf8', (err, data) => {
+                if (!err) {
+                    let newStyle = data.replace(/^.*--accent:.*$/mg, "    --accent: " + resp + ";");
+                    fs.outputFile(stylePath, newStyle, err => {
+                        if (err) {
+                            console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                            console.error(err);
+                            applyDarkStyles(WAPath);
+                        } else {
+                            fs.readFile(htmlPath, 'utf8', (err, data) => {
+                                if (!err) {
+                                    let newHtml = data.replace("progress[value]::-webkit-progress-value{background-color:#5792ff}progress[value]::-moz-progress-bar{background-color:#5792ff}", "progress[value]::-webkit-progress-value{background-color:" + resp + "}progress[value]::-moz-progress-bar{background-color:" + resp + "}");
+                                    fs.outputFile(htmlPath, newHtml, err => {
+                                        if (err) {
+                                            console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                                            console.error(err);
+                                            applyDarkStyles(WAPath);
+                                        } else {
+                                            console.log('\x1b[32m%s\x1b[0m', '\nAccent color was successfully set to ' + resp + '\n');
+                                            applyDarkStyles(WAPath);
+                                        }
+                                    });
+                                } else {
+                                    console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                                    console.error(err);
+                                    applyDarkStyles(WAPath);
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                    console.error(err);
+                    applyDarkStyles(WAPath);
+                }
+            });
+        } else {
+            console.log('\x1b[31m%s\x1b[0m', 'Invalid color. Try again.\n');
+            customAccent();
+        }
+    });
 }
 
 function ask(question, yes, no) {
