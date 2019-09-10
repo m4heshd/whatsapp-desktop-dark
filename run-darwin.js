@@ -35,7 +35,8 @@ exports.start = function () {
 
 function checkProcess() {
     ps.lookup({
-        command: execPath
+        command: execPath,
+        psargs: 'ax'
     }, function (err, resultList) {
         if (err) {
             console.log(err);
