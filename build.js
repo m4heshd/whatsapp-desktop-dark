@@ -37,6 +37,7 @@ function runBuild() {
         try {
             console.log('Copying resources..');
             fs.copySync(stylePath, distStylePath);
+            fs.copySync(path.join(__dirname, 'info.json'), path.join(distDir, 'info.json'));
             switch (platform) {
                 case 'win32':
                     setWinIcon();
