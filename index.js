@@ -36,9 +36,7 @@ function checkAppUpd() {
         res.on('data', (d) => {
             let latest = JSON.parse(d.toString())["version"];
             if (semver.lt(version, latest)) {
-                ask('A new update is available. Would you like to download? (Y or N) : ', function () {
-                    openDownload(latest);
-                }, start);
+                ask('A new update is available. Would you like to download? (Y or N) : ', openDownload, start);
             } else {
                 if (!started) {
                     start();
@@ -93,10 +91,9 @@ function ask(question, yes, no) {
     });
 }
 
-function openDownload(latest) {
-    let link = 'https://github.com/m4heshd/whatsapp-desktop-dark/releases/tag/' + latest;
+function openDownload() {
     (async () => {
-        await open(link);
+        await open('https://github.com/m4heshd/whatsapp-desktop-dark/releases/latest');
     })();
     endApp();
 }
