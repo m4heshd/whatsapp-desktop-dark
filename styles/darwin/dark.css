@@ -1132,12 +1132,14 @@ span[data-icon="delete-danger"] svg path {
 span[data-icon="audio-file"] svg path {
     fill: rgba(255, 173, 31, 0.8) !important; }
 /* Audio length bar. */
-._22cMG.fS1bA .nDKsM {
+html[dir] ._2PmJH ._1N8Pv, html[dir] ._38Akx._2gO-- ._1N8Pv {
     background-color: var(--accent) !important; }
 /* Slider thumb. */
 input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
     background: var(--accent) !important; }
+html[dir] ._38Akx ._30LFW::-webkit-slider-runnable-track, html[dir] ._2PmJH ._30LFW::-webkit-slider-runnable-track {
+    background-color: var(--light) !important; }
 
 /* Rounded buttons. */
 span svg > path[fill="#00BFA5"] {
