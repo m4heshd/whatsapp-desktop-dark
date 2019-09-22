@@ -249,13 +249,17 @@ span[class="_1DOO2"] > svg > rect {
 .dISnq ._2GAEV,
 .dISnq ._2Lbqu {
     background-color: rgba(0,0,0,0.5) !important; }
+/* Modal footer and +/- buttons */
+html[dir] ._2hSRn, html[dir] ._2Nh9C {
+    background-color: var(--darker) !important; }
+/* Editor backgroud */
+html[dir] ._3B9EY {
+    background-color: var(--dark) !important; }
+
 /* Text color. */
 .dISnq *, ._1UZ7n._33sjE {
     color: var(--light);
 }
-/* Zoom in/out. */
-._2LALH {
-    background-color: var(--dark) !important; }
 
 /* Option/select elements. */
 ._1IUJU select {

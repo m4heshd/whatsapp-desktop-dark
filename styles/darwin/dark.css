@@ -245,13 +245,17 @@ html[dir] ._5UNoc ._3hnO5 {
 ._1KDYa ._1JS2G,
 ._1KDYa ._2Lbqu {
     background-color: rgba(0,0,0,0.5) !important; }
+/* Modal footer and +/- buttons */
+html[dir] ._22aOT, html[dir] ._1DKwn {
+    background-color: var(--darker) !important; }
+/* Editor backgroud */
+html[dir] ._3979j {
+    background-color: var(--dark) !important; }
+
 /* Text color. */
 ._1KDYa *, .i1XSV._3Q3ui {
     color: var(--light);
 }
-/* Zoom in/out. */
-._2LALH {
-    background-color: var(--dark) !important; }
 
 /* Option/select elements. */
 .Fzl83 select {
