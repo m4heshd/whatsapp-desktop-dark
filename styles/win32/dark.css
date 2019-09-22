@@ -875,6 +875,11 @@ html[dir] ._2C5WN {
 ._19iwE,
 .YMJXW {
     background-color: var(--dark) !important; }
+/* Search emojis using ":" */
+html[dir] ._3gNH7, html[dir=ltr] ._3gNH7 {
+    background-color: var(--darker) !important; }
+html[dir=ltr] ._3gNH7 {
+    border-left: 1px solid var(--darker) !important; }
 /* Text color. */
 .DWACj label input,
 .YMJXW input,

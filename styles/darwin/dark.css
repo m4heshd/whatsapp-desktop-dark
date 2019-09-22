@@ -862,6 +862,11 @@ html[dir] ._26IFT {
 ._2Qm0c,
 ._2hMsh {
     background-color: var(--dark) !important; }
+/* Search emojis using ":" */
+html[dir] ._2mlOb, html[dir=ltr] ._2mlOb {
+    background-color: var(--darker) !important; }
+html[dir=ltr] ._2mlOb {
+    border-left: 1px solid var(--darker) !important; }
 /* Text color. */
 .DWACj label input,
 ._2hMsh input,
