@@ -459,8 +459,8 @@ html[dir=ltr] ._1F9Ap {
 .app ._1C9rS ._2LSbZ ._2UaNq * {
     color: var(--light); }
 /* Admin color. */
-.app ._1C9rS ._2LSbZ ._2e8Mu {
-    border: 2px solid var(--accent); }
+html[dir] .FPZFa {
+    border: 1px solid var(--accent) !important; }
 
 
 /* Search messages. TODO: Apply this to all search elements. */
