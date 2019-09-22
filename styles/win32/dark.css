@@ -862,6 +862,9 @@ footer ._2EJZE > div:last-child > div svg {
 /* Active button. */
 ._1x_c3.bRYFY path {
     fill: var(--accent) !important; }
+/* Sticker drawer scroll arrow */
+html[dir] ._2C5WN {
+    background-color: var(--darker) !important; }
 
 /* Search emojis. */
 .DWACj label,
