@@ -510,6 +510,11 @@ html[dir=ltr] ._1F9Ap {
 /* Read by. */
 ._1C9rS .rK2ei ._3La1s .X7YrQ > div {
     background-color: var(--dark) !important; }
+/* Forwarding info */
+._3XHR- {
+    background-color: var(--darker) !important;
+    border-top: 1px solid var(--dark) !important;
+}
 
 /* Media/docs/links section. */
 ._1C9rS ._27U_m {

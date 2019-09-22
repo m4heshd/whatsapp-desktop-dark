@@ -520,6 +520,11 @@ html[dir=ltr] ._1aUEJ {
 html[dir] .Och61 ._1Qelh {
     height: 72px !important;
 }
+/* Forwarding info */
+._faBY {
+    background-color: var(--darker) !important;
+    border-top: 1px solid var(--dark) !important;
+}
 
 
 /* Media/docs/links section. */
