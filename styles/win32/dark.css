@@ -216,9 +216,9 @@ span[class="_1DOO2"] > svg > rect {
 
 /* New message indicator. */
 #side ._3_4ol {
-    color: var(--accent2) !important;
+    color: var(--accent) !important;
     background-color: var(--darker) !important;
-    box-shadow: inset 0 0 0 2px var(--accent2); }
+    box-shadow: inset 0 0 0 2px var(--accent); }
 
 
 /* Settings. */

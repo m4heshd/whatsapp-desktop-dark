@@ -212,9 +212,9 @@ html[dir] ._5UNoc ._3hnO5 {
 
 /* New message indicator. */
 #side .P6z4j {
-    color: var(--accent2) !important;
+    color: var(--accent) !important;
     background-color: var(--darker) !important;
-    box-shadow: inset 0 0 0 2px var(--accent2); }
+    box-shadow: inset 0 0 0 2px var(--accent); }
 
 
 /* Settings. */
