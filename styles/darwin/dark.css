@@ -715,18 +715,22 @@ footer ._1ebw2 > div:last-child > div svg {
     background-color: var(--dark); }
 
 /* Mention group members. */
-.Uukb4, .AiI_S.vg0uI {
+.Uukb4, ._1Yz8K.XSeqj {
     color: var(--light);
     border-left: none !important;
     background-color: var(--darker) !important;
     transition: 300ms ease-in-out !important; }
 
-.tzmti {
+._2j-wI {
     border: none !important;
     background-color: var(--darker) !important; }
 
-.AiI_S.vg0uI:hover {
+._1Yz8K.XSeqj {
     background-color: var(--dark) !important; }
+
+.matched-text {
+    color: var(--accent); !important;
+}
 
 /* Wrapper. */
 .Uukb4 ._3v_lq {

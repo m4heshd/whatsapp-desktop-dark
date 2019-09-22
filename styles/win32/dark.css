@@ -738,8 +738,12 @@ footer ._2EJZE > div:last-child > div svg {
     border: none !important;
     background-color: var(--darker) !important; }
 
-.AiI_S.vg0uI:hover {
+.AiI_S.vg0uI {
     background-color: var(--dark) !important; }
+
+.matched-text {
+    color: var(--accent); !important;
+}
 
 /* Wrapper. */
 .Uukb4 ._3v_lq {
