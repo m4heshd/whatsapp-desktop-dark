@@ -29,14 +29,14 @@ fs.readJson(path.join(__dirname, 'info.json'), (error, infoJSON) => {
 });
 
 function checkAppUpd() {
-    console.log('Checking for dark mode updates..\n');
+    console.log('Checking for dark mode updates.. (Current version - v' + version + ')\n');
 
     let req = request(new URL(updURL), function (res) {
 
         res.on('data', (d) => {
             let latest = JSON.parse(d.toString())["version"];
             if (semver.lt(version, latest)) {
-                ask('A new update is available. Would you like to download? (Y or N) : ', openDownload, start);
+                ask('A new update is available (v' + latest +'). Would you like to download? (Y or N) : ', openDownload, start);
             } else {
                 if (!started) {
                     start();
