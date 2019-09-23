@@ -1,5 +1,28 @@
 /* All the things that were broken and fixed in each version will go in here */
 
+----- v0.3.4678 -----
+
+All platforms
+-------------
+* Accent color customization support
+* Auto update check support
+* Group chat '@' mention selection fix
+* Forwarded message info section fix
+* Audio message slider fix
+* Stickers drawer scroll arrows fix
+* "Set profile picture" modal fix
+* Unreadable "Reply to status" quote fix
+* Emoji search using ":" fix
+* Accent colored message count indicator
+* Accent colored typing status
+* Group info admin badge fix
+* Version info shown in installer
+
+macOS
+-----
+* Process lookup support for all users (using 'sudo' is now supported)
+
+
 ----- v0.3.4479 -----
 
 All platforms
