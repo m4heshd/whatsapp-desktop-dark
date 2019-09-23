@@ -4,10 +4,6 @@ const request = require('https').request;
 const {URL} = require('url');
 const semver = require('semver');
 const open = require('open');
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 
 let version = '0';
 let started = false;
@@ -71,6 +67,11 @@ function start() {
 }
 
 function ask(question, yes, no) {
+    const readline = require('readline').createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
     readline.question(question, function (resp) {
         resp = resp.trim().toLowerCase();
         switch (resp) {
