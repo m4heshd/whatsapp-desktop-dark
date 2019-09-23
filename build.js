@@ -7,7 +7,7 @@ let distDir = path.join(__dirname, 'dist', 'Windows');
 let out = path.join(distDir, 'WADark.exe');
 let stylePath = path.join(__dirname, 'styles', 'win32');
 let distStylePath = path.join(distDir, 'styles', 'win32');
-let target = 'windows-x86-12.7.0';
+let target = 'windows-x86-12.9.1';
 
 let platform = process.argv[2].trim();
 
@@ -20,7 +20,7 @@ switch (platform) {
         out = path.join(distDir, 'WADark');
         stylePath = path.join(__dirname, 'styles', 'darwin');
         distStylePath = path.join(distDir, 'styles', 'darwin');
-        target = 'mac-x64-12.7.0';
+        target = 'mac-x64-12.9.1';
         runBuild();
         break;
     default:
