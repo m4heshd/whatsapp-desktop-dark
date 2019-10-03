@@ -21,13 +21,14 @@
 
 /* Title bar */
 #windows-title-bar {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-color: var(--accent) !important; }
 #windows-title-minimize:hover, #windows-title-maximize:hover {
     transition: 200ms ease-in-out !important;
     background-color: var(--darker) !important; }
 #windows-title-close:hover {
     transition: 200ms ease-in-out !important;
-    background-color: #dd3b4f !important; }
+    background-color: #a90021 !important; }
 
 /* Background doodle */
 .app ._1wm9T {
