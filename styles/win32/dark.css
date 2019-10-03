@@ -598,9 +598,9 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
 
 
 /* Message bubbles. */
-.message-in, .message-out, .message {
+html[dir] .message-in .Nxkz1, .message-out, .message {
     background-color: var(--darker) !important; }
-.message-out {
+html[dir] .message-out .Nxkz1 {
     background-color: var(--msgout) !important; }
 
 /* File messages (shared files) */

@@ -584,9 +584,9 @@ html[dir=ltr] ._1LdNS:hover:not(.cJP5q) {
 
 
 /* Message bubbles. */
-.message-in, .message-out, .message {
+html[dir] .message-in ._2Wx_5, .message-out, .message {
     background-color: var(--darker) !important; }
-.message-out {
+html[dir] .message-out ._2Wx_5 {
     background-color: var(--msgout) !important; }
 
 /* File messages (shared files) */
