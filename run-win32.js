@@ -50,9 +50,13 @@ function checkProcess() {
                     if (restore) {
                         restoreBackup(WAPath);
                     } else {
-                        ask('\nWould you like to customize the accent color? Default is blue (Y or N) : ', customAccent, function () {
-                            applyDarkStyles(WAPath);
-                        });
+                        if (fs.existsSync(path.join(__dirname, 'override.json'))) {
+                            overrideStyles();
+                        } else {
+                            ask('\nWould you like to customize the accent color? Default is blue (Y or N) : ', customAccent, function () {
+                                applyDarkStyles(WAPath);
+                            });
+                        }
                     }
                 } else {
                     console.log('\x1b[31m%s\x1b[0m', 'WhatsApp process not found. Make sure WhatsApp desktop is running before installing dark mode.\n');
@@ -214,6 +218,97 @@ function customAccent() {
         } else {
             console.log('\x1b[31m%s\x1b[0m', 'Invalid color. Try again.\n');
             customAccent();
+        }
+    });
+}
+
+function overrideStyles() {
+    console.log('\n"override.json" was found. Customizing styles..');
+
+    let stylePath = path.join(__dirname, 'styles', 'win32', 'dark.css');
+    let htmlPath = path.join(__dirname, 'styles', 'win32', 'index.html');
+    let bkPath = path.join(__dirname, 'styles', 'win32', 'bk');
+
+    fs.copySync(stylePath, path.join(bkPath, 'dark.css'));
+    fs.copySync(htmlPath, path.join(bkPath, 'index.html'));
+
+    customize = true;
+
+    fs.readJson(path.join(__dirname, 'override.json'), (error, ovrdJSON) => {
+        if (!error) {
+
+            let themeName = ((ovrdJSON.themeName === undefined) ? 'Unknown' : ovrdJSON.themeName);
+            let dark = ((ovrdJSON.dark === undefined) ? '#272c35' : ovrdJSON.dark);
+            let dark_alpha = ((ovrdJSON.dark_alpha === undefined) ? 'rgba(39, 44, 53, 0.89)' : ovrdJSON.dark_alpha);
+            let darker = ((ovrdJSON.darker === undefined) ? '#1f232a' : ovrdJSON.darker);
+            let bgcol = ((ovrdJSON.bgcol === undefined) ? '#101318' : ovrdJSON.bgcol);
+            let light = ((ovrdJSON.light === undefined) ? '#d1d1d1' : ovrdJSON.light);
+            let lighter = ((ovrdJSON.lighter === undefined) ? '#e9e9e9' : ovrdJSON.lighter);
+            let accent = ((ovrdJSON.accent === undefined) ? '#5792ff' : ovrdJSON.accent);
+            let accent2 = ((ovrdJSON.accent2 === undefined) ? '#09d261' : ovrdJSON.accent2);
+            let icon = ((ovrdJSON.icon === undefined) ? '#e1e1e1' : ovrdJSON.icon);
+            let shadow = ((ovrdJSON.shadow === undefined) ? 'rgba(0, 0, 0, 0.12)' : ovrdJSON.shadow);
+            let mred = ((ovrdJSON.mred === undefined) ? '#dd3b4f' : ovrdJSON.mred);
+            let mgreen = ((ovrdJSON.mgreen === undefined) ? '#70A352' : ovrdJSON.mgreen);
+            let mblue = ((ovrdJSON.mblue === undefined) ? '#527AA3' : ovrdJSON.mblue);
+            let msgout = ((ovrdJSON.msgout === undefined) ? '#131a25' : ovrdJSON.msgout);
+
+            fs.readFile(stylePath, 'utf8', (err, data) => {
+                if (!err) {
+                    let newStyle = data;
+                    newStyle = newStyle.replace(/^.*--dark:.*$/mg, "    --dark: " + dark + ";");
+                    newStyle = newStyle.replace(/^.*--dark_alpha:.*$/mg, "    --dark_alpha: " + dark_alpha + ";");
+                    newStyle = newStyle.replace(/^.*--darker:.*$/mg, "    --darker: " + darker + ";");
+                    newStyle = newStyle.replace(/^.*--bgcol:.*$/mg, "    --bgcol: " + bgcol + ";");
+                    newStyle = newStyle.replace(/^.*--light:.*$/mg, "    --light: " + light + ";");
+                    newStyle = newStyle.replace(/^.*--lighter:.*$/mg, "    --lighter: " + lighter + ";");
+                    newStyle = newStyle.replace(/^.*--accent:.*$/mg, "    --accent: " + accent + ";");
+                    newStyle = newStyle.replace(/^.*--accent2:.*$/mg, "    --accent2: " + accent2 + ";");
+                    newStyle = newStyle.replace(/^.*--icon:.*$/mg, "    --icon: " + icon + ";");
+                    newStyle = newStyle.replace(/^.*--shadow:.*$/mg, "    --shadow: " + shadow + ";");
+                    newStyle = newStyle.replace(/^.*--mred:.*$/mg, "    --mred: " + mred + ";");
+                    newStyle = newStyle.replace(/^.*--mgreen:.*$/mg, "    --mgreen: " + mgreen + ";");
+                    newStyle = newStyle.replace(/^.*--mblue:.*$/mg, "    --mblue: " + mblue + ";");
+                    newStyle = newStyle.replace(/^.*--msgout:.*$/mg, "    --msgout: " + msgout + ";");
+
+                    fs.outputFile(stylePath, newStyle, err => {
+                        if (err) {
+                            console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                            console.error(err);
+                            applyDarkStyles(WAPath);
+                        } else {
+                            fs.readFile(htmlPath, 'utf8', (err, data) => {
+                                if (!err) {
+                                    let newHtml = data.replace("progress[value]::-webkit-progress-value{background-color:#5792ff}progress[value]::-moz-progress-bar{background-color:#5792ff}", "progress[value]::-webkit-progress-value{background-color:" + accent + "}progress[value]::-moz-progress-bar{background-color:" + accent + "}");
+                                    fs.outputFile(htmlPath, newHtml, err => {
+                                        if (err) {
+                                            console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                                            console.error(err);
+                                            applyDarkStyles(WAPath);
+                                        } else {
+                                            console.log('\x1b[32m%s\x1b[0m', '\nTheme "' + themeName + '" was successfully applied.\n');
+                                            applyDarkStyles(WAPath);
+                                        }
+                                    });
+                                } else {
+                                    console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                                    console.error(err);
+                                    applyDarkStyles(WAPath);
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    console.log('\x1b[31m%s\x1b[0m', 'Unable to process the request.\n');
+                    console.error(err);
+                    applyDarkStyles(WAPath);
+                }
+            });
+
+        } else {
+            console.log('\x1b[31m%s\x1b[0m', 'Unable to read "override.json" file.\n');
+            console.log(error);
+
         }
     });
 }
