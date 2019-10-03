@@ -588,6 +588,11 @@ html[dir] .message-in ._2Wx_5, .message-out, .message {
     background-color: var(--darker) !important; }
 html[dir] .message-out ._2Wx_5 {
     background-color: var(--msgout) !important; }
+/* Deleted messages */
+._3uHCS, ._2v02G {
+    color: var(--light) !important;
+    opacity: 0.70;
+}
 
 /* File messages (shared files) */
 html[dir] ._3cukQ ._1mrMQ, html[dir] ._1o6AT ._1mrMQ {
@@ -1137,7 +1142,8 @@ span[data-icon="emoji-gifs"] svg path {
 /* Be cautious icons. */
 span[data-icon="exit"] svg path,
 span[data-icon="thumbs-down"] svg path,
-span[data-icon="delete-danger"] svg path {
+span[data-icon="recalled-in"] svg path,
+span[data-icon="recalled-out"] svg path {
     fill: var(--mred) !important; }
 
 /* Audio message. */
