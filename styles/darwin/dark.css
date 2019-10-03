@@ -999,6 +999,10 @@ html[dir=ltr] ._2mlOb {
 /* Status area! */
 .app-wrapper-web ._3sacU {
     background-color: rgba(0,0,0,0.6) !important; }
+/* Contact names */
+html[dir] ._2UaNq._2t0gn {
+    background-color: transparent !important;
+}
 
 /* Normal icon. */
 span[data-icon="status-v3"] > svg > path:first-child {
