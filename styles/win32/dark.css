@@ -351,7 +351,7 @@ html[dir] ._1arra .s49Nq {
 /* Header. */
 .I3S-C #main header {
     border: none;
-    background-color: var(--dark);
+    background-color: var(--darker);
     box-shadow: 0px 0px 3px 0px var(--accent); }
 /* Text color. */
 .I3S-C #main header ._2F-NA * {
