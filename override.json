@@ -13,5 +13,8 @@
   "mred": "#dd3b4f",
   "mgreen": "#70A352",
   "mblue": "#527AA3",
-  "msgout": "#131a25"
+  "msgout": "#131a25",
+  "win_title": "var(--accent)",
+  "ctl_hover": "var(--darker)",
+  "dark_title": true
 }

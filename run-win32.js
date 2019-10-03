@@ -252,6 +252,9 @@ function overrideStyles() {
             let mgreen = ((ovrdJSON.mgreen === undefined) ? '#70A352' : ovrdJSON.mgreen);
             let mblue = ((ovrdJSON.mblue === undefined) ? '#527AA3' : ovrdJSON.mblue);
             let msgout = ((ovrdJSON.msgout === undefined) ? '#131a25' : ovrdJSON.msgout);
+            let win_title = ((ovrdJSON.win_title === undefined) ? 'var(--accent)' : ovrdJSON.win_title);
+            let ctl_hover = ((ovrdJSON.ctl_hover === undefined) ? 'var(--darker)' : ovrdJSON.ctl_hover);
+            let dark_title = ((ovrdJSON.dark_title === undefined) ? true : ovrdJSON.dark_title);
 
             fs.readFile(stylePath, 'utf8', (err, data) => {
                 if (!err) {
@@ -270,6 +273,12 @@ function overrideStyles() {
                     newStyle = newStyle.replace(/^.*--mgreen:.*$/mg, "    --mgreen: " + mgreen + ";");
                     newStyle = newStyle.replace(/^.*--mblue:.*$/mg, "    --mblue: " + mblue + ";");
                     newStyle = newStyle.replace(/^.*--msgout:.*$/mg, "    --msgout: " + msgout + ";");
+                    newStyle = newStyle.replace(/^.*--win_title:.*$/mg, "    --win_title: " + win_title + ";");
+                    newStyle = newStyle.replace(/^.*--ctl_hover:.*$/mg, "    --ctl_hover: " + ctl_hover + ";");
+
+                    if (dark_title === false) {
+                        newStyle = newStyle.replace("background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));", "");
+                    }
 
                     fs.outputFile(stylePath, newStyle, err => {
                         if (err) {

@@ -17,15 +17,17 @@
     --mgreen: #70A352;
     --mblue: #527AA3;
     --msgout: #131a25;
+    --win_title: var(--accent);
+    --ctl_hover: var(--darker);
 }
 
 /* Title bar */
 #windows-title-bar {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    background-color: var(--accent) !important; }
+    background-color: var(--win_title) !important; }
 #windows-title-minimize:hover, #windows-title-maximize:hover {
     transition: 200ms ease-in-out !important;
-    background-color: var(--darker) !important; }
+    background-color: var(--ctl_hover) !important; }
 #windows-title-close:hover {
     transition: 200ms ease-in-out !important;
     background-color: #a90021 !important; }
