@@ -1118,15 +1118,20 @@ span[data-icon="new-group"] svg path,
 span[data-icon="add-user-light"] svg path,
 span[data-icon="link"] svg path,
 span[data-icon="pinned"] svg path,
-span[data-icon="ptt-in-green"] svg path:first-child,
+span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }
 
 /* Audio message icons. */
 span[data-icon="ptt-in-green"] svg path:first-child,
+span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child,
 span[data-icon="ptt-out-gray"] svg path:first-child {
-    fill: transparent !important; }
+    fill: var(--darker) !important; }
+span[data-icon="ptt-out-blue"] > svg > path,
+span[data-icon="ptt-in-blue"] > svg > path {
+    fill: var(--accent) !important;
+}
 
 /* Logo. */
 ._1DOO2 > svg > path:first-child {

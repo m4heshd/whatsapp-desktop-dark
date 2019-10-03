@@ -1136,10 +1136,15 @@ span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }
 
 /* Audio message icons. */
+span[data-icon="ptt-in-green"] svg path:first-child,
 span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child,
 span[data-icon="ptt-out-gray"] svg path:first-child {
-    fill: transparent !important; }
+    fill: var(--darker) !important; }
+span[data-icon="ptt-out-blue"] > svg > path,
+span[data-icon="ptt-in-blue"] > svg > path {
+    fill: var(--accent) !important;
+}
 
 /* Logo. */
 ._1DOO2 > svg > path:first-child {
@@ -1167,7 +1172,7 @@ span[data-icon="recalled-out"] svg path {
 span[data-icon="audio-file"] svg path {
     fill: rgba(255, 173, 31, 0.8) !important; }
 /* Audio length bar. */
-html[dir] ._2LpgR .P2m7T, html[dir] ._3u2w9.nb4F9 .P2m7T {
+html[dir] ._2LpgR .P2m7T, html[dir] ._3u2w9.nb4F9 .P2m7T, ._3u2w9 .P2m7T {
     background-color: var(--accent) !important; }
 /* Slider thumb. */
 input[type=range]::-webkit-slider-thumb {
