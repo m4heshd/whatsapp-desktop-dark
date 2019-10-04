@@ -1,5 +1,28 @@
 /* All the things that were broken and fixed in each version will go in here */
 
+----- v0.3.4941 -----
+
+All platforms
+-------------
+* Node.js version bumped up to 12.9.1
+* Fix issue where console inputs being typed twice
+* No more white backgrounds on emojis
+* Fix broken chat bubble styling
+* Voice message icon fix with "listened" status
+* Unreadable audio message duration fix
+* New deleted message styling
+* Status viewer contact background color fix
+* Fix group message info styling
+* Custom theme support via "override.json"
+* Downloadable themes from "themes" directory
+* Chat header switched to darker color
+* New Dark/Light mode switch button
+
+Windows
+-------
+* New darker title bar (customizable using "override.json")
+
+
 ----- v0.3.4678 -----
 
 All platforms
