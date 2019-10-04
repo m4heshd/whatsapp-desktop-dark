@@ -384,6 +384,10 @@ html[dir] ._1arra .s49Nq {
 ._2odss ._1EL2G {
     color: var(--light) !important;
     background-color: var(--darker) !important; }
+/* Dark mode switch */
+span[data-icon="dark-switch"] > svg > path:first-child {
+    fill: var(--accent) !important;
+    opacity: 0.8 !important; }
 
 /* Send contact to & Shared contact */
 ._36ApL, ._1vhOZ {
