@@ -17,17 +17,20 @@
     --mgreen: #70A352;
     --mblue: #527AA3;
     --msgout: #131a25;
+    --win_title: var(--accent);
+    --ctl_hover: var(--darker);
 }
 
 /* Title bar */
 #windows-title-bar {
-    background-color: var(--accent) !important; }
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background-color: var(--win_title) !important; }
 #windows-title-minimize:hover, #windows-title-maximize:hover {
     transition: 200ms ease-in-out !important;
-    background-color: var(--darker) !important; }
+    background-color: var(--ctl_hover) !important; }
 #windows-title-close:hover {
     transition: 200ms ease-in-out !important;
-    background-color: #dd3b4f !important; }
+    background-color: #a90021 !important; }
 
 /* Background doodle */
 .app ._1wm9T {
@@ -348,7 +351,7 @@ html[dir] ._1arra .s49Nq {
 /* Header. */
 .I3S-C #main header {
     border: none;
-    background-color: var(--dark);
+    background-color: var(--darker);
     box-shadow: 0px 0px 3px 0px var(--accent); }
 /* Text color. */
 .I3S-C #main header ._2F-NA * {
@@ -369,7 +372,7 @@ html[dir] ._1arra .s49Nq {
     color: var(--light);
     background-color: var(--darker) !important; }
 /* Voice message duration. */
-.zFs-M {
+._310HD {
     color: var(--light) !important; }
 
 /* Unknown contact. */
@@ -517,7 +520,7 @@ html[dir] ._2zDbx {
 ._2eMOD .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
-.Och61 ._1arra ._1pguo ._1E8X1 > div {
+html[dir] ._2Gdxc, html[dir] ._2v3Jy {
     background-color: var(--dark) !important;
 }
 /* Item height override */
@@ -598,10 +601,15 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
 
 
 /* Message bubbles. */
-.message-in, .message-out, .message {
+html[dir] .message-in .Nxkz1, .message-out, .message {
     background-color: var(--darker) !important; }
-.message-out {
+html[dir] .message-out .Nxkz1 {
     background-color: var(--msgout) !important; }
+/* Deleted messages */
+._3hePT, ._2bkkE {
+    color: var(--light) !important;
+    opacity: 0.70;
+}
 
 /* File messages (shared files) */
 html[dir] ._2iTjt ._33TLc, html[dir] ._2e5OK ._33TLc {
@@ -1007,6 +1015,10 @@ html[dir=ltr] ._3gNH7 {
 /* Status area! */
 .app-wrapper-web ._3sacU {
     background-color: rgba(0,0,0,0.6) !important; }
+/* Contact names */
+html[dir] ._1Qelh._3lVcs {
+    background-color: transparent !important;
+}
 
 /* Normal icon. */
 span[data-icon="status-v3"] > svg > path:first-child {
@@ -1127,10 +1139,15 @@ span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }
 
 /* Audio message icons. */
+span[data-icon="ptt-in-green"] svg path:first-child,
 span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child,
 span[data-icon="ptt-out-gray"] svg path:first-child {
-    fill: transparent !important; }
+    fill: var(--darker) !important; }
+span[data-icon="ptt-out-blue"] > svg > path,
+span[data-icon="ptt-in-blue"] > svg > path {
+    fill: var(--accent) !important;
+}
 
 /* Logo. */
 ._1DOO2 > svg > path:first-child {
@@ -1150,14 +1167,15 @@ span[data-icon="emoji-gifs"] svg path {
 /* Be cautious icons. */
 span[data-icon="exit"] svg path,
 span[data-icon="thumbs-down"] svg path,
-span[data-icon="delete-danger"] svg path {
+span[data-icon="recalled-in"] svg path,
+span[data-icon="recalled-out"] svg path {
     fill: var(--mred) !important; }
 
 /* Audio message. */
 span[data-icon="audio-file"] svg path {
     fill: rgba(255, 173, 31, 0.8) !important; }
 /* Audio length bar. */
-html[dir] ._2LpgR .P2m7T, html[dir] ._3u2w9.nb4F9 .P2m7T {
+html[dir] ._2LpgR .P2m7T, html[dir] ._3u2w9.nb4F9 .P2m7T, ._3u2w9 .P2m7T {
     background-color: var(--accent) !important; }
 /* Slider thumb. */
 input[type=range]::-webkit-slider-thumb {

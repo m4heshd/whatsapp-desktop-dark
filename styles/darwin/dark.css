@@ -343,7 +343,7 @@ html[dir] ._2UaNq._3fAgu {
 /* Header. */
 ._2rI9W #main header {
     border: none;
-    background-color: var(--dark);
+    background-color: var(--darker);
     box-shadow: 0px 0px 3px 0px var(--accent); }
 /* Text color. */
 ._2rI9W #main header ._2F-NA * {
@@ -364,7 +364,7 @@ html[dir] ._2UaNq._3fAgu {
     color: var(--light);
     background-color: var(--darker) !important; }
 /* Voice message duration. */
-._3HwRC {
+._1lxsr {
     color: var(--light) !important; }
 
 /* Unknown contact. */
@@ -512,7 +512,7 @@ html[dir] .FPZFa {
 ._2rGVQ .pane-chat-tile {
     filter: invert(100%) opacity(0.8); }
 /* Read by. */
-._1C9rS .rK2ei ._3La1s .X7YrQ > div {
+html[dir] ._2AJf5, html[dir] ._19xqi {
     background-color: var(--dark) !important; }
 /* Forwarding info */
 ._3XHR- {
@@ -584,10 +584,15 @@ html[dir=ltr] ._1LdNS:hover:not(.cJP5q) {
 
 
 /* Message bubbles. */
-.message-in, .message-out, .message {
+html[dir] .message-in ._2Wx_5, .message-out, .message {
     background-color: var(--darker) !important; }
-.message-out {
+html[dir] .message-out ._2Wx_5 {
     background-color: var(--msgout) !important; }
+/* Deleted messages */
+._3uHCS, ._2v02G {
+    color: var(--light) !important;
+    opacity: 0.70;
+}
 
 /* File messages (shared files) */
 html[dir] ._3cukQ ._1mrMQ, html[dir] ._1o6AT ._1mrMQ {
@@ -994,6 +999,10 @@ html[dir=ltr] ._2mlOb {
 /* Status area! */
 .app-wrapper-web ._3sacU {
     background-color: rgba(0,0,0,0.6) !important; }
+/* Contact names */
+html[dir] ._2UaNq._2t0gn {
+    background-color: transparent !important;
+}
 
 /* Normal icon. */
 span[data-icon="status-v3"] > svg > path:first-child {
@@ -1109,15 +1118,20 @@ span[data-icon="new-group"] svg path,
 span[data-icon="add-user-light"] svg path,
 span[data-icon="link"] svg path,
 span[data-icon="pinned"] svg path,
-span[data-icon="ptt-in-green"] svg path:first-child,
+span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child{
     fill: var(--icon) !important; }
 
 /* Audio message icons. */
 span[data-icon="ptt-in-green"] svg path:first-child,
+span[data-icon="ptt-in-blue"] svg path:first-child,
 span[data-icon="ptt-out-blue"] svg path:first-child,
 span[data-icon="ptt-out-gray"] svg path:first-child {
-    fill: transparent !important; }
+    fill: var(--darker) !important; }
+span[data-icon="ptt-out-blue"] > svg > path,
+span[data-icon="ptt-in-blue"] > svg > path {
+    fill: var(--accent) !important;
+}
 
 /* Logo. */
 ._1DOO2 > svg > path:first-child {
@@ -1137,7 +1151,8 @@ span[data-icon="emoji-gifs"] svg path {
 /* Be cautious icons. */
 span[data-icon="exit"] svg path,
 span[data-icon="thumbs-down"] svg path,
-span[data-icon="delete-danger"] svg path {
+span[data-icon="recalled-in"] svg path,
+span[data-icon="recalled-out"] svg path {
     fill: var(--mred) !important; }
 
 /* Audio message. */
