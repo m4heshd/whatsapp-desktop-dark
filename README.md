@@ -5,11 +5,17 @@
   <br>
 WhatsApp Desktop Dark Mode by <a href="https://github.com/m4heshd">m4heshd</a>
   <br>
-<img src="https://img.shields.io/github/downloads/m4heshd/whatsapp-desktop-dark/total.svg?label=Downloads&logo=WhatsApp&color=5792ff&logoColor=5792ff&labelColor=272c35" alt="Total downloads" width="150">
+<img src="https://img.shields.io/github/downloads/m4heshd/whatsapp-desktop-dark/total.svg?label=Downloads&logo=WhatsApp&color=5792ff&logoColor=5792ff&labelColor=272c35" alt="Total downloads" height="25.2">
+<a href="https://github.com/m4heshd/whatsapp-desktop-dark/issues?q=is%3Aissue+is%3Aclosed" target="_blank">
+    <img src="https://img.shields.io/github/issues-closed/m4heshd/whatsapp-desktop-dark?label=Issues&logo=github&color=5792ff&logoColor=5792ff&labelColor=272c35" alt="Closed issues" height="25.2">
+</a>
+<a href="https://t.me/wadarkmodechat" target="_blank">
+    <img src="https://img.shields.io/static/v1?label=Telegram%20Chat&logo=Telegram&color=5792ff&logoColor=5792ff&labelColor=272c35&message=Join" alt="Join the chat on Telegram" height="25.2">
+</a>
   <br>
 </h1>
 
-Stable version: [**`0.3.4678`**](https://github.com/m4heshd/whatsapp-desktop-dark/releases/tag/0.3.4678) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
+Stable version: [**`0.3.4941`**](https://github.com/m4heshd/whatsapp-desktop-dark/releases/tag/0.3.4941) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
 
 This mod is a simple tweak for [WhatsApp Desktop **Official** version](https://www.whatsapp.com/download/) to make it look awesomely dark.
 
@@ -35,8 +41,8 @@ The answer is right there on the top. **This is an open source project**. which 
 **NOTE:** *THIS IS NOT A MODDED VERSION OF WhatsApp*. WhatsApp Desktop Dark Mode is a simple set of styling that needs to be injected to the source files of your current installation of WhatsApp. I've made it much easier by creating a installation script using NodeJS and made it easier furthermore by creating simple executable files using [nexe](https://github.com/nexe/nexe). If you don't trust the executable files I've provided below, you can build and run it from the source code itself by following the instructions in the next section.
 
  - [All releases (with source)](https://github.com/m4heshd/whatsapp-desktop-dark/releases)
- - Windows (x86 & x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4678/WADark-0.3.4678-Windows.zip)
- -  macOS (x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4678/WADark-0.3.4678-macOS.zip)
+ - Windows (x86 & x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4941/WADark-0.3.4941-Windows.zip)
+ -  macOS (x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4941/WADark-0.3.4941-macOS.zip)
 
 ## Installation
 
@@ -48,8 +54,12 @@ Simply extract the downloaded ZIP file and run `WADark.exe` or `WADark` in the r
 
 **NOTE:** It's recommended not to delete the script folder after the installation because the script automatically creates a backup of your original WhatsApp source in case you need to revert back to the original version.
 
+## Custom Themes
+
+You can find all the resources and theming related documentation [right here](https://github.com/m4heshd/whatsapp-desktop-dark/tree/master/themes).
+
 ### How to remove the mod?
-Simply rerun the script and it will ask you to restore the backup made by any previous installations.
+Simply rerun the script and it will ask you to restore the backup made by any previous installations. (Or use the button on top left to switch to light mode)
 
 ### My WhatsApp turned back to light theme after sometime. What to do?
 This means that your WhatsApp build is probably auto updated to a newer version. Rerun the script and It'll tell you if a new version is available. Even if the dark mode version is not updated, just rerun the script and install the dark mode again.
@@ -58,7 +68,7 @@ This means that your WhatsApp build is probably auto updated to a newer version.
 
 Building process is really simple even if you're not a pro developer. You will just need [NodeJS](https://nodejs.org) and [NPM](https://www.npmjs.com/) (Usually packed with NodeJS) installed on your computer to build and run the script yourself.
 
-Clone this repository, `cd` to that directory and enter the following commands to start the script. There are two methods you can run the script.
+Clone or download this repository, `cd` to that directory and enter the following commands to start the script. There are two methods you can run the script.
 
 **Method 1 (Build binaries)**
 

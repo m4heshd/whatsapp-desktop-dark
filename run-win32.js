@@ -82,6 +82,9 @@ function killWhatsApp(procList) {
 }
 
 function applyDarkStyles(procPath) {
+
+    console.log('\x1b[33m%s\x1b[0m', 'TIP: You can create/download custom themes using "override.json" (Instructions are in the documentation)\n');
+
     try {
         // console.log(procPath);
         let dir = path.dirname(procPath);

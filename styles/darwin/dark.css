@@ -1133,7 +1133,8 @@ span[data-icon="ptt-out-blue"] svg path:first-child,
 span[data-icon="ptt-out-gray"] svg path:first-child {
     fill: var(--darker) !important; }
 span[data-icon="ptt-out-blue"] > svg > path,
-span[data-icon="ptt-in-blue"] > svg > path {
+span[data-icon="ptt-in-blue"] > svg > path,
+span[data-icon="status-ptt-blue"] > svg > path {
     fill: var(--accent) !important;
 }
 
