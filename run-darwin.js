@@ -242,7 +242,6 @@ function overrideStyles() {
             const themeNames = ovrdJSONObject.map((ovrd, i) => (i+1) + '. ' + ovrd.themeName );
             let ovrdJSON = ovrdJSONObject.find(x => x.themeName === 'Default');
             readline.question('Pick one of the following themes:\n'+themeNames.join('\n')+'\n', (resp) => {
-                console.log(resp);
                 if(!isNaN(resp) && parseInt(resp) <= ovrdJSONObject.length) {
                     ovrdJSON = ovrdJSONObject[resp-1];
                 } else {
