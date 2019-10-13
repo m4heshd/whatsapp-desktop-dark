@@ -173,7 +173,7 @@ span[class="_3PxOr"] > svg > rect {
     box-shadow: 0 0 8px -1px var(--shadow) !important;
     background-color: var(--dark) !important; }
 /* Remove participant button */
-._2ItjF ._1R9FX:hover {
+._1Dfrr:hover {
     background-color: var(--accent) !important; }
 /* Group members area */
 .I72vi {
@@ -747,7 +747,7 @@ footer ._1ebw2 > div:last-child > div svg {
     background-color: var(--dark) !important; }
 
 .matched-text {
-    color: var(--accent); !important;
+    color: var(--accent) !important;
 }
 
 /* Wrapper. */
