@@ -602,17 +602,12 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
     border: 0px solid var(--accent);
     outline: 3px solid var(--accent) !important; }
 
-
-
-/* Message bubbles. */
-html[dir] .message-in .Nxkz1, .message-out, .message {
-    background-color: var(--darker) !important; }
-html[dir] .message-out .Nxkz1 {
-    background-color: var(--msgout) !important; }
-/* Deleted messages */
-._3hePT, ._2bkkE {
-    color: var(--light) !important;
-    opacity: 0.70;
+/* Message bubbles. */ 
+html[dir] .message-in ._2Wx_5 {
+    background-color: var(--darker) !important;
+} 
+html[dir] .message-out ._2Wx_5 {
+    background-color: var(--msgout) !important; 
 }
 
 /* File messages (shared files) */
