@@ -1104,7 +1104,7 @@ span[data-icon="msg-dblcheck-ack"] svg path,
 span[data-icon="status-dblcheck-ack"] svg path,
 span[data-icon="msg-dblcheck-ack-light"] svg path,
 span[data-icon="status-v3-unread"] > svg > path:last-child {
-    fill: var(--accent) !important;
+    fill: var(--accent2) !important;
     opacity: 1 !important; }
 
 /* Misc icons fix. */
