@@ -588,14 +588,11 @@ html[dir=ltr] ._1LdNS:hover:not(.cJP5q) {
 
 
 /* Message bubbles. */
-html[dir] .message-in ._2Wx_5, .message-out, .message {
-    background-color: var(--darker) !important; }
+html[dir] .message-in ._2Wx_5 {
+    background-color: var(--darker) !important;
+} 
 html[dir] .message-out ._2Wx_5 {
-    background-color: var(--msgout) !important; }
-/* Deleted messages */
-._3uHCS, ._2v02G {
-    color: var(--light) !important;
-    opacity: 0.70;
+    background-color: var(--msgout) !important; 
 }
 
 /* File messages (shared files) */
