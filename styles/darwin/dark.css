@@ -182,6 +182,11 @@ span[class="_3PxOr"] > svg > rect {
 html[dir] ._5UNoc ._3hnO5 {
     border-bottom-color: var(--accent) !important; }
 
+/* Join group via link info */
+html[dir] .XOIaT {
+    background-color: var(--dark); !important; }
+html[dir] ._2Z5XD {
+    background-color: var(--darker); !important; }
 
 /* Search results. */
 #side .r7sRK {

@@ -189,6 +189,11 @@ span[class="_1DOO2"] > svg > rect {
 ._1SvoX {
     background-color: var(--dark) !important; }
 
+/* Join group via link info */
+html[dir] .VScLO {
+    background-color: var(--dark); !important; }
+html[dir] ._2tZIF {
+    background-color: var(--darker); !important; }
 
 /* Search results. */
 #side .gHiUI {
