@@ -188,6 +188,9 @@ span[class="_1DOO2"] > svg > rect {
 /* Remove participant button */
 ._1SvoX {
     background-color: var(--dark) !important; }
+/* Group name accent border */
+html[dir] ._36V4s ._4elAm {
+    border-bottom-color: var(--accent) !important; }
 
 /* Join group via link info */
 html[dir] .VScLO {
