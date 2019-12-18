@@ -795,11 +795,11 @@ footer ._1ebw2 > div:last-child > div svg {
     z-index: 0 !important;
     border-top: 12px solid var(--darker);
     background: none !important; }
-.tail.message-in .tail-container {
+.message-in .tail-container {
     left: -10px !important; top: 0px;
     border-left: 10px solid transparent;
     border-radius: 5px 0 0 0; }
-.tail.message-out .tail-container {
+.message-out .tail-container {
     right: -10px !important; top: 0px;
     border-right: 10px solid transparent;
     border-top: 12px solid var(--msgout);
