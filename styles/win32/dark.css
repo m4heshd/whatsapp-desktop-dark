@@ -605,7 +605,7 @@ html[dir=ltr] ._3kx-g:hover:not(._3E86i) {
 
 
 /* Message bubbles. */
-html[dir] .message-in .Nxkz1, .message-out, .message {
+html[dir] .message-in .Nxkz1, .message {
     background-color: var(--darker) !important; }
 html[dir] .message-out .Nxkz1 {
     background-color: var(--msgout) !important; }

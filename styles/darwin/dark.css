@@ -588,7 +588,7 @@ html[dir=ltr] ._1LdNS:hover:not(.cJP5q) {
 
 
 /* Message bubbles. */
-html[dir] .message-in ._2Wx_5, .message-out, .message {
+html[dir] .message-in ._2Wx_5, .message {
     background-color: var(--darker) !important; }
 html[dir] .message-out ._2Wx_5 {
     background-color: var(--msgout) !important; }
