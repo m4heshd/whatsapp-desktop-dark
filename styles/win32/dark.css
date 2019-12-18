@@ -582,6 +582,11 @@ html[dir] ._2prFz {
 /* Preloader. */
 ._3dGYA {
     background-color: var(--darker) !important; }
+/* Border */
+html[dir] ._2TJWE {
+    border-top: solid 1px var(--accent) !important;
+    background: var(--darker) !important;
+}
 
 /* Header. */
 #app ._1zcz2 ._2YdsD, ._212qn .bJP_g {

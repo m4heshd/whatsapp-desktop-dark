@@ -565,6 +565,12 @@ html[dir] .yrOIH {
 /* Preloader. */
 ._3dGYA {
     background-color: var(--darker) !important; }
+/* Border */
+html[dir] ._2n0jo {
+    border-top: solid 1px var(--accent) !important;
+    background: var(--darker) !important;
+}
+
 /* Header. */
 #app ._1zcz2 ._2YdsD, ._2KgjI .cGLoy {
     background-color: var(--darker) !important; }
