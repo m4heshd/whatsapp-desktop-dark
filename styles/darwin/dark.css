@@ -970,6 +970,10 @@ html[dir=ltr] ._2mlOb {
 /* Empty element below search bar. */
 ._1KDYa span._3fOoY {
     display: none !important; }
+/* Search result info */
+._F7Vk {
+    color: var(--light);
+}
 
 
 /* Buttons. */

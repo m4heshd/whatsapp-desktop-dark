@@ -988,7 +988,10 @@ html[dir=ltr] ._3gNH7 {
 /* Empty element below search bar. */
 .dISnq span._3fOoY {
     display: none !important; }
-
+/* Search result info */
+._2ZdUP {
+    color: var(--light);
+}
 
 /* Buttons. */
 ._2QzpG, ._2JDHp, ._2Gki6, ._2MNzO {
