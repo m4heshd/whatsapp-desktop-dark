@@ -1,6 +1,6 @@
 :root {
     --dark: #272c35;
-    --dark_alpha: rgba(39, 44, 53, 0.89);
+    --dark_alpha: rgba(19, 19, 21, 0.93);
     --darker: #1f232a;
     --bgcol: #101318;
     --light: #d1d1d1;
@@ -59,6 +59,42 @@ body {
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0px 2px 9px -1px rgba(0, 0, 0, 0.2), 0px 8px 9px 4px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, .12);
+}
+
+#overlay {
+    background: var(--dark_alpha);
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    margin: -15px;
+    backdrop-filter: blur(3px);
+    visibility: visible;
+    transition: visibility 0.2s linear, opacity 0.2s linear;
+}
+
+.grid-ol {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas: 'space1 space1 space1' 'space2 divTxtOL space3' 'space2 divImgOL space3' 'space4 space4 space4';
+}
+
+#divTxtOL {
+    grid-area: divTxtOL;
+}
+
+#divImgOL {
+    grid-area: divImgOL;
+}
+
+#txtOL {
+    font-size: 20px;
+}
+
+#imgOL {
+    padding-top: 20px;
 }
 
 .grid-main {
