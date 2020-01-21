@@ -12,6 +12,7 @@ let client = null;
 let version = '0';
 let started = false;
 let updURL = 'https://raw.githubusercontent.com/m4heshd/whatsapp-desktop-dark/master/package.json';
+let bkPath = path.join(__dirname, 'backup', 'app.asar');
 
 //Backend setup
 xApp.use(express.static(path.join(__dirname, 'gui')));
@@ -39,13 +40,11 @@ function startInit() {
         if (!error) {
             version = infoJSON.version;
             // version = "0.3.4940";
+            setVersion('v' + version);
             checkAppUpd();
         } else {
             console.log(error);
-            if (!started) {
-                // start();
-                started = true;
-            }
+            start();
         }
     });
 }
@@ -56,25 +55,40 @@ function checkAppUpd() {
         res.on('data', (d) => {
             let latest = JSON.parse(d.toString())["version"];
             if (semver.lt(version, latest)) {
-                ask('A new update is available (v' + latest +'). Would you like to download?', openDownload, null);
+                ask('A new update is available (v' + latest + '). Would you like to download?', openDownload, start);
             } else {
-                if (!started) {
-                    // start();
-                    started = true;
-                }
+                start();
             }
         });
     });
 
     req.on('error', (e) => {
         console.log(e);
-        if (!started) {
-            // start();
-            started = true;
-        }
+        start();
     });
 
     req.end();
+}
+
+function start() {
+    getThemes(function () {
+        endInit(fs.existsSync(bkPath));
+    });
+}
+
+function getThemes(callback) {
+    showOL('Loading themes..');
+    fs.readJson(path.join(__dirname, 'override.json'), (error, ovrdJSONObject) => {
+        if (!error) {
+            const themeNames = ovrdJSONObject.map((ovrd) => ovrd.themeName);
+            setThemeNames(themeNames);
+            callback();
+        } else {
+            console.log('\x1b[31m%s\x1b[0m', 'Unable to read "override.json" file.\n');
+            console.log(error);
+            callback();
+        }
+    });
 }
 
 function openDownload() {
@@ -95,6 +109,18 @@ function showOL(text) {
 
 function hideOL() {
     client.emit('hideOL');
+}
+
+function setVersion(ver) {
+    client.emit('setVersion', ver);
+}
+
+function setThemeNames(themes) {
+    client.emit('setThemeNames', themes);
+}
+
+function endInit(isBkAvail) {
+    client.emit('endInit', isBkAvail);
 }
 
 function ask(text, yes, no) {
