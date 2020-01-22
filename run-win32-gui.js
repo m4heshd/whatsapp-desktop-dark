@@ -1,4 +1,5 @@
 const fs = require('fs-extra');
+const ps = require('ps-node');
 const request = require('https').request;
 const {URL} = require('url');
 const semver = require('semver');
@@ -13,6 +14,8 @@ let version = '0';
 let started = false;
 let updURL = 'https://raw.githubusercontent.com/m4heshd/whatsapp-desktop-dark/master/package.json';
 let bkPath = path.join(__dirname, 'backup', 'app.asar');
+let WAPath = null;
+let restore = false;
 
 //Backend setup
 xApp.use(express.static(path.join(__dirname, 'gui')));
@@ -22,10 +25,17 @@ let xServ = xApp.listen(3210, function () {
 });
 
 io = io(xServ);
-io.on('connection', function(socket){
-    if (!client){
+io.on('connection', function (socket) {
+    if (!client) {
         client = socket;
         console.log('WADark installer client connected');
+
+        //Incoming messages
+        client.on('startInstall', function () {
+            setOLTxt('Identifying process..');
+            startInstall();
+        });
+
         startInit();
     } else {
         console.log('Client connection rejected');
@@ -53,7 +63,7 @@ function checkAppUpd() {
     let req = request(new URL(updURL), function (res) {
 
         res.on('data', (d) => {
-            let latest = JSON.parse(d.toString())["version"];
+            let latest = JSON.parse(d.toString())['version'];
             if (semver.lt(version, latest)) {
                 ask('A new update is available (v' + latest + '). Would you like to download?', openDownload, start);
             } else {
@@ -73,6 +83,40 @@ function checkAppUpd() {
 function start() {
     getThemes(function () {
         endInit(fs.existsSync(bkPath));
+    });
+}
+
+function startInstall() {
+    ps.lookup({
+        command: 'WhatsApp.exe',
+        psargs: 'ux'
+    }, function (err, resultList) {
+        if (err) {
+            console.log(err);
+        } else {
+            if (resultList.length) {
+                setOLTxt('Please close WhatsApp Desktop manually to continue installation.. (Please wait if you have already closed)');
+                WAPath = resultList[0].command;
+                startInstall();
+            } else {
+                if (WAPath) {
+                    if (restore) {
+                        // restoreBackup(WAPath);
+                    } else {
+                        if (fs.existsSync(path.join(__dirname, 'override.json'))) {
+                            // overrideStyles();
+                            console.log(WAPath);
+                        } else {
+                            // applyDarkStyles(WAPath);
+                        }
+                    }
+                } else {
+                    say('WhatsApp process not found. Make sure WhatsApp desktop is running before installing dark mode.');
+                    hideOL();
+                }
+            }
+
+        }
     });
 }
 
@@ -131,4 +175,8 @@ function ask(text, yes, no) {
             no();
         }
     });
+}
+
+function say(msg) {
+    client.emit('say', msg);
 }

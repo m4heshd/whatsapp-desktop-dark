@@ -2,6 +2,7 @@
 let overlay = document.querySelector("#overlay");
 let txtOL = document.querySelector("#txtOL");
 let btnRestore = document.querySelector('#btnRestore');
+let btnInstall = document.querySelector('#btnInstall');
 let lblVersion = document.querySelector('#lblVersion');
 let cmbTheme = document.querySelector('#cmbTheme');
 let cmbThemeOpts = document.querySelectorAll('#cmbTheme option');
@@ -27,12 +28,22 @@ socket.on('ask', function (data, fn) {
     fn(confirm(data));
 });
 
+socket.on('say', function (data) {
+    alert(data);
+});
+
 socket.on('setThemeNames', function (data) {
     setThemeNames(data);
 });
 
 socket.on('endInit', function (data) {
     endInit(data);
+});
+
+//UI element events
+btnInstall.addEventListener("click", function () {
+    showOL("Starting installation..");
+    socket.emit('startInstall');
 });
 
 //UI Functions
