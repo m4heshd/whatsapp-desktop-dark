@@ -5,7 +5,6 @@ let btnRestore = document.querySelector('#btnRestore');
 let btnInstall = document.querySelector('#btnInstall');
 let lblVersion = document.querySelector('#lblVersion');
 let cmbTheme = document.querySelector('#cmbTheme');
-let cmbThemeOpts = document.querySelectorAll('#cmbTheme option');
 
 //Incoming messages
 socket.on('showOL', function (data) {
@@ -28,6 +27,11 @@ socket.on('ask', function (data, fn) {
     fn(confirm(data));
 });
 
+socket.on('getSelectedTheme', function (fn) {
+    let selected = cmbTheme.options[cmbTheme.selectedIndex].value;
+    fn(selected);
+});
+
 socket.on('say', function (data) {
     alert(data);
 });
@@ -38,6 +42,10 @@ socket.on('setThemeNames', function (data) {
 
 socket.on('endInit', function (data) {
     endInit(data);
+});
+
+socket.on('disconnect', reason => {
+    console.log(`reason: ${reason}`);
 });
 
 //UI element events
@@ -69,7 +77,7 @@ function setVersion(text) {
 }
 
 function setThemeNames(themes) {
-    cmbThemeOpts.forEach(option => option.remove());
+    document.querySelectorAll('#cmbTheme option').forEach(option => option.remove());
     themes.forEach(function (theme) {
         let opt = document.createElement("option");
         opt.text = theme;
