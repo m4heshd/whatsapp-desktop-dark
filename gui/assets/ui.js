@@ -54,6 +54,11 @@ btnInstall.addEventListener("click", function () {
     socket.emit('startInstall');
 });
 
+btnRestore.addEventListener("click", function () {
+    showOL("Starting restoration..");
+    socket.emit('startRestore');
+});
+
 //UI Functions
 function showOL(text) {
     if (text) {

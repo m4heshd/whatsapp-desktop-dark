@@ -17,7 +17,6 @@ let started = false;
 let updURL = 'https://raw.githubusercontent.com/m4heshd/whatsapp-desktop-dark/master/package.json';
 let bkPath = path.join(__dirname, 'backup', 'app.asar');
 let WAPath = null;
-let restore = false;
 
 //Backend setup
 xApp.use(express.static(path.join(__dirname, 'gui')));
@@ -37,9 +36,27 @@ io.on('connection', function (socket) {
 
         //Incoming messages
         client.on('startInstall', function () {
-            restore = false;
             setOLTxt('Identifying process..');
-            startInstall();
+            if (fs.existsSync(bkPath)) {
+                ask('Current backup will be replaced and it cannot be undone. Are you sure want to continue?', function () {
+                    startInstall(false);
+                }, function () {
+                    say('Hope you\'re enjoying WhatsApp dark.. :)');
+                    hideOL();
+                });
+            } else {
+                startInstall(false);
+            }
+        });
+
+        client.on('startRestore', function () {
+            setOLTxt('Identifying process..');
+            if (fs.existsSync(bkPath)) {
+                startInstall(true);
+            } else {
+                say('Unable to locate the backup file');
+                hideOL();
+            }
         });
 
         startInit();
@@ -92,7 +109,7 @@ function start() {
     });
 }
 
-function startInstall() {
+function startInstall(isRestore) {
     started = true;
     ps.lookup({
         command: 'WhatsApp.exe',
@@ -102,13 +119,13 @@ function startInstall() {
             console.log(err);
         } else {
             if (resultList.length) {
-                setOLTxt('Please close WhatsApp Desktop manually to continue installation.. (Please wait if you have already closed)');
+                setOLTxt('Please close WhatsApp Desktop manually to continue installation.. </br>(Please wait if you already have)');
                 WAPath = resultList[0].command;
-                startInstall();
+                startInstall(isRestore);
             } else {
                 if (WAPath) {
-                    if (restore) {
-                        // restoreBackup(WAPath);
+                    if (isRestore) {
+                        restoreBackup(WAPath);
                     } else {
                         if (fs.existsSync(path.join(__dirname, 'override.json'))) {
                             overrideStyles();
@@ -294,6 +311,27 @@ function overrideStyles() {
             applyDarkStyles(WAPath);
         }
     });
+}
+
+function restoreBackup(procPath) {
+    setOLTxt('Restoring original version of the application...');
+    let dir = path.dirname(procPath);
+    let fullpath = path.join(dir, 'resources', 'app.asar');
+    try {
+        fs.copySync(bkPath, fullpath);
+
+        say('All done. Make sure to let the developers know if something was wrong.. :)');
+        let WAPP = spawn(procPath, [], {
+            detached: true,
+            stdio: ['ignore', 'ignore', 'ignore']
+        });
+        WAPP.unref();
+        hideOL();
+    } catch (error) {
+        say('An error occurred while restoring.');
+        console.log(error);
+        hideOL();
+    }
 }
 
 function getThemes(callback) {
