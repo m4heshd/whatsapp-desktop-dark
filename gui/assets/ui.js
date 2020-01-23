@@ -1,8 +1,9 @@
 //Elements
-let overlay = document.querySelector("#overlay");
-let txtOL = document.querySelector("#txtOL");
+let overlay = document.querySelector('#overlay');
+let txtOL = document.querySelector('#txtOL');
 let btnRestore = document.querySelector('#btnRestore');
 let btnInstall = document.querySelector('#btnInstall');
+let btnClose = document.querySelector('#btnClose');
 let lblVersion = document.querySelector('#lblVersion');
 let cmbTheme = document.querySelector('#cmbTheme');
 
@@ -49,14 +50,20 @@ socket.on('disconnect', reason => {
 });
 
 //UI element events
-btnInstall.addEventListener("click", function () {
-    showOL("Starting installation..");
+btnInstall.addEventListener('click', function () {
+    showOL('Starting installation..');
     socket.emit('startInstall');
 });
 
-btnRestore.addEventListener("click", function () {
-    showOL("Starting restoration..");
+btnRestore.addEventListener('click', function () {
+    showOL('Starting restoration..');
     socket.emit('startRestore');
+});
+
+btnClose.addEventListener('click', function () {
+    if (confirm('Are you sure you want to exit the installer?')) {
+        quit();
+    }
 });
 
 //UI Functions
@@ -64,13 +71,13 @@ function showOL(text) {
     if (text) {
         txtOL.innerHTML = text;
     }
-    overlay.style.opacity = "1";
-    overlay.style.visibility = "visible";
+    overlay.style.opacity = '1';
+    overlay.style.visibility = 'visible';
 }
 
 function hideOL() {
-    overlay.style.opacity = "0";
-    overlay.style.visibility = "hidden";
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
 }
 
 function setOLTxt(text) {
@@ -84,7 +91,7 @@ function setVersion(text) {
 function setThemeNames(themes) {
     document.querySelectorAll('#cmbTheme option').forEach(option => option.remove());
     themes.forEach(function (theme) {
-        let opt = document.createElement("option");
+        let opt = document.createElement('option');
         opt.text = theme;
         opt.value = theme;
         cmbTheme.options.add(opt);
@@ -93,6 +100,18 @@ function setThemeNames(themes) {
 }
 
 function endInit(isBkAvail) {
-    isBkAvail ? btnRestore.removeAttribute("disabled") : btnRestore.setAttribute("disabled", true);
+    isBkAvail ? btnRestore.removeAttribute('disabled') : btnRestore.setAttribute('disabled', true);
     hideOL();
+}
+
+function quit() {
+    let body = document.querySelector('body');
+    body.innerHTML =
+        '<div id="endScrn">\n' +
+        '    <a href="https://github.com/m4heshd/whatsapp-desktop-dark" target="_blank">\n' +
+        '        <img id="endImg" src="assets/wadark_med.png" alt="Visit on GitHub" onload="socket.emit(\'endApp\')">\n' +
+        '        <br>\n' +
+        '        <span id="endTxt">Visit on GitHub</span>\n' +
+        '    </a>\n' +
+        '</div>';
 }

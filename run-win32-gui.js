@@ -59,6 +59,12 @@ io.on('connection', function (socket) {
             }
         });
 
+        client.on('endApp', function () {
+            console.log('Quitting the installer..');
+            client.disconnect();
+            process.exit(0);
+        });
+
         startInit();
     } else {
         console.log('Client connection rejected. ID - ' + socket.id);
@@ -147,7 +153,6 @@ function applyDarkStyles(procPath) {
     console.log('\x1b[33m%s\x1b[0m', 'TIP: You can create/download custom themes using "override.json" (Instructions are in the documentation)\n');
 
     try {
-        // console.log(procPath);
         let dir = path.dirname(procPath);
         let fullpath = path.join(dir, 'resources', 'app.asar');
 
@@ -353,7 +358,6 @@ function openDownload() {
     (async () => {
         await open('https://github.com/m4heshd/whatsapp-desktop-dark/releases/latest');
     })();
-    // endApp();
 }
 
 //Client functions

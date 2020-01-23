@@ -104,7 +104,12 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 8px;
-    grid-template-areas: 'divImgLogo divImgLogo' 'divLblVersion divLblVersion' 'divCmbTheme divCmbTheme' 'divTxtInfo divTxtInfo' 'divBtnRestore divBtnInstall';
+    grid-template-areas: 'divCtl divCtl' 'divImgLogo divImgLogo' 'divLblVersion divLblVersion' 'divCmbTheme divCmbTheme' 'divTxtInfo divTxtInfo' 'divBtnRestore divBtnInstall';
+}
+
+#divCtl {
+    grid-area: divCtl;
+    text-align: end;
 }
 
 #divImgLogo {
@@ -141,12 +146,12 @@ body {
     transition: box-shadow .18s ease-out, background .18s ease-out, color .18s ease-out;
 }
 
-.btn:hover {
+.btn:hover, #btnClose:hover {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     background: #4e76ff;
 }
 
-.btn:active:hover {
+.btn:active:hover, #btnClose:active:hover {
     background: var(--dark);
 }
 
@@ -196,4 +201,39 @@ body {
 
 #txtInfo {
     color: var(--accent) !important;
+}
+
+#btnClose {
+    float: right;
+    padding: 5px 10px;
+    background: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* End screen */
+#endScrn {
+    cursor: pointer;
+    width: 400px;
+    height: 430px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#endImg {
+    margin-bottom: 20px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+#endTxt {
+    font-size: 30px;
+}
+
+#endScrn a {
+    color: inherit;
+    text-decoration: none;
 }
