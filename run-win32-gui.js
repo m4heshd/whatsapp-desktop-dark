@@ -356,8 +356,7 @@ function getThemes(callback) {
     showOL('Loading themes..');
     fs.readJson(path.join(__dirname, 'override.json'), (error, ovrdJSONObject) => {
         if (!error) {
-            const themeNames = ovrdJSONObject.map((ovrd) => ovrd.themeName);
-            setThemeNames(themeNames);
+            setThemeNames(ovrdJSONObject);
             callback();
         } else {
             say('Unable to read "override.json" file.');

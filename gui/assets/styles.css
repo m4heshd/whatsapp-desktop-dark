@@ -6,6 +6,7 @@
     --light: #d1d1d1;
     --lighter: #e9e9e9;
     --accent: #5792ff;
+    --accent_hover: #4e76ff;
     --accent2: #09d261;
     --icon: #e1e1e1;
     --shadow: rgba(0, 0, 0, 0.12);
@@ -43,7 +44,7 @@ body {
 }
 
 .link:active:hover {
-    color: #4e76ff;
+    color: var(--accent_hover);
 }
 
 #pnlMainContainer {
@@ -148,7 +149,7 @@ body {
 
 .btn:hover, #btnClose:hover {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-    background: #4e76ff;
+    background: var(--accent_hover);
 }
 
 .btn:active:hover, #btnClose:active:hover {
