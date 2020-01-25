@@ -65,6 +65,10 @@ io.on('connection', function (socket) {
             process.exit(0);
         });
 
+        client.on('checkUpd', function () {
+            checkAppUpd(false);
+        });
+
         startInit();
     } else {
         console.log('Client connection rejected. ID - ' + socket.id);
@@ -74,13 +78,13 @@ io.on('connection', function (socket) {
 
 //Backend functions
 function startInit() {
-    showOL('Checking for updates..');
+    showOL('Reading version info..');
     fs.readJson(path.join(__dirname, 'info.json'), (error, infoJSON) => {
         if (!error) {
             version = infoJSON.version;
             // version = "0.3.4940";
             setVersion('v' + version);
-            checkAppUpd();
+            checkAppUpd(true);
         } else {
             console.log(error);
             start();
@@ -88,7 +92,8 @@ function startInit() {
     });
 }
 
-function checkAppUpd() {
+function checkAppUpd(isStart) {
+    showOL('Checking for updates..');
     let req = request(new URL(updURL), function (res) {
 
         res.on('data', (d) => {
@@ -96,14 +101,22 @@ function checkAppUpd() {
             if (semver.lt(version, latest)) {
                 ask('A new update is available (v' + latest + '). Would you like to download?', openDownload, start);
             } else {
-                start();
+                if (isStart){
+                    start();
+                } else {
+                    hideOL();
+                }
             }
         });
     });
 
     req.on('error', (e) => {
         console.log(e);
-        start();
+        if (isStart){
+            start();
+        } else {
+            hideOL();
+        }
     });
 
     req.end();

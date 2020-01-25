@@ -5,6 +5,7 @@ let btnRestore = document.querySelector('#btnRestore');
 let btnInstall = document.querySelector('#btnInstall');
 let btnClose = document.querySelector('#btnClose');
 let lblVersion = document.querySelector('#lblVersion');
+let lnkCheckUpd = document.querySelector('#lnkCheckUpd');
 let cmbTheme = document.querySelector('#cmbTheme');
 
 //Incoming messages
@@ -64,6 +65,10 @@ btnClose.addEventListener('click', function () {
     if (confirm('Are you sure you want to exit the installer?')) {
         quit();
     }
+});
+
+lnkCheckUpd.addEventListener('click', function () {
+    socket.emit('checkUpd');
 });
 
 //UI Functions
