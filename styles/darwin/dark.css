@@ -1,1197 +1,1462 @@
-/* WhatsApp Desktop Dark mode by m4heshd */
+/**
+   * Everything you need to know is below:
+   * Source:  https://github.com/vednoc/onyx
+   * Discord: https://discord.gg/NpT8PzA
+   * License: MIT
+   */
 
-/* macOS Styles */
+  :root {
+    --dark:    #272C35;
+    --darker:  #1F232A;
+    --light:   #D1D1D1;
+    --lighter: #E9E9E9;
+    --accent:  #7289DA;
+    --icon:    #E1E1E1;
+    --shadow:  rgba(0,0,0,0.10);
+    --mred:    #A3525B;
+    --mgreen:  #70A352;
+    --mblue:   #527AA3;
+    --hover-delay: 0.8s;
+    --image: url(https://media.discordapp.net/attachments/310799529161129984/417408747812552715/zilesanamin.jpg);
+    --emojiOpacity: 0.75;
+    --ui-font: 'font_name', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', 'Ubuntu', 'Cantarell', 'Fira Sans', sans-serif;
+    --version: "WhatsApp by Mew v1.7.1";
+    --message: "Updated on 16th of January. Ported some fixes to v1. Please switch to v2 because v1 is unsupported! Also, please report issues on GitHub because I can't log into USo forums. ";
+    --changes: "Visit https://github.com/vednoc/dark-whatsapp for more info.";
+  }
 
-:root {
-    --dark: #272c35;
-    --dark_alpha: rgba(39, 44, 53, 0.89);
-    --darker: #1f232a;
-    --bgcol: #101318;
-    --light: #d1d1d1;
-    --lighter: #e9e9e9;
-    --accent: #5792ff;
-    --accent2: #09d261;
-    --icon: #e1e1e1;
-    --shadow: rgba(0, 0, 0, 0.12);
-    --mred: #dd3b4f;
-    --mgreen: #70A352;
-    --mblue: #527AA3;
-    --msgout: #131a25;
-}
-
-/* Background doodle */
-.app .fzCXy {
-    filter: invert(100%) opacity(0.45) !important; }
-
-/* Body reset. */
-body {
-    background: none;
-    background-color: var(--bgcol); }
-
-/* Scrollbar track. */
-*::-webkit-scrollbar-track {
-    background-color: var(--shadow); }
-/* Scrollbar thumb. */
-*::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2); }
-/* Highlight selection. */
-::selection {
-    color: var(--light) !important;
-    background-color: var(--accent) !important; }
-::-moz-selection {
-    color: var(--light) !important;
-    background-color: var(--accent) !important; }
-/* Input placeholders. */
-::-webkit-input-placeholder {
-    color: var(--lighter) !important; }
-
-/* Progress. */
-progress[value]::-webkit-progress-bar {
-    background: var(--darker); }
-/* Value. */
-progress[value]::-webkit-progress-value {
-    background: var(--accent); }
-
-/* App wrapper. */
-#app .app {
+  /* Body reset. */
+  body {
+    font-family: var(--ui-font);
     background: none;
     background-color: var(--dark); }
 
-/* Accent background. */
-.app-wrapper::after {
-    background: none !important; }
+  /* Scrollbar track. */
+  *::-webkit-scrollbar-track {
+    background-color: var(--shadow); }
+  /* Scrollbar thumb. */
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--accent); }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--shadow); }
 
+  /* Highlight selection. */
+  ::selection {
+    color: var(--light) !important;
+    background-color: var(--accent) !important; }
+  ::-moz-selection {
+    color: var(--light) !important;
+    background-color: var(--accent) !important; }
+  /* Input placeholders. */
+  ::placeholder { color: var(--lighter) !important; }
+  ::-moz-placeholder { color: var(--lighter) !important; }
+  ::-webkit-input-placeholder { color: var(--lighter) !important; }
 
-/* Log-in page. */
-.landing-window {
+  /* Progress. */
+  progress[value]::-webkit-progress-bar {
+    background: var(--darker); }
+  /* Value. */
+  progress[value]::-webkit-progress-value {
+    background: var(--accent); }
+  progress {
+    background: var(--darker); }
+  ::-moz-progress-bar {
+    background: var(--accent) !important; }
+
+  /* App wrapper. */
+  #app .app {
+    background: none;
+    background-color: var(--dark); }
+
+  /* Log-in page. */
+  .landing-wrapper::before {
+    opacity: 0.6;
+    background-color: var(--accent) !important; }
+  .landing-window {
+    border-radius: 4px !important;
     border: 1px solid var(--shadow);
     box-shadow: 0 8px 32px 0 var(--shadow) !important;
     background-color: var(--darker) !important; }
-/* Text color. */
-.landing-window * {
-    color: var(--light); }
-/* Top color stripe */
-.landing-wrapper:before {
-    background-color: var(--accent) !important; }
-/* Reload QR code. */
-._1MOym {
+  .landing-main + div {
     background-color: var(--darker) !important; }
-/* Fix QR code. */
-.landing-window ._1pw2F {
-    border: 3px solid white !important; }
-/* Tutorial. */
-.landing-window > div:last-child {
-    background-color: var(--darker); }
-/* Loader. */
-#startup svg > circle {
-    stroke: var(--lighter) !important; }
-
-/* Disable background. */
-._2U_Zc:before {
-    display: none !important; }
-
-/* Icon color. */
-._1lmAJ span[class="_3PxOr"] > svg > path:first-child {
+    .landing-main + div img:not(:hover) {
+      opacity: 0.3; }
+    /* Text color. */
+    .landing-main * {
+      color: var(--light); }
+    /* Reload QR code. */
+    ._1MOym {
+      background-color: var(--darker) !important; }
+    ._3PxOr rect {
+      fill: var(--dark) !important; }
+    /* Fix QR code. */
+    .landing-wrapper div[data-ref] {
+      border-radius: 0;
+      filter: contrast(150%) !important;
+      outline: 4px solid white !important; }
+    /* Loader. */
+    #startup svg > circle {
+      stroke: var(--lighter) !important; }
+  /* Logo colors. */
+  span._3PxOr svg path:nth-child(1) {
     fill: var(--dark) !important; }
 
-span[class="_3PxOr"] > svg > rect {
-    fill: var(--dark) !important; }
 
-
-/* Landing page. */
-.app ._2rI9W .iFKgT {
-    /* box-shadow: 1px -3px 2px 0 var(--shadow) inset; */
+  /* Landing page. */
+  .app ._1qNwV {
     border: none;
-    background-color: var(--dark); }
-/* Status update. */
-.app ._2rI9W .iFKgT ._1kdWs ._1wSzK {
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 50%; }
-/* Text color. */
-.app ._2rI9W .iFKgT ._35BbM * {
-    color: var(--light) !important; }
-/* Accent bar. */
-.app ._2rI9W .iFKgT:after {
-    border-top-color: var(--accent); }
-/* Author info */
-._3mkas::after, ._357v7::after {
-    display: block !important;
-    margin-top: 17px;
-    padding-top: 10px;
-    content: "~ WhatsApp Desktop Dark Mode by m4heshd ~" !important;
-    font-size: 20px;
-    color: var(--accent);
-    border-top: 1px solid var(--darker);
-}
+    background-color: var(--dark) !important; }
+    /* Image. */
+    .app ._1qNwV [data-asset-intro-image] {
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+      filter: opacity(0.75);
+      transition: opacity 1s ease !important; }
+    /* Text color. */
+    .app ._1qNwV * {
+      color: var(--light); }
+    /* Accent bar. */
+    .app ._1qNwV::after {
+      border-top-color: var(--accent) !important; }
+    /* Hide the text. */
+    ._1qNwV .tzihe { font-size: 0px; }
+    /** Theme note. */
+    .app ._1qNwV .tzihe::before {
+      display: block;
+      margin-bottom: -20px;
+      line-height: 1.3;
+      font-size: 20px;
+      color: var(--accent);
+      content: var(--message) var(--changes) !important;
+    }
+    /** Theme info. */
+    .app ._1qNwV .tzihe::after {
+      display: block;
+      margin-top: 10px;
+      padding-top: 10px;
+      font-size: 16px;
+      content: var(--version) !important;
+      border-top: 1px solid var(--darker);
+    }
 
-/* Left drawer. */
-#app .app #side {
+  /* Left drawer. */
+  #app .app #side {
     background-color: var(--darker); }
 
-/* Chat list. */
-#side > header {
-    background-color: var(--darker) !important; }
+    /* Chat list. */
+    #side > header {
+      background-color: var(--darker) !important; }
 
-/* Chat preloader */
-._2sOZc {
-    background-color: var(--darker) !important; }
-.XqrVN {
-    stroke: var(--accent) !important;
-}
+    /* Enable notifications. */
+    #side ._2GB6m {
+      background-color: var(--accent) !important; }
+    /* Low battery. */
+    #side ._2t3oV {
+      background-color: var(--mred) !important; }
+    /* Phone not connected. */
+    #side ._1puWZ {
+      background-color: var(--mred) !important; }
+      /* Text color. */
+      #side ._2GB6m *,
+      #side ._1puWZ * {
+        color: var(--lighter); }
 
-/* Notifications && more!! */
-#side ._3YewW {
-    box-shadow: inset 0 0 4px 0 var(--shadow);
-    background-color: var(--accent) !important; }
-/* Text color. */
-#side ._3YewW .l2BEH * {
-    color: var(--lighter); }
+    /* Global -> Search. */
+    ._2vikl {
+      border-bottom: 1px solid var(--darker);
+      background-color: var(--darker) !important; }
+      /* Label background. */
+      .ZP8RM label, .ZP8RM._19OGD {
+        border: 0px solid var(--dark);
+        background-color: var(--dark) !important; }
+      /* Input element. */
+      .ZP8RM ._183ES,
+      .ZP8RM label input {
+        color: var(--light);
+        background-color: transparent; }
+      .ZP8RM::after,
+      .ZP8RM > div::after {
+        border-color: var(--darker) !important;
+        background-color: var(--darker) !important; }
 
-/* Search or start new chat. */
-#side ._2HS9r {
-    border-bottom: 0px solid var(--dark);
-    background-color: var(--darker) !important;
-    background-color: transparent !important; }
-/* Label background. */
-#side ._2HS9r .ZP8RM label,
-.ZP8RM._19OGD,
-.-peIt ._1AxuS .ZP8RM {
-    border: 0px solid var(--dark);
-    background-color: var(--dark) !important; }
-/* Input element. */
-#side ._2HS9r .ZP8RM label input {
-    color: var(--light);
-    background-color: transparent; }
-/* Active. */
-#side ._2HS9r .ZP8RM._19OGD {
-    background-color: var(--dark) !important; }
-
-/* New group and group info buttons. */
-._2UaNq ._3vpWv ._3p0T6,
-._2UaNq ._3vpWv ._3RWII {
-    box-shadow: 0 0 8px -1px var(--shadow) !important;
-    background-color: var(--dark) !important; }
-/* Remove participant button */
-._2ItjF ._1R9FX:hover {
-    background-color: var(--accent) !important; }
-/* Group members area */
-.I72vi {
-    background-color: var(--dark) !important; }
-/* Group name accent border */
-html[dir] ._5UNoc ._3hnO5 {
-    border-bottom-color: var(--accent) !important; }
-
-
-/* Search results. */
-#side .r7sRK {
-    color: var(--accent);
-    background-color: var(--dark); }
-/* Matching results. */
-#side .matched-text {
-    color: var(--accent) !important; }
-
-/* Contacts wrapper. */
-#side ._1RYPC, ._1KDYa ._70TS5 {
-    background-color: transparent !important; }
-/* Contacts. */
-#side ._1RYPC ._2UaNq, ._1KDYa ._1w-mX {
-    transition: 200ms ease-in-out;
-    background-color: transparent !important; }
-/* On event. */
-#side ._1RYPC ._2UaNq._3mMX1,
-#side ._1RYPC ._2UaNq:hover {
-    background-color: var(--dark) !important; }
-/* Text color. */
-#side ._1RYPC [class*="_2WP9Q"] * {
-    color: var(--light); }
-/* Avatar wrapper background. */
-._3RWII {
-    box-shadow: 0 0 8px -1px var(--shadow) !important;
-    background-color: transparent !important; }
-
-/* New message indicator. */
-#side .P6z4j {
+  /* New group and group info buttons. */
+  ._1w-mX, ._70TS5, ._11p3Q, .r7sRK, ._8-yzK {
+    /* box-shadow: 0 0 8px -1px var(--shadow) !important; */
     color: var(--accent) !important;
-    background-color: var(--darker) !important;
-    box-shadow: inset 0 0 0 2px var(--accent); }
-
-
-/* Settings. */
-._1KDYa {
-    background-color: var(--darker) !important; }
-/* Header color. */
-._1KDYa header {
-    min-height: 50px;
-    /*height: auto;*/
-    background-color: var(--darker) !important; }
-/* Reset header height. */
-._1KDYa header > div:first-child {
-    padding: 12px 0 !important;
-    height: auto; }
-/* Reset header title in left/right drawers. */
-._1KDYa ._1xGbt {
-    margin-top: 2px !important;
-    font-size: 16px; }
-/* Transparent sections. */
-._1KDYa ._2LSbZ {
-    box-shadow: none !important;
     background-color: transparent !important; }
-/* Highlighted sections. */
-._1KDYa ._2TLLH ._26JG5,
-._3UUn3 {
-    background-color: var(--dark) !important; }
-/* Change profile picture. */
-._1KDYa ._1JS2G,
-._1KDYa ._2Lbqu {
-    background-color: rgba(0,0,0,0.5) !important; }
-/* Modal footer and +/- buttons */
-html[dir] ._22aOT, html[dir] ._1DKwn {
-    background-color: var(--darker) !important; }
-/* Editor backgroud */
-html[dir] ._3979j {
-    background-color: var(--dark) !important; }
+    /* Hide borders. */
+    ._2DxRd, ._39cGk {
+      border-color: var(--shadow) !important; }
+    /* Input text color. */
+    ._44uDJ {
+      color: var(--light) !important; }
 
-/* Text color. */
-._1KDYa *, .i1XSV._3Q3ui {
-    color: var(--light);
-}
-
-/* Option/select elements. */
-.Fzl83 select {
-    border-color: var(--accent); }
-.Fzl83 select option {
+  /* Search results. */
+  #side ._1AKfk {
+    color: var(--accent);
     background-color: var(--dark); }
+    /* Matching results. */
+    #side .matched-text {
+      color: var(--accent) !important; }
 
-/* Archived chat image. */
-._1KDYa ._1i7uJ {
-    background-color: var(--dark) !important; }
+    /* Contacts wrapper. */
+    #pane-side, ._11GZy ._2UaNq {
+      background-color: transparent !important; }
+      /* Contacts. */
+      ._2UaNq, ._11GZy ._26JG5 {
+        transition: 200ms ease-in-out;
+        background-color: transparent !important; }
+        /* On event. */
+        ._2UaNq._3mMX1, ._2UaNq:hover {
+          background-color: var(--dark) !important; }
+        /* Text color. */
+        ._2UaNq *:not(#z) {
+          color: var(--light) !important; }
+        /* Borders. */
+        ._2UaNq::after, ._2WP9Q {
+          border-color: transparent !important; }
+        /* Avatar wrapper background. */
+        ._3RWII {
+          box-shadow: 0 0 8px -1px var(--shadow) !important;
+          background-color: transparent !important; }
 
-/* Body. */
-._1KDYa .rK2ei ._26JG5,
-._1KDYa .rK2ei ._2UaNq {
-    background-color: transparent; }
-/* On event. TODO: Fixed, but it might still overlap somewhere. */
-._3kF8H .rK2ei > ._26JG5:hover,
-._1KDYa .rK2ei ._26JG5:hover {
-    background-color: var(--dark); }
-
-/* New chat section. */
-._1KDYa .ZP8RM label {
-    border: none;
-    background-color: var(--dark); }
-/* Input element. */
-._1KDYa .ZP8RM label input {
-    background-color: transparent; }
-
-/* New group. */
-._1KDYa ._11p3Q {
-    background-color: transparent !important; }
-/* Header. */
-._1KDYa .r7sRK {
-    background-color: var(--darker) !important; }
-/* On event. */
-._3kF8H ._1KDYa ._2UaNq._3mMX1,
-._3kF8H ._1KDYa ._2UaNq:hover {
-    background-color: var(--dark) !important; }
-/* Search element */
-._1w-mX ._39cGk {
-    border-bottom: 1px solid var(--accent) !important; }
-._1w-mX ._39cGk input, ._1w-mX ._39cGk ::placeholder {
-    color: var(--lighter) !important; }
-
-/* Dropdown menu. */
-._2hHc6, ._1ArIP {
-    box-shadow: 0 2px 8px 0 var(--shadow), 0 2px 16px 0 var(--shadow) !important;
-    background-color: var(--darker) !important; }
-/* On event. */
-._2hHc6 li:hover, ._2hHc6 li._28zBA {
-    background-color: var(--dark) !important; }
-html[dir] ._3BqnP._3VXiW  {
-    background-color: var(--dark) !important; }
-/* Text color. */
-._2hHc6 div, ._1ArIP div {
-    color: var(--light); }
-
-/**********VIEW PROFILE PICTURE************/
-html[dir] ._1iNsf {
-    background-color: var(--dark_alpha) !important;
-}
-html[dir] ._2UaNq, html[dir] .s4BtI {
-    background-color: var(--darker) !important;
-	height: 72px;
-}
-/*Settings prof pic*/
-html[dir] ._2UaNq._3fAgu {
-	height: auto !important;
-}
-
-/* Middle drawer. */
-.app ._2rI9W .NuujD {
-    background-color: var(--dark); }
-/* Doodle background. TODO: Plans for the future. */
-/*[[doodles]]*/
-
-/* Jump to present button. */
-._3KRbU {
-    box-shadow: 0 4px 8px 2px var(--shadow) !important;
-    background-color: var(--darker) !important; }
-/* Number of messages. */
-._3KRbU .P6z4j {
+  /* New message indicator. */
+  #side .P6z4j {
+    color: white !important;
     background-color: var(--accent) !important; }
 
-/* Header. */
-._2rI9W #main header {
-    border: none;
-    background-color: var(--darker);
-    box-shadow: 0px 0px 3px 0px var(--accent); }
-/* Text color. */
-._2rI9W #main header ._2F-NA * {
+
+  /* Settings. */
+  ._7YAGC, ._1KDYa {
+    background-color: var(--darker) !important; }
+    /* Header color. */
+    ._7YAGC header, ._1KDYa header {
+      min-height: 50px;
+      height: auto;
+      background-color: var(--darker) !important; }
+      /* Send contacts. #42 */
+      .WOXAS,
+      ._1v8mQ {
+        background-color: transparent !important; }
+      /* Footer. */
+      ._21bWq, ._22oFl {
+        background-color: var(--accent) !important; }
+      /* Reset header height. */
+      ._7YAGC header > div:first-child {
+        padding: 12px 0 !important;
+        height: auto; }
+      /* Reset header title in left/right drawers. */
+      ._7YAGC ._1xGbt {
+        margin-top: 2px !important;
+        font-size: 16px; }
+    /* Transparent sections. */
+    ._7YAGC ._1CRb5, ._1KDYa ._2LSbZ, ._26JG5 {
+      box-shadow: none !important;
+      background-color: transparent !important; }
+      /* Highlighted sections. */
+      ._7YAGC ._3hhmj ._1CkkN {
+        background-color: var(--darker) !important; }
+      /* Change profile picture. */
+      ._7YAGC .WX_XW, ._7YAGC ._2Lbqu, ._1JS2G {
+        background-color: rgba(0,0,0,0.5) !important; }
+      /* Text color. */
+      ._3wYPn * {
+        color: var(--light); }
+    /* Input element. */
+    ._5UNoc ._3hnO5 { border-color: var(--accent) !important; }
+    /* Wrapper background. */
+    ._3979j { background-color: transparent !important }
+    /* Take a new profile picture. */
+    ._2HyTU, ._22aOT {
+      background-color: var(--darker) !important; }
+    /* Confirm button. */
+    ._2HyTU ._1g8sv, ._22aOT ._1g8sv {
+      box-shadow: 0 2px 4px 0 var(--shadow) !important;
+      background-color: var(--accent) !important; }
+    /* Zoom in/out. */
+    ._1DKwn {
+      box-shadow: 0 2px 4px 0 var(--shadow) !important;
+      background-color: var(--dark) !important; }
+
+  /* Option/select elements. */
+  select {
+    color: var(--light);
+    border-color: var(--accent); }
+  select option { background-color: var(--dark); }
+
+    /* Archived chat image. */
+    ._2fq0t ._2Lev2 {
+      background-color: var(--dark) !important; }
+
+    /* Body. */
+    ._2fq0t ._2sNbV ._1CkkN,
+    ._2fq0t ._2sNbV ._2EXPL {
+      background-color: transparent; }
+      /* On event. TODO: Fixed, but it might still overlap somewhere. */
+      .k1feT ._2sNbV > ._1CkkN:hover,
+      ._2fq0t ._2sNbV ._1CkkN:hover {
+        background-color: var(--dark); }
+
+    /* New group. */
+    ._2fq0t ._39pS- {
+      background-color: transparent !important; }
+      /* Header. */
+      ._2fq0t ._1AKfk {
+        background-color: var(--darker) !important; }
+        /* On event. */
+        .k1feT ._2fq0t ._2EXPL._1f1zm,
+        .k1feT ._2fq0t ._2EXPL:hover {
+          background-color: var(--dark) !important; }
+      /* Search element */
+      ._66JgU ._3_3Rs {
+        border-bottom: none !important; }
+      ._66JgU ._3_3Rs input, ._66JgU ._3_3Rs ::placeholder {
+        color: var(--lighter) !important; }
+
+  /** Context/dropdown menu. */
+  ._2hHc6 {
+    background-color: var(--darker) !important;
+    box-shadow: 0 4px 16px 0 var(--shadow) !important; }
+  ._2hHc6 li:hover, ._2hHc6 li:hover div {
+    color: var(--accent) !important;
+    background-color: var(--dark) !important; }
+  ._2hHc6 div, ._1ArIP div {
     color: var(--light); }
 
-/* Footer. */
-._2rI9W #main footer {
-    background-color: var(--darker); }
-/* Input wrapper. */
-#main footer > div {
-    color: var(--light);
-    border: none;
-    /* border-bottom: 2px solid var(--dark); */
+  /* Middle drawer. */
+  #main {
     background-color: var(--dark); }
-/* Input element. */
-#main footer > div:nth-child(1) > div:nth-child(2) {
-    border: none !important;
-    color: var(--light);
-    background-color: var(--darker) !important; }
-/* Voice message duration. */
-._1lxsr {
-    color: var(--light) !important; }
+    /* Fix parent-element. #43 */
+    ._1ays2 {
+      display: flex !important;
+      flex-direction: column !important; }
 
-/* Unknown contact. */
-._2Pown {
+    /* Doodle background. TODO: Plans for the future. */
+    #app [data-asset-chat-background="true"] {
+    filter: invert(100%) opacity(0.45) !important; }
+
+    /* Main -> Group description. */
+    ._3jzsh {
+      background-color: var(--darker) !important; }
+    /* Text colors. */
+    ._3jzsh ._3GIEC, ._3jzsh ._6xQdq {
+      color: var(--lighter) !important; }
+
+    /* Jump to present button. */
+    ._3KRbU {
+      box-shadow: 0 4px 8px 2px var(--shadow) !important;
+      background-color: var(--darker) !important; }
+    /* Number of messages. */
+    ._3KRbU > span > span {
+      background-color: var(--accent) !important; }
+
+    /* Header. */
+    #main header {
+      border: none;
+      background-color: var(--dark); }
+      /* Text color. */
+      #main header ._1WBXd * {
+        color: var(--light); }
+    /* Header text color. #22 */
+    #main > header > div span[title] {
+      color: var(--light); }
+    /* Header separator. */
+    #main > header::after {
+      border-bottom-color: var(--darker);
+      background-color: transparent; }
+
+  /* Footer. */
+  #main footer {
+    border-top: 1px solid var(--darker);
+    background-color: var(--darker); }
+    /* Input wrapper. */
+    #main footer > div {
+      color: var(--light);
+      border: none;
+      /* border-bottom: 2px solid var(--dark); */
+      background-color: var(--dark); }
+      /* Input element. */
+      #main footer > div:nth-child(1) > div:nth-child(2) {
+        border: none !important;
+        color: var(--light);
+        background-color: var(--darker) !important; }
+
+  /* Unknown contact. */
+  ._2Pown {
+    color: var(--light) !important;
     border-color: var(--darker) !important;
     background-color: var(--dark) !important;
-    box-shadow: 0 0px 8px 2px var(--shadow) !important; }
-/* Buttons. */
-._2Pown ._2ZZub {
+    box-shadow: 0 -1px 0 0 inset var(--darker) !important; }
+  /* Buttons. */
+  ._2ZZub {
+    color: var(--lighter) !important;
+    background-color: var(--darker) !important; }
+  ._2ZZub:hover {
     color: var(--light) !important;
-    background-color: var(--darker) !important; }
-/* Dark mode switch */
-span[data-icon="dark-switch"] > svg > path:first-child {
-    fill: var(--accent) !important;
-    opacity: 0.8 !important; }
+    box-shadow: 0 2px 4px 0 var(--shadow) !important; }
 
-/* Send contact to & Shared contact */
-._36ApL, ._1VwzF {
-    background-color: var(--dark) !important; }
-/* Shared multiple contacts preview */
-._3B8lS {
-    color: var(--light) !important; }
-/* Shared contact button colors. */
-.b332w {
-    color: var(--accent) !important; }
-/* Shared contact text. */
-.AVd_p {
-    color: var(--lighter) !important; }
-/* View contact. */
-._36ApL {
+    /* Shared contact button colors. */
+    .Ir_Ne {
+      color: var(--accent) !important; }
+    /* Shared contact text. */
+    .AVd_p {
+      color: var(--lighter) !important; }
+    /* View contact. */
+    ._1VwzF {
+      background-color: transparent !important; }
+
+  /* Hide 'Type a message' once focused. */
+  ._3FeAD.focused div[style] {
+    color: transparent !important; }
+    /* Placeholder text color. */
+    ._3FeAD div[style] {
+      transition: color 0.15s ease;
+      color: var(--lighter) !important; }
+
+  /* Right drawer. */
+  /* .app ._3HZor ._2fq0t {
+    background-color: var(--darker); } */
+    /* Border-color. */
+    .app ._3HZor {
+      border-left-color: transparent !important; }
+    /* Header. */
+    .app ._3HZor header {
+      background-color: var(--darker); }
+      /* Fix header text vertical position. */
+      .app ._3HZor ._1pYs5 {
+        margin-top: 4px !important; }
+      /* Text color. */
+      .app ._3HZor header div {
+        color: var(--light); }
+      /* Mute/starred messages. */
+      ._3_-Si + ._3_-Si ._2x2XP {
+        border-color: var(--darker) !important; }
+
+    /* Group info sections. */
+    .app ._3HZor ._26JG5, .app ._3HZor ._2UaNq {
+      /*box-shadow: 0 1px 3px shadow /**/
+      box-shadow: none;
+      background-color: transparent; }
+      .app ._3HZor ._26JG5:hover {
+        background-color: var(--dark) !important; }
+      /* Fix borders. */
+      .app ._3HZor ._27Ie2,
+      .app ._3HZor ._26JG5::before {
+        border-color: transparent !important; }
+      /* User's name. */
+      .app ._3HZor span {
+        color: var(--light); }
+      .app ._3HZor ._23Un5 {
+        color: var(--mred); }
+      /** Username colors in group chat. */
+      .app [class*="color-"] span {
+        color: inherit !important; }
+
+      /* Group options. */
+      .app ._3HZor ._1CRb5 ._2EXPL,
+      .app ._3HZor ._1CRb5 ._1CkkN {
+        transition: 200ms ease-in-out;
+        background-color: transparent; }
+        /* On event. */
+        .app ._3HZor ._1CRb5 ._2EXPL._3xj48:hover,
+        .app ._3HZor ._1CRb5 ._1CkkN:hover {
+          background-color: var(--dark); }
+        /* Text color. */
+        .app ._3HZor ._1CRb5 ._2EXPL * {
+          color: var(--light); }
+        /* Admin color. */
+        .app ._3HZor .FPZFa {
+          border-color: var(--accent); }
+
+
+  /* Search messages. TODO: Apply this to all search elements. */
+  .a5vst, .a5vst .ZP8RM._19OGD /*, ._3HZor ._1iMEz._3sdhb*/ {
+    background-color: var(--darker) !important; }
+    /* Input wrapper. */
+    .a5vst label {
+      border: 0px solid var(--dark) !important;
+      background-color: var(--dark) !important; }
+    .a5vst .ZP8RM::after {
+      border: none !important;
+      background-color: var(--dark) !important; }
+      .a5vst label input {
+        background-color: transparent !important; }
+
+  /* Search messages body. */
+  .YAPQk {
+    background-color: var(--darker) !important; }
+    /* Matching results. */
+    ._3HZor .matched-text {
+      color: var(--accent) !important; }
+    /* On event. */
+    .YAPQk ._1f1zm > ._3j7s9,
+    .YAPQk ._3j7s9:hover {
+      background-color: var(--dark) !important; }
+
+  /* Search messages. */
+  #pane-side ._2EXPL {
     background-color: transparent !important; }
 
-/* Live Location */
-._2ofvs {
-    color: var(--light) !important; }
-
-/* Hide 'Type a message' once focused. */
-._3F6QL._2WovP.focused ._39LWd {
-    color: transparent; }
-/* Placeholder text color. */
-._39LWd {
-    color: var(--lighter) !important; }
-/* On event smoothness. */
-.pluggable-input.pluggable-input-compose > div:first-child {
-    transition: 150ms ease-in-out !important; }
-
-
-/* Right drawer. */
-.app ._1C9rS ._1KDYa {
-    background-color: var(--darker); }
-/* Border-color. */
-.app ._1C9rS {
-    border-left-color: transparent !important; }
-/* Header. */
-.app ._1C9rS ._1KDYa header {
-    background-color: var(--darker); }
-/* Text color. */
-.app ._1C9rS ._1KDYa header div {
-    color: var(--light); }
-
-/* Group info sections. */
-.app ._1C9rS ._1KDYa ._2LSbZ {
-    /*box-shadow: 0 1px 3px shadow /**/
-    box-shadow: none;
-    background-color: transparent; }
-/* Group name. */
-.app ._1C9rS ._2LSbZ ._3hnO5, .media-body .CzI8E {
-    margin-bottom: 10px;
-    color: var(--light);
-    border-bottom: 2px solid var(--accent) !important; }
-/* Unknown User's name. */
-html[dir=ltr] ._1F9Ap {
-    color: var(--light) !important;
-}
-/* User's name. */
-.app ._1C9rS .copyable-text, ._19vo_, ._3H4MS {
-    color: var(--light) !important; }
-/* Accent color text. */
-.app ._1C9rS ._2LSbZ ._3he1q {
-    font-weight: 400;
-    color: var(--accent) !important; }
-/* Mute/Starred Messages. */
-.app ._1C9rS ._2LSbZ ._3LL06 {
-    color: var(--light) !important; }
-
-/* Group options. */
-.app ._1C9rS ._2LSbZ ._2UaNq,
-.app ._1C9rS ._2LSbZ ._26JG5 {
-    transition: 200ms ease-in-out;
-    background-color: transparent; }
-/* On event. */
-.app ._1C9rS ._2LSbZ ._2UaNq._3xj48:hover,
-.app ._1C9rS ._2LSbZ ._26JG5:hover {
-    background-color: var(--dark); }
-/* Text color. */
-.app ._1C9rS ._2LSbZ ._2UaNq * {
-    color: var(--light); }
-/* Admin color. */
-html[dir] .FPZFa {
-    border: 1px solid var(--accent) !important; }
+  /* Starred messages. */
+  ._1WMT2 .tail:not(.PJFFv) {
+    background-color: var(--dark) !important; }
+  /* Borders. */
+  ._1WMT2::before, ._1WMT2::after {
+    display: none !important; }
+    /* Selected message. */
+    ._1WMT2._2V_Wj,
+    ._1WMT2._2nA3s,
+    ._1WMT2:hover {
+      transition: 200ms ease-in-out !important;
+      background-color: var(--dark) !important; }
+    /* Remove tails. */
+    ._1WMT2 .tail-container {
+      display: none !important; }
+    /* Date text color. */
+    ._1WMT2 ._2V2qB {
+      color: var(--lighter) !important; }
 
 
-/* Search messages. TODO: Apply this to all search elements. */
-._1C9rS ._1iMEz, .a5vst /*, ._1C9rS ._1iMEz._19OGD*/ {
+  /* Message info. */
+  #app .app > div:nth-child(2) ._2rGVQ {
+    background-color: var(--dark) !important; }
+    /* Doodle image. */
+    #app .app > div:nth-child(2) [data-asset-chat-background="true"] {
+      filter: invert(100%) opacity(0.8) !important; }
+    /* Read by. */
+    #app .app > div:nth-child(2) ._2AJf5,
+    #app .app > div:nth-child(2) ._19xqi {
+      box-shadow: none !important;
+      background-color: transparent !important; }
+    /* Read by text color. */
+    #app .app > div:nth-child(2) ._2AJf5 span {
+      color: var(--accent) !important; }
+    /* Forwarded message info. #44 */
+    ._1NZZN, ._3XHR- {
+      border-color: var(--dark) !important;
+      background-color: transparent !important;
+      box-shadow: none !important; }
+    ._1w7vp {
+      color: var(--light) !important; }
+
+  /* Media/docs/links section. */
+  ._27U_m, ._2XHj8 {
+    border-bottom: 1px solid var(--dark);
     background-color: var(--darker) !important; }
-/* Input wrapper. */
-._1iMEz label {
-    border: 0px solid var(--dark) !important;
-    background-color: var(--dark) !important; }
-._1iMEz ._19OGD label {
-    background-color: transparent !important; }
-/* Input element. */
-._1iMEz label input {
-    background-color: transparent !important; }
-
-/* Search messages body. */
-._1Kstu {
-    background-color: var(--darker) !important; }
-/* Matching results. */
-._1C9rS .matched-text {
-    color: var(--accent) !important; }
-/* On event. */
-._1Kstu ._3mMX1 > ._2WP9Q,
-._1Kstu ._2WP9Q:hover {
-    background-color: var(--dark) !important; }
-
-/* Search messages. */
-#pane-side ._2UaNq {
-    background-color: transparent !important; }
-
-/* Starred messages. */
-._1C9rS .BfrqJ, .BfrqJ {
-    background-color: var(--dark) !important; }
-/* On event. */
-.starred-msg-wrapper, ._1WMT2 {
-    transition: 200ms ease-in-out !important; }
-/* On event. */
-._1WMT2._2nA3s {
-    background-color: var(--dark) !important; }
-
-._1WMT2._1lakC, ._1WMT2._2V_Wj {
-    background-color: var(--darker) !important; }
-
-
-/* Message info. */
-._2rGVQ {
-    background-color: var(--dark) !important; }
-/* Doodle image. */
-._2rGVQ .pane-chat-tile {
-    filter: invert(100%) opacity(0.8); }
-/* Read by. */
-html[dir] ._2AJf5, html[dir] ._19xqi {
-    background-color: var(--dark) !important; }
-/* Forwarding info */
-._3XHR- {
-    background-color: var(--darker) !important;
-    border-top: 1px solid var(--dark) !important;
-}
-
-/* Media/docs/links section. */
-._1C9rS ._27U_m {
-    background-color: var(--darker) !important; }
-/* Active indicator. */
-._1C9rS ._27U_m:before {
+  /* Active indicator. */
+  ._27U_m::before {
     background-color: var(--accent) !important; }
-/* Selection Header. */
-html[dir] .yrOIH {
-    background-color: var(--accent) !important; }
-/* Selected image. */
-.P85aN ._3xJ94 {
-    border-color: var(--accent) !important; }
-/* Selected links. */
-.D6ZWG {
-    background-color: var(--darker) !important; }
-/* Text color. */
-.D6ZWG ._1S4i5,
-._2Mvo8.fyJXn {
-    color: var(--lighter); }
-/* Link preview */
-._2nZ2E.HNuTV, .Lhd3q.HNuTV {
-    background-color: var(--bgcol) !important; }
-._3JxFB, ._23MBZ {
+  /* Text color. */
+  ._26Nvu,
+  ._27U_m .Y1iVg {
+    color: var(--lighter) !important; }
+  /* Selected links. */
+  ._27U_m .Y1iVg._3caqI {
     color: var(--light) !important; }
-._2IHkF {
-    color: var(--lighter) !important; }
-
-/* Media viewer. */
-#app ._1zcz2, ._2KgjI {
-    background-color: rgba(0,0,0,0.85) !important; }
-/* Chevron background. */
-._3yth3 {
-    background-color: var(--darker) !important; }
-/* Preloader. */
-._3dGYA {
-    background-color: var(--darker) !important; }
-/* Header. */
-#app ._1zcz2 ._2YdsD, ._2KgjI .cGLoy {
-    background-color: var(--darker) !important; }
-._2UaNq._1k-OW.ROigK {
-    height: 60px !important;
-}
-/* Inner element. */
-#app ._1zcz2 ._2UaNq {
-    background-color: transparent !important; }
-/* Text color. */
-#app ._1zcz2 ._2UaNq ._2WP9Q *,
-._2KgjI ._12oAB,
-.cGLoy * {
-    color: var(--light); }
-/* Footer. */
-._2AP3i {
-    border: none !important;
-    background-color: var(--darker) !important; }
-/* Selected image. */
-._2AP3i .cJP5q {
-    transform: scale(1) !important;
-    border: 3px solid var(--accent) !important }
-html[dir=ltr] ._1LdNS:hover:not(.cJP5q) {
-    border: 0px solid var(--accent);
-    outline: 3px solid var(--accent) !important; }
-
-
-/* Message bubbles. */
-html[dir] .message-in ._2Wx_5, .message-out, .message {
-    background-color: var(--darker) !important; }
-html[dir] .message-out ._2Wx_5 {
-    background-color: var(--msgout) !important; }
-/* Deleted messages */
-._3uHCS, ._2v02G {
-    color: var(--light) !important;
-    opacity: 0.70;
-}
-
-/* File messages (shared files) */
-html[dir] ._3cukQ ._1mrMQ, html[dir] ._1o6AT ._1mrMQ {
-    background-color: var(--dark) !important;
-}
-._1NeOh, ._1o0MN, ._1o6AT ._35Zop:before {
-    color: var(--light) !important;
-}
-
-/* Message text color. */
-.message-in .selectable-text,
-.message-out .selectable-text,
-.quoted-mention,
-._1upWv {
-    color: var(--light) !important; }
-
-/* Message link text color */
-.message-out .selectable-text a,
-.message-in .selectable-text a {
-    color: var(--accent) !important;
-}
-
-/* Forwarded message. */
-._8fE-g {
-    color: var(--lighter) !important; }
-
-/* Phone numbers of users that aren't your contacts. */
-._3Ye_R._1wjpf._1OmDL {
-    color: var(--lighter) !important; }
-
-/* Mentions. */
-.message-in .matched-mention,
-.message-out .matched-mention,
-.message-out .matched-mention .at-symbol {
-    color: var(--accent) !important; }
-
-/* Message meta text color. */
-[class*="message-"] ._3wVZ5 *, [class*="message-"] ._3wVZ5 *,
-[class*="message-"] ._1DI_4 *, [class*="message-"] ._27K_5 *,
-[class*="message-"] ._3MYI2 *, [class*="message-"] ._3cMIj * {
-    color: var(--light); }
-
-/* Image/gif/video meta wrapper. */
-.BmK5Q ._3MYI2 {
-    bottom: 8px;
-    padding: 2px 5px;
-    border-radius: 4px;
-    background-color: var(--shadow); }
-/* Text color. */
-.BmK5Q ._3MYI2 ._3EFt_ {
-    margin-top: 0px;
-    color: var(--lighter); }
-
-/* Message options. */
-._15CAo {
-    /*transition: 200ms ease-in-out;/**/
-    background: linear-gradient(to right, transparent 0%, var(--darker) 40%) !important; }
-.message-out ._15CAo {
-    /*transition: 200ms ease-in-out;/**/
-    background: linear-gradient(to right, transparent 0%, var(--msgout) 40%) !important; }
-/* Smooth transition. */
-.message span:last-child div {
-    transition: 50ms ease-in-out !important; }
-
-/* Typing... */
-._2ZAIy {
-    color: var(--accent) !important; }
-
-/* System messages. */
-.a7otO {
-    box-shadow: 0 2px 8px 0px var(--shadow) !important;
-    border-bottom: 3px solid var(--shadow) !important;
-    background-color: var(--darker) !important; }
-/* Text color and shadows. */
-.a7otO * {
-    text-shadow: none !important;
-    color: var(--lighter) !important; }
-/* New message. */
-#main ._3Xx0y {
-    border: none !important;
-    background-color: transparent !important; }
-/* X unread messages. */
-#main ._3Xx0y ._1lo-H {
-    box-shadow: 0 0 8px 0 var(--shadow) !important;
-    color: var(--light) !important;
-    background-color: var(--darker) !important; }
-
-
-/* Document embeds. */
-._1vKRe {
+  /* Selected image. */
+  ._2Ji5m {
     border-color: var(--darker) !important; }
-/* Embed background. */
-._12xX7 {
-    background-color: var(--dark) !important; }
-/* Embed text color. */
-._12xX7 * {
-    color: var(--light); }
 
-/* Link embeds. */
-._1sGGp._1SsXF, ._1AUdd._1SsXF, ._3qblR._1SsXF {
-    background-color: var(--dark) !important; }
-/* Text color. */
-._1sGGp._1SsXF *, ._3qblR._1SsXF *, ._1AUdd._1SsXF * {
-    color: var(--light); }
-/* Link options. */
-._2Nkc4._3WZEQ, ._1ykUM._3WZEQ {
-    background: none !important; }
-/* Link without thumbnails. */
-html[dir] ._3_nIn {
-    background-color: var(--darker) !important;
-}
+  /** Media viewer. */
+  ._1iNsf, ._2KgjI {
+    background-color: transparent !important; }
+    /* Pseudo-element background. */
+    ._1iNsf::before, ._2KgjI::before {
+      content: ""; position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background-color: var(--dark);
+      opacity: 0.8; z-index: -1; }
+    /* Chevron/preloader background. */
+    ._3yth3 {
+      box-shadow: 0 2px 4px -1px var(--shadow) !important;
+      background-color: var(--darker) !important; }
+
+    /* Header. */
+    ._1iNsf > div:first-child,
+    ._2KgjI > div:first-child {
+      box-shadow: 0 1px 0 0 var(--darker);
+      background-color: var(--dark) !important; }
+      /* Inner element. */
+      ._1iNsf > div:first-child > div > div,
+      ._2KgjI > div:first-child > div > div {
+        background-color: transparent !important; }
+        /* Text color. */
+        ._1iNsf > div:first-child > div > div *,
+        ._2KgjI > div:first-child > div > div * {
+          color: var(--light); }
+
+    /* Footer. */
+    ._2n0jo {
+      border-color: var(--darker) !important;
+      background-color: var(--dark) !important; }
+      /* Selected image. */
+      ._2AP3i .cJP5q {
+        border: none !important;
+        transform: scale(1) !important;
+        outline: 3px solid var(--accent) !important }
+        ._2AP3i ._1LdNS:hover:not(.cJP5q):not(#spec) {
+          outline: 3px solid var(--accent) !important; }
+
+  /* Highlight message bubbles. #29 */
+  div.message-in.velocity-animating > div > div,
+  div.message-out.velocity-animating > div > div {
+    background-color: var(--accent) !important }
+  .velocity-animating > .tail > .tail-container {
+    border-top-color: var(--accent) !important }
+
+  /* Bubble colors. #49 #54 */
+  .message-in > div:not(.a81-s) > div,
+  .message-out > div:not(.a81-s) > div {
+    background-color: var(--darker) !important; }
+    /* Message sender bubble. #69 */
+    ._3tMyP {
+        background-color: var(--darker) !important; }
+    ._2v02G {
+      color: var(--lighter) !important; }
+
+    /* Message text color. */
+    .message-in .selectable-text,
+    .message-out .selectable-text,
+    .quoted-mention,
+    ._1upWv,
+    ._3ZVco {
+      color: var(--light) !important; }
+
+    /* Voice messages. */
+    ::-moz-range-thumb { background-color: var(--accent) !important }
+    ::-moz-range-track { background-color: var(--lighter) !important }
+    ._7sUPO { background-color: var(--accent) !important }
+    ._1FWQp { color: var(--light) !important }
+
+    /* Use accent color for links. #20 */
+    a[href].selectable-text {
+      color: var(--accent) !important; }
+
+    /* Forwarded message. */
+    ._15aTv {
+      color: var(--lighter) !important; }
+
+    /* Show more. */
+    ._1Jc9f { color: var(--accent) !important }
+
+    /* Deleted message. */
+    ._3uHCS { color: var(--lighter) !important }
+    span[class][data-icon="recalled-out"] svg path { fill: red !important }
+
+    /* Phone numbers of users that aren't your contacts. */
+    #main ._1F9Ap {
+      color: var(--lighter) !important; }
+
+    /* Mentions. */
+    .matched-mention, .matched-mention .at-symbol {
+      color: var(--accent) !important; }
+
+      /* Message meta text color. */
+      [class*="message-"] div > div:last-child span {
+        color: var(--light); }
+
+    /* Image/gif/video meta wrapper. */
+    .KYpDv ._1DZAH {
+      bottom: 8px;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background-color: var(--shadow); }
+      /* Text color. */
+      .KYpDv ._1DZAH ._3EFt_, ._2MyYN {
+        margin-top: 0px;
+        color: var(--lighter); }
+
+      /* Message options for images. */
+      ._3EQsG._1eJVc {
+        background: none !important; }
+      /* Smooth transition. */
+      .message span:last-child div {
+        transition: 50ms ease-in-out !important; }
+
+    /* Typing... */
+    span._2ZAIy {
+      color: var(--accent) !important; }
+
+    /* System messages. */
+    .a7otO {
+      box-shadow: 0 2px 8px 0px var(--shadow) !important;
+      border-bottom: 3px solid var(--shadow) !important;
+      background-color: var(--darker) !important; }
+      /* Text color and shadows. */
+      .a7otO * {
+        text-shadow: none !important;
+        color: var(--lighter) !important; }
+      /* New message. */
+      #main ._3Xx0y {
+        border: none !important;
+        background-color: var(--darker) !important; }
+        /* X unread messages. */
+        #main ._3Xx0y span {
+          box-shadow: 0 0 8px 0 var(--shadow) !important;
+          color: var(--light) !important;
+          background-color: var(--dark) !important; }
+
+    /* Loader. */
+    ._2sOZc {
+      box-shadow: 0 2px 4px -1px var(--shadow) !important;
+      background-color: var(--darker) !important; }
+
+    /* Document embeds. */
+    ._3a29n, ._1mrMQ {
+      background-color: var(--dark) !important; }
+
+    /* Embeds description */
+    .HNuTV {
+      background-color: var(--dark) !important; }
+
+    /* Link embeds. */
+    ._3qblR, ._1SsXF {
+      box-shadow: 0 0 0 1px var(--dark) !important;
+      background-color: var(--dark) !important; }
+
+    /* Thumbnail. */
+    ._3_nIn {
+      background-color: var(--darker) !important; }
 
 
-/* Reply section. (= */
-footer ._1ebw2 {
+  /* Reply section. (= */
+  footer ._1ebw2 {
     box-shadow: 0 0px 8px 0 var(--darker) !important;
     background-color: var(--darker) !important; }
-/* Fix margins. */
-footer ._1ebw2 > div:first-child {
+  /* Fix margins. */
+  footer ._1ebw2 > div:first-child {
     margin: 0 0 5px 10px !important;
     background-color: transparent !important; }
-/* Reply content. */
-footer ._1ebw2 > div:first-child > div {
+  /* Reply content. */
+  footer ._1ebw2 > div:first-child > div {
     background-color: var(--dark) !important; }
-/* Close button. */
-footer ._1ebw2 > div:last-child {
+  /* Close button. */
+  footer ._1ebw2 > div:last-child {
     position: relative;
     margin: 0 8px 5px 8px !important;
     background-color: transparent !important; }
-/* Make the button larger. */
-footer ._1ebw2 > div:last-child > div svg {
+  /* Make the button larger. */
+  footer ._1ebw2 > div:last-child > div svg {
     padding: 18px;
     border-radius: 6px;
     background-color: var(--dark); }
 
-/* Mention group members. */
-.Uukb4, ._1Yz8K.XSeqj {
+  /* Mention group members. */
+  ._2j-wI, .XSeqj {
     color: var(--light);
     border-left: none !important;
-    background-color: var(--darker) !important;
-    transition: 300ms ease-in-out !important; }
-
-._2j-wI {
-    border: none !important;
     background-color: var(--darker) !important; }
-
-._1Yz8K.XSeqj {
-    background-color: var(--dark) !important; }
-
-.matched-text {
-    color: var(--accent); !important;
-}
-
-/* Wrapper. */
-.Uukb4 ._3v_lq {
+  /* Wrapper. */
+  ._2j-wI .XSeqj {
     transition: 300ms ease-in-out !important;
     background-color: transparent !important; }
-/* Active. */
-.Uukb4 .j5Hcb._3v_lq,
-.Uukb4 ._3v_lq:hover {
-    background-color: var(--darker) !important; }
+  /* Active. */
+  ._2j-wI .XSeqj._1Yz8K,
+  ._2j-wI .XSeqj:hover {
+    background-color: var(--accent) !important; }
 
-/* Select messages. */
-#main ._2AqZl {
+
+  /* Select messages. */
+  #main ._2AqZl {
     background-color: var(--shadow); }
-/* Hover over messages. */
-#main ._1o1sm {
-    transition: 100ms ease-in-out !important; }
-/* Selected message. */
-#main ._1o1sm:hover, #main ._1o1sm._2nOMz {
-    background-color: var(--shadow) !important; }
+    /* Hover over messages. */
+    #main .qTFAl {
+      transition: 0.15s ease !important; }
+      /* Selected message. */
+      #main .qTFAl:hover, #main .qTFAl._3Z2tD {
+        background-color: var(--shadow) !important; }
+    /* Selected icon. */
+    ._15wNI {
+      border-color: var(--accent) !important;
+      background-color: var(--accent) !important; }
+      /* Checkmark. */
+      ._15wNI ._1ygtt {
+        border-bottom-color: var(--light);
+        border-right-color: var(--light); }
+    /* Footer/control/options. */
+    #main ._1hhkM {
+      background-color: var(--darker); }
 
-/* Selected icon. */
-#main ._15wNI {
-    border-color: var(--accent) !important;
-    /*background-color: var(--accent) !important; */
-}
-/* Checkmark. */
-#main ._15wNI ._3KRSo {
-    border-bottom-color: var(--accent);
-    border-right-color: var(--accent); }
+  /*
+    Fixes message content/timestamp overlapping.
+    Apparently they forgot to add nl-specific styles. XD
+  */
+  html[lang='vi'] .EopGb, html[lang='nl'] .EopGb { width: 56px }
+  html[lang='vi'] ._2COY9, html[lang='nl'] ._2COY9 { width: 92px }
 
-/* Footer/control/options. */
-#main ._1hhkM, #main ._3PWNn, #main ._2-Uk7 {
-    background-color: var(--darker); }
-/* Text color. */
-#main ._1hhkM span, #main ._2-Uk7 {
-    color: var(--light); }
-
-
-
-/* Bubble tails -- experimental. */
-.tail .tail-container {
+  /* Bubble tails -- experimental. */
+  .tail .tail-container {
     width: 0px !important;
     height: 10px !important;
     z-index: 0 !important;
     border-top: 12px solid var(--darker);
     background: none !important; }
-.tail.message-in .tail-container {
-    left: -10px !important; top: 0px;
-    border-left: 10px solid transparent;
-    border-radius: 5px 0 0 0; }
-.tail.message-out .tail-container {
-    right: -10px !important; top: 0px;
-    border-right: 10px solid transparent;
-    border-top: 12px solid var(--msgout);
-    border-radius: 0 5px 0 0; }
+    .message-in > .tail > .tail-container {
+      left: -10px !important; top: 0px;
+      border-left: 10px solid transparent;
+      border-radius: 5px 0 0 0; }
+    .message-out > .tail > .tail-container {
+      right: -10px !important; top: 0px;
+      border-right: 10px solid transparent;
+      border-radius: 0 5px 0 0; }
 
-/* Disable tails everywhere. */
-/*[[tails]]*/
+    /* Disable tails everywhere. */
+    /* Tails are enabled. */
 
-/* Disable tails everywhere except in chat. */
-.starred-msg-wrapper .tail-container,
-.message-gallery .tail-container,
-._1WMT2 .tail-container {
-    display: none !important; }
-/* Rounded corners. */
-.message-gallery.tail-override-left,
-._1WMT2 .tail-override-left {
-    border-radius: 7.5px !important; }
+    /* Disable tails everywhere except in chat. */
+    .starred-msg-wrapper .tail-container,
+    .message-gallery .tail-container,
+    .MS-DH .tail-container {
+      display: none !important; }
+      /* Rounded corners. */
+      .message-gallery.tail-override-left,
+      .MS-DH .tail-override-left {
+        border-radius: 7.5px !important; }
 
-/** Stickers. */
-.PJFFv, .a81-s {
+  /** Stickers. */
+  ._1rK-b {
     background: none !important; }
-._1j7jW {
-    display: none !important; }
-/* Sender. */
-._2Hp95 ._3Mf7Z {
+  /* Sender. */
+  ._3Mf7Z {
     background-color: var(--darker) !important; }
-/* Time/status. */
-._2Hp95 ._3qAvH {
+  /* Time/status. */
+  ._3qAvH {
     background-color: var(--darker) !important; }
-/* Reset message menu. */
-._36oqf {
-    top: 0 !important;
-    right: 0 !important;
-    background: none !important; }
-/* Icon background. */
-.YiYMT { background-color: transparent !important; }
-
-/* Temporary fix for emoji container. */
-#main footer > div:nth-child(2) > div {
-    border: 0; }
-/* Emoji/gif/stickers background. */
-._1mJO-, ._20KNO, ._3b3vC, ._3LFRS > .RxbUw {
-    background-color: var(--dark) !important; }
-
-/* Emoji menu. */
-.DWACj .Sbkt2,
-.DWACj .Sbkt2 > span > div,
-._3ETD3, .R0lQ6 {
-    background-color: var(--dark) !important; }
-/* Emoji tabs. */
-.DWACj ._2ByZq,
-.DWACj ._2avTY,
-._2avTY {
-    background: var(--darker) !important; }
-/* Tab indicator. */
-._2NQtS,
-.YbzIC .YGHyX,
-.Orl3a {
-    background-color: var(--accent) !important; }
-/* Active button. */
-._1x_c3.bRYFY path {
-    fill: var(--accent) !important; }
-/* Sticker drawer scroll arrow */
-html[dir] ._26IFT {
-    background-color: var(--darker) !important; }
-
-/* Search emojis. */
-.DWACj label,
-._2Qm0c,
-._2hMsh {
-    background-color: var(--dark) !important; }
-/* Search emojis using ":" */
-html[dir] ._2mlOb, html[dir=ltr] ._2mlOb {
-    background-color: var(--darker) !important; }
-html[dir=ltr] ._2mlOb {
-    border-left: 1px solid var(--darker) !important; }
-/* Text color. */
-.DWACj label input,
-._2hMsh input,
-._3wfs2,
-._3Ztfl {
+  ._3qAvH * {
     color: var(--light) !important; }
 
-/* Gif preloader background. */
-.zl5TR {
-    /* border: 2px dashed ; */
-    background-color: var(--darker) !important; }
+  /* Message options. */
+  ._15CAo {
+    background: linear-gradient(90deg, transparent, var(--darker) 40%) !important;
+  }
+  /* Reset sticker menu background. */
+  .a81-s > div + span > div { background: none !important }
+  /* Context menu buttons. */
+  [data-js-context-icon='true'] {
+    background-image: none !important;
+    background: none !important; }
+  [data-js-context-icon='true'] + div { background: var(--darker) !important }
 
-/* Preview. */
-.kqC9O {
+  /* Emoji/gif/stickers menu. */
+  .QChXd, ._20KNO, .RxbUw, ._2PpWQ > div {
     background-color: var(--dark) !important; }
-/* Header. */
-.kqC9O header {
-    background-color: var(--accent) !important; }
-/* Text color. */
-.kqC9O header *, .kqC9O .media-body * {
-    color: var(--lighter) !important; }
-/* Footer. */
-.kqC9O .media-collection {
-    background-color: var(--darker); }
-/* Button. */
-.kqC9O .media-collection .btn-fill, .kqC9O ._1g8sv {
-    color: var(--lighter);
-    background-color: var(--accent) !important; }
+    /* Temporary fix for emoji container. */
+    #main footer > div:nth-child(2) > div {
+      border: 0; }
+    /* Nib. */
+    .iqJMX {
+      background-color: var(--dark) !important; }
+    /* Emoji tabs. */
+    ._2avTY {
+      background: var(--darker) !important; }
+    /* Tab indicator. */
+    ._2avTY .Orl3a,
+    ._1Wbpa {
+      background-color: var(--accent) !important; }
+    /* Active button. */
+    ._1oNFt.-XQxp path {
+      fill: var(--accent) !important; }
+
+    /* Search emojis. */
+    ._2Qm0c, ._2Qm0c label {
+      box-shadow: none !important;
+      background-color: var(--dark) !important; }
+      /* Text color. */
+      ._2Qm0c input {
+        color: var(--light) !important; }
+
+    /* Gif preloader background. */
+    ._2x9yi {
+      /* border: 2px dashed ; */
+      background-color: var(--darker) !important; }
+
+      /* Preview. */
+      ._1drQ- {
+        background-color: var(--dark) !important; }
+        /* Header. */
+        ._1drQ- header {
+          background-color: var(--accent) !important; }
+          /* Text color. */
+          ._1drQ- header *, ._1drQ- .media-body * {
+            color: var(--lighter) !important; }
+        /* Footer. */
+        ._1drQ- .media-collection {
+          background-color: var(--darker); }
+          /* Button. */
+          ._1drQ- .media-collection .btn-fill, ._1drQ- ._3hV1n {
+            color: var(--lighter);
+            background-color: var(--accent) !important; }
 
 
-/* Emoji-wanna-be-round. */
-/*  .emojik {
+  /* Emoji-wanna-be-round. */
+  .emojik {
     opacity: var(--emojiOpacity);
-    transition: transform 200ms cubic-bezier(0.59, 0.57, 0.39, 1.04);
-    clip-path: circle(47%) !important; }*/
-/* Selected emoji. */
-.emojik:focus, .emojik:hover, .emojik.selected {
-    box-shadow: none !important;
-    opacity: 1;
-    transform: scale(1.15); }
+    transition: transform 200ms cubic-bezier(0.59, 0.57, 0.39, 1.04); }
+    /* Selected emoji. */
+    .emojik:focus, .emojik:hover, .emojik.selected {
+      box-shadow: none !important;
+      opacity: 1;
+      transform: scale(1.15); }
 
-/* Emoji quick selection. */
-._1k6Uw {
-    border: 0 !important;
-    border-bottom: 1px solid var(--darker) !important;
-    background-color: var(--darker) !important; }
-/* Emoji race color popup. */
-._1ArIP, ._1ArIP ._1v2rQ {
-    background-color: var(--dark); }
-/* Separator. */
-._1ArIP ._2WvMb:first-child {
-    border-right: 2px solid var(--accent) !important; }
-/* Emoji menu triangle. */
-._1v2rQ {
+    /* Emoji quick selection. */
+    ._2mlOb {
+      border: 0 !important;
+      border-bottom: 1px solid var(--darker) !important;
+      background-color: var(--darker) !important; }
+    /* Emoji race color popup. */
+    ._1gFYk {
+      background-color: var(--dark) !important; }
+      /* Separator. */
+      ._1gFYk ul li:first-child {
+        border-right: 1px solid var(--darker) !important; }
+      /* Emoji menu triangle. */
+      ._1gFYk .iqJMX {
+        background-color: var(--dark) !important; }
+    /* Quick replies. #56 */
+      ._1omcu._2saG0, ._2saG0 {
+        background-color: var(--darker) !important; }
+
+  /* Android emojis. */
+  .emojik.wa.b0 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/0.webp")}
+  .emojik.wa.b1 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/1.webp")}
+  .emojik.wa.b2 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/2.webp")}
+  .emojik.wa.b3 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/3.webp")}
+  .emojik.wa.b4 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/4.webp")}
+  .emojik.wa.b5 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/5.webp")}
+  .emojik.wa.b6 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/6.webp")}
+  .emojik.wa.b7 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/7.webp")}
+  .emojik.wa.b8 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/8.webp")}
+  .emojik.wa.b9 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/9.webp")}
+  .emojik.wa.b10 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/10.webp")}
+  .emojik.wa.b11 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/11.webp")}
+  .emojik.wa.b12 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/12.webp")}
+  .emojik.wa.b13 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/13.webp")}
+  .emojik.wa.b14 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/14.webp")}
+  .emojik.wa.b15 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/15.webp")}
+  .emojik.wa.b16 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/16.webp")}
+  .emojik.wa.b17 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/17.webp")}
+  .emojik.wa.b18 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/18.webp")}
+  .emojik.wa.b19 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/19.webp")}
+  .emojik.wa.b20 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/20.webp")}
+  .emojik.wa.b21 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/21.webp")}
+  .emojik.wa.b22 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/22.webp")}
+  .emojik.wa.b23 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/23.webp")}
+  .emojik.wa.b24 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/24.webp")}
+  .emojik.wa.b25 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/25.webp")}
+  .emojik.wa.b26 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/26.webp")}
+  .emojik.wa.b27 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/27.webp")}
+  .emojik.wa.b28 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/28.webp")}
+  .emojik.wa.b29 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/29.webp")}
+  .emojik.wa.b30 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/30.webp")}
+  .emojik.wa.b31 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/31.webp")}
+  .emojik.wa.b32 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/32.webp")}
+  .emojik.wa.b33 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/33.webp")}
+  .emojik.wa.b34 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/34.webp")}
+  .emojik.wa.b35 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/35.webp")}
+  .emojik.wa.b36 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/36.webp")}
+  .emojik.wa.b37 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/37.webp")}
+  .emojik.wa.b38 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/38.webp")}
+  .emojik.wa.b39 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/39.webp")}
+  .emojik.wa.b40 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/40.webp")}
+  .emojik.wa.b41 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/41.webp")}
+  .emojik.wa.b42 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/42.webp")}
+  .emojik.wa.b43 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/43.webp")}
+  .emojik.wa.b44 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/44.webp")}
+  .emojik.wa.b45 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/45.webp")}
+  .emojik.wa.b46 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/46.webp")}
+  .emojik.wa.b47 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/47.webp")}
+  .emojik.wa.b48 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/48.webp")}
+  .emojik.wa.b49 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/49.webp")}
+  .emojik.wa.b50 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/50.webp")}
+  .emojik.wa.b51 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/51.webp")}
+  .emojik.wa.b52 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/52.webp")}
+  .emojik.wa.b53 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/53.webp")}
+  .emojik.wa.b54 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/54.webp")}
+  .emojik.wa.b55 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/55.webp")}
+  .emojik.wa.b56 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/56.webp")}
+  .emojik.wa.b57 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/57.webp")}
+  .emojik.wa.b58 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/58.webp")}
+  .emojik.wa.b59 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/59.webp")}
+  .emojik.wa.b60 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/60.webp")}
+  .emojik.wa.b61 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/61.webp")}
+  .emojik.wa.b62 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/62.webp")}
+  .emojik.wa.b63 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/63.webp")}
+  .emojik.wa.b64 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/64.webp")}
+  .emojik.wa.b65 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/65.webp")}
+  .emojik.wa.b66 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/66.webp")}
+  .emojik.wa.b67 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/67.webp")}
+  .emojik.wa.b68 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/68.webp")}
+  .emojik.wa.b69 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/69.webp")}
+  .emojik.wa.b70 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/70.webp")}
+  .emojik.wa.b71 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/71.webp")}
+  .emojik.wa.b72 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/72.webp")}
+  .emojik.wa.b73 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/73.webp")}
+  .emojik.wa.b74 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/74.webp")}
+  .emojik.wa.b75 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/75.webp")}
+  .emojik.wa.b76 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/76.webp")}
+  .emojik.wa.b77 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/77.webp")}
+  .emojik.wa.b78 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/78.webp")}
+  .emojik.wa.b79 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/79.webp")}
+  .emojik.wa.b80 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/80.webp")}
+  .emojik.wa.b81 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/81.webp")}
+  .emojik.wa.b82 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/82.webp")}
+  .emojik.wa.b83 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/83.webp")}
+  .emojik.wa.b84 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/84.webp")}
+  .emojik.wa.b85 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/85.webp")}
+  .emojik.wa.b86 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/86.webp")}
+  .emojik.wa.b87 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/87.webp")}
+  .emojik.wa.b88 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/88.webp")}
+  .emojik.wa.b89 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/89.webp")}
+  .emojik.wa.b90 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/90.webp")}
+  .emojik.wa.b91 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/91.webp")}
+  .emojik.wa.b92 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/92.webp")}
+  .emojik.wa.b93 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/93.webp")}
+  .emojik.wa.b94 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/94.webp")}
+  .emojik.wa.b95 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/95.webp")}
+  .emojik.wa.b96 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/96.webp")}
+  .emojik.wa.b97 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/97.webp")}
+  .emojik.wa.b98 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/98.webp")}
+  .emojik.wa.b99 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/99.webp")}
+  .emojik.wa.b100 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/100.webp")}
+  .emojik.wa.b101 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/a/101.webp")}
+  /* iOS emojis. */
+  .emojik.apple.b0 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/0.webp")}
+  .emojik.apple.b1 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/1.webp")}
+  .emojik.apple.b2 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/2.webp")}
+  .emojik.apple.b3 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/3.webp")}
+  .emojik.apple.b4 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/4.webp")}
+  .emojik.apple.b5 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/5.webp")}
+  .emojik.apple.b6 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/6.webp")}
+  .emojik.apple.b7 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/7.webp")}
+  .emojik.apple.b8 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/8.webp")}
+  .emojik.apple.b9 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/9.webp")}
+  .emojik.apple.b10 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/10.webp")}
+  .emojik.apple.b11 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/11.webp")}
+  .emojik.apple.b12 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/12.webp")}
+  .emojik.apple.b13 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/13.webp")}
+  .emojik.apple.b14 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/14.webp")}
+  .emojik.apple.b15 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/15.webp")}
+  .emojik.apple.b16 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/16.webp")}
+  .emojik.apple.b17 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/17.webp")}
+  .emojik.apple.b18 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/18.webp")}
+  .emojik.apple.b19 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/19.webp")}
+  .emojik.apple.b20 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/20.webp")}
+  .emojik.apple.b21 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/21.webp")}
+  .emojik.apple.b22 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/22.webp")}
+  .emojik.apple.b23 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/23.webp")}
+  .emojik.apple.b24 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/24.webp")}
+  .emojik.apple.b25 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/25.webp")}
+  .emojik.apple.b26 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/26.webp")}
+  .emojik.apple.b27 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/27.webp")}
+  .emojik.apple.b28 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/28.webp")}
+  .emojik.apple.b29 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/29.webp")}
+  .emojik.apple.b30 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/30.webp")}
+  .emojik.apple.b31 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/31.webp")}
+  .emojik.apple.b32 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/32.webp")}
+  .emojik.apple.b33 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/33.webp")}
+  .emojik.apple.b34 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/34.webp")}
+  .emojik.apple.b35 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/35.webp")}
+  .emojik.apple.b36 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/36.webp")}
+  .emojik.apple.b37 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/37.webp")}
+  .emojik.apple.b38 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/38.webp")}
+  .emojik.apple.b39 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/39.webp")}
+  .emojik.apple.b40 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/40.webp")}
+  .emojik.apple.b41 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/41.webp")}
+  .emojik.apple.b42 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/42.webp")}
+  .emojik.apple.b43 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/43.webp")}
+  .emojik.apple.b44 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/44.webp")}
+  .emojik.apple.b45 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/45.webp")}
+  .emojik.apple.b46 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/46.webp")}
+  .emojik.apple.b47 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/47.webp")}
+  .emojik.apple.b48 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/48.webp")}
+  .emojik.apple.b49 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/49.webp")}
+  .emojik.apple.b50 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/50.webp")}
+  .emojik.apple.b51 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/51.webp")}
+  .emojik.apple.b52 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/52.webp")}
+  .emojik.apple.b53 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/53.webp")}
+  .emojik.apple.b54 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/54.webp")}
+  .emojik.apple.b55 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/55.webp")}
+  .emojik.apple.b56 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/56.webp")}
+  .emojik.apple.b57 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/57.webp")}
+  .emojik.apple.b58 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/58.webp")}
+  .emojik.apple.b59 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/59.webp")}
+  .emojik.apple.b60 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/60.webp")}
+  .emojik.apple.b61 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/61.webp")}
+  .emojik.apple.b62 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/62.webp")}
+  .emojik.apple.b63 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/63.webp")}
+  .emojik.apple.b64 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/64.webp")}
+  .emojik.apple.b65 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/65.webp")}
+  .emojik.apple.b66 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/66.webp")}
+  .emojik.apple.b67 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/67.webp")}
+  .emojik.apple.b68 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/68.webp")}
+  .emojik.apple.b69 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/69.webp")}
+  .emojik.apple.b70 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/70.webp")}
+  .emojik.apple.b71 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/71.webp")}
+  .emojik.apple.b72 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/72.webp")}
+  .emojik.apple.b73 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/73.webp")}
+  .emojik.apple.b74 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/74.webp")}
+  .emojik.apple.b75 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/75.webp")}
+  .emojik.apple.b76 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/76.webp")}
+  .emojik.apple.b77 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/77.webp")}
+  .emojik.apple.b78 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/78.webp")}
+  .emojik.apple.b79 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/79.webp")}
+  .emojik.apple.b80 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/80.webp")}
+  .emojik.apple.b81 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/81.webp")}
+  .emojik.apple.b82 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/82.webp")}
+  .emojik.apple.b83 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/83.webp")}
+  .emojik.apple.b84 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/84.webp")}
+  .emojik.apple.b85 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/85.webp")}
+  .emojik.apple.b86 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/86.webp")}
+  .emojik.apple.b87 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/87.webp")}
+  .emojik.apple.b88 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/88.webp")}
+  .emojik.apple.b89 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/89.webp")}
+  .emojik.apple.b90 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/90.webp")}
+  .emojik.apple.b91 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/91.webp")}
+  .emojik.apple.b92 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/92.webp")}
+  .emojik.apple.b93 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/93.webp")}
+  .emojik.apple.b94 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/94.webp")}
+  .emojik.apple.b95 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/95.webp")}
+  .emojik.apple.b96 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/96.webp")}
+  .emojik.apple.b97 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/97.webp")}
+  .emojik.apple.b98 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/98.webp")}
+  .emojik.apple.b99 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/99.webp")}
+  .emojik.apple.b100 {background-image: url("https://raw.githubusercontent.com/vednoc/wae/dev/i/100.webp")}
+
+
+  /* Backdrop. */
+  ._3Fq9Y, #startup, #initial_startup {
     background-color: var(--dark) !important; }
+    /* Modal. */
+    ._3Fq9Y ._3RiLE,
+    ._3gUiM ._2dA13 ._1CnF3,
+    ._2dA13 ._18wuJ, ._2dA13 .IuYNx {
+      box-shadow: 0 0 0 1px var(--darker), 0 8px 16px 0px var(--shadow) !important;
+      background-color: var(--darker) !important; }
+      /* Selected contact. */
+      ._3gUiM ._2EXPL._1f1zm,
+      ._3gUiM ._2EXPL:hover,
+      ._2EXPL._3ntaf:hover {
+        background-color: var(--dark) !important; }
+      /* Text color. */
+      ._3Fq9Y ._3RiLE *,
+      ._3gUiM ._1CnF3 * {
+        color: var(--light); }
+      /* Header/footer. */
+      .XOIaT {
+        background-color: var(--dark) !important; }
+      /* Empty element below search bar. */
+      ._2fq0t span._3fOoY {
+        display: none !important; }
 
 
-
-/* Backdrop. */
-._3Fq9Y, #startup, #initial_startup {
-    background-color: var(--dark_alpha) !important; }
-/* Modal. */
-._3Fq9Y .-peIt ._3RiLE,
-.-peIt ._18wuJ, .-peIt .IuYNx {
-    box-shadow: 0 0 0 1px var(--darker), 0 8px 16px 0px var(--shadow) !important;
-    background-color: var(--darker) !important; }
-/* Selected contact. */
-._3Fq9Y ._2UaNq._3mMX1,
-._3Fq9Y ._2UaNq:hover,
-._2UaNq.s49Nq:hover {
-    background-color: var(--dark) !important; }
-/* Text color. */
-._3Fq9Y ._3RiLE * {
-    color: var(--light); }
-/* Header/footer. */
-.-peIt header,
-.-peIt .iHLo1 {
-    background-color: var(--darker) !important; }
-._2-yrI ._22oFl {
-    background-color: var(--dark) !important; }
-/* Empty element below search bar. */
-._1KDYa span._3fOoY {
-    display: none !important; }
-
-
-/* Buttons. */
-._3PQ7V, ._1g8sv, ._2Gki6, ._2MNzO {
+  /* Accent buttons. */
+  ._3PQ7V {
     color: var(--lighter) !important;
     background-color: var(--accent) !important; }
-/* Muted checkbox color. */
-._15wNI {
+  ._3PQ7V:hover {
+    opacity: 0.8; }
+  /* Link buttons. */
+  ._23_1v:hover {
+    box-shadow: none !important;
+    color: var(--accent) !important;
+    background-color: transparent !important; }
+  /* Muted checkbox color. */
+  ._1VD7W {
     border-color: var(--accent);
-    background-color: transparent; }
-/* Buttons. */
-._3PQ7V:hover, ._2eK7W:hover {
+    background-color: var(--accent); }
+  /* Buttons. */
+  .PNlAR:hover, ._1WZqU:hover {
     background-color: var(--dark) !important; }
 
-/* Drop items. (-: */
-.drag-drop, .lC2xi {
+  /* Drop items. (-: */
+  .drag-drop, ._2n-96 {
     background-color: var(--dark) !important; }
-/* Footer. */
-.NeQRT {
-    background-color: var(--darker) !important; }
-/* Border. */
-.lC2xi ._8C3uJ {
-    border: 5px dashed var(--accent) !important;
-    color: var(--light) !important; }
+    /* Footer. */
+    .NeQRT {
+      background-color: var(--darker) !important; }
+    /* Border. */
+    ._2n-96 ._3L-be {
+      border: 5px dashed var(--accent) !important;
+      color: var(--light) !important; }
 
-/* Add file icon. */
-._2sn3C, ._3fktq {
-    background-color: var(--dark) !important; }
-/* Border. */
-._1gcLL::after {
-    background-color: var(--accent) !important; }
+    /* Add file icon. */
+    .GpvML, ._1ypOz, ._3fktq, ._1g8sv {
+      background-color: var(--dark) !important;
+      box-shadow: 0 2px 4px var(--shadow) !important; }
+      /* Border. */
+      ._1gcLL::after {
+        background-color: var(--accent) !important; }
 
-/* Accent border. */
-.CzI8E, ._2Fvnm ._3ogpF {
-    border-bottom-color: var(--accent) !important; }
-/* Text color. */
-._7HWvs {
-    color: var(--light) !important; }
+    /* Accent border. */
+    .CzI8E, ._31WRs ._1DTd4, ._2Fvnm ._3ogpF {
+      border-bottom-color: var(--accent) !important; }
+    /* Text color. */
+    ._7HWvs, .A_Kh_ {
+      color: var(--light) !important; }
 
+  /** Status area! */
+  .app-wrapper-web ._2dLx9 {
+    background-color: transparent !important; }
+  /* Pseudo-element background. */
+  .app-wrapper-web ._2dLx9::before {
+    content: ""; position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: var(--dark);
+    opacity: 0.8; z-index: -1; }
+    /* Status icon. */
+    span[data-icon*="status-v3"] > svg > path:first-child {
+      opacity: 0.55 !important; }
+    /* Left hand side. */
+    ._2dLx9 .IMn_C { background-color: var(--darker) !important; }
+    /* Text color. */
+    .IMn_C span { color: var(--light) !important; }
+    .qlhJH hr { color: var(--dark) !important; }
+    /* Right hand side. */
+    ._2dLx9 ._3MBzN { background-color: var(--dark) !important; }
+    /* Text color. */
+    ._2dLx9 ._3MBzN div { color: var(--lighter) !important; }
+    /* Reply to status. */
+    .QRsOy { background-color: var(--dark) !important; }
+    /* Input bar. */
+    ._3FeAD._2nW8k { background-color: var(--dark) !important; }
 
+  /* Remove weird iframes. */
+  object { display: none !important; }
 
-/* Status area! */
-.app-wrapper-web ._3sacU {
-    background-color: rgba(0,0,0,0.6) !important; }
-/* Contact names */
-html[dir] ._2UaNq._2t0gn {
-    background-color: transparent !important;
-}
-
-/* Normal icon. */
-span[data-icon="status-v3"] > svg > path:first-child {
-    opacity: 0.55 !important; }
-/* Unread status. */
-span[data-icon="status-v3-unread"] > svg > path:first-child {
-    opacity: 1 !important; }
-
-/* Status modal! */
-/*.app-wrapper-web ._1abwg {
-  max-width: 1396px;
-  height: calc(100% - 36px);
-  margin-left: auto;
-  margin-right: auto;
-  top: 20px; }/**/
-
-/* Left hand side. */
-._3sacU .bZ3B9 {
-    background-color: var(--darker) !important; }
-/* Text color. */
-._3sacU .bZ3B9 ._35Ai0,
-._3sacU .bZ3B9 ._1wjpf {
-    color: var(--lighter) !important; }
-/* Dimmed text. */
-._3sacU .bZ3B9 ._3_-c_,
-._3sacU .bZ3B9 ._1Ou9Y,
-._3sacU .bZ3B9 ._itDl {
-    color: var(--light) !important; }
-
-/* Right hand side. */
-._3sacU ._1abwg {
-    background-color: var(--dark) !important; }
-/* Text color. */
-._3sacU ._1abwg ._2LuDL {
-    color: var(--light); }
-
-/* Reply to status. */
-.QRsOy {
-    border-radius: 5px !important;
-    background-color: var(--dark) !important; }
-
-
-
-/* REMOVE STUFF. */
-/* Remove pseudo elements. */
-[class*="chat"]:before, [class*="chat"]:after,
-.ZP8RM:after, ._26JG5:before, ._2rNOJ:after,
-._1WMT2:before, ._1WMT2:after, ._2DxRd {
-    display: none !important; }
-/* Remove ONLY borders. */
-._26JG5 ._27Ie2, ._3_-Si ._2x2XP,
-html[dir] ._2UaNq:after, ._2WP9Q,
-._1fkhx, .chat-body, ._2TLLH, ._2nmDZ {
-    border: none !important; }
-/* Some random iframe? */
-object { display: none !important; }
-
-
-
-/* Global icon color. */
-span:not([data-icon="image"]) > svg > path {
+  /* Global icon color. */
+  span[data-icon^="business-"] > svg path,
+  span:not([data-icon="image"]) > svg > path {
     transition: 200ms ease;
     fill: var(--icon) !important; }
-/* On event. */
-span:not([data-icon="image"]):hover > svg > path {
-    /* fill: var(--accent) !important; */
-    opacity: 0.3 !important; }
-/* Selection check circle */
-span[data-icon="checkbox-round-checked"] svg circle{
-    fill: var(--accent) !important; }
+    /* On event. */
+    span:not([data-icon="image"]):hover > svg > path {
+      /* fill: var(--accent) !important; */
+      opacity: 0.3 !important; }
 
-/* Upload files. */
-.GK4Lv::after {
-    box-shadow: 0 1px 2px var(--shadow), 0 4px 8px var(--shadow) !important; }
+  /* Upload files. */
+  .azEEh { color:var(--light) !important; }
+  ._2sn3C { background-color: var(--darker) !important; }
+  .Ijb1Q::after { box-shadow: 0 4px 8px 2px var(--shadow) !important; }
 
-/* Default profile picture background. */
-span[data-icon="default-user"] svg > path:first-child,
-span[data-icon="default-group"] svg > path:first-child,
-span[data-icon="default-broadcast"] svg > path:first-child {
+  /* Default profile picture background. */
+  span[data-icon^="default-"] svg > path:first-child {
     fill: var(--dark) !important; }
 
-span[data-icon="default-user"] svg > g > path:last-child,
-span[data-icon="default-group"] svg > path:last-child,
-span[data-icon="default-broadcast"] svg > path:last-child {
+  span[data-icon^="default-"] svg path:last-child {
     opacity: 0.7;
     fill: var(--icon) !important; }
 
-/*  Sent message. */
-span[data-icon="msg-dblcheck"] svg path,
-span[data-icon="status-dblcheck"] svg path,
-span[data-icon="msg-check"] svg path,
-span[data-icon="status-check"] svg path {
+  /*  Sent message. */
+  span[data-icon="msg-dblcheck"] svg path,
+  span[data-icon="status-dblcheck"] svg path,
+  span[data-icon="msg-check"] svg path,
+  span[data-icon="status-check"] svg path {
     fill: var(--light) !important;
     opacity: 0.5 !important; }
 
-/* Sent AND seen message. */
-span[data-icon="msg-dblcheck-ack"] svg path,
-span[data-icon="status-dblcheck-ack"] svg path,
-span[data-icon="msg-dblcheck-ack-light"] svg path,
-span[data-icon="status-v3-unread"] > svg > path:last-child {
+  /* Sent AND seen message. */
+  span[data-icon="msg-dblcheck-ack"] svg path,
+  span[data-icon="status-dblcheck-ack"] svg path,
+  span[data-icon="msg-dblcheck-ack-light"] svg path,
+  span[data-icon="status-v3-unread"] > svg > path:last-child {
     fill: var(--accent) !important;
     opacity: 1 !important; }
 
-/* Misc icons fix. */
-span[data-icon="chevron-left"] svg path,
-span[data-icon="chevron-right"] svg path,
-span[data-icon="x-viewer"] svg path,
-span[data-icon="download"] svg path,
-span[data-icon="forward"] svg path,
-span[data-icon="star-btn"] svg path,
-span[data-icon="audio-file"] svg path:last-child,
-span[data-icon="new-group"] svg path,
-span[data-icon="add-user-light"] svg path,
-span[data-icon="link"] svg path,
-span[data-icon="pinned"] svg path,
-span[data-icon="ptt-in-blue"] svg path:first-child,
-span[data-icon="ptt-out-blue"] svg path:first-child{
+  /* Misc icons fix. */
+  span[data-icon^="chevron-"] svg path,
+  span[data-icon="x-viewer"] svg path,
+  span[data-icon="download"] svg path,
+  span[data-icon="forward"] svg path,
+  span[data-icon="star-btn"] svg path,
+  span[data-icon="audio-file"] svg path:last-child,
+  span[data-icon="new-group"] svg path,
+  span[data-icon="add-user-light"] svg path,
+  span[data-icon="link"] svg path {
     fill: var(--icon) !important; }
 
-/* Audio message icons. */
-span[data-icon="ptt-in-green"] svg path:first-child,
-span[data-icon="ptt-in-blue"] svg path:first-child,
-span[data-icon="ptt-out-blue"] svg path:first-child,
-span[data-icon="ptt-out-gray"] svg path:first-child {
-    fill: var(--darker) !important; }
-span[data-icon="ptt-out-blue"] > svg > path,
-span[data-icon="ptt-in-blue"] > svg > path,
-span[data-icon="status-ptt-blue"] > svg > path {
-    fill: var(--accent) !important;
-}
-
-/* Logo. */
-._1DOO2 > svg > path:first-child {
+  /* Audio message icons. #55 */
+  span[data-icon^="ptt-"] svg path:first-child {
+    fill: var(--dark) !important; }
+  span[data-icon^="ptt-"] svg path:last-child {
     fill: var(--accent) !important; }
-span[data-icon="logo"] svg path:nth-child(1) {
+
+  span[data-icon="ptt-out-gray"] svg path:last-child {
+    fill: var(--icon) !important; }
+
+  /* Logo. */
+  ._3CSsZ > svg > path:first-child {
+    fill: var(--accent) !important; }
+  span[data-icon="logo"] svg path:nth-child(1) {
     fill: white !important; }
-span[data-icon="alert-phone"] svg path:first-child,
-span[data-icon="logo"] svg path:nth-child(1n+2),
-span[data-icon="whatsapp-logo"] svg path:first-child {
+  span[data-icon="alert-phone"] svg path:first-child,
+  span[data-icon="logo"] svg path:nth-child(1n+2),
+ 	span[data-icon="whatsapp-logo"] svg path:first-child {
     fill: var(--darker) !important; }
 
-/* GIF icon opacity. */
-span[data-icon="emoji-gifs"] svg path {
+  /* GIF icon opacity. */
+  span[data-icon="emoji-gifs"] svg path {
     fill: var(--icon) !important;
     fill-opacity: 1 !important; }
 
-/* Be cautious icons. */
-span[data-icon="exit"] svg path,
-span[data-icon="thumbs-down"] svg path,
-span[data-icon="recalled-in"] svg path,
-span[data-icon="recalled-out"] svg path {
+  /* Be cautious icons. */
+  span[data-icon="exit"] svg path,
+  span[data-icon="thumbs-down"] svg path,
+  span[data-icon="delete-danger"] svg path {
     fill: var(--mred) !important; }
 
-/* Audio message. */
-span[data-icon="audio-file"] svg path {
+  /* Audio message. */
+  span[data-icon="audio-file"] svg path {
     fill: rgba(255, 173, 31, 0.8) !important; }
-/* Audio length bar. */
-html[dir] ._2PmJH ._1N8Pv, html[dir] ._38Akx._2gO-- ._1N8Pv {
-    background-color: var(--accent) !important; }
-/* Slider thumb. */
-input[type=range]::-webkit-slider-thumb {
-    cursor: pointer;
-    background: var(--accent) !important; }
-html[dir] ._38Akx ._30LFW::-webkit-slider-runnable-track, html[dir] ._2PmJH ._30LFW::-webkit-slider-runnable-track {
-    background-color: var(--light) !important; }
+    /* Audio length bar. */
+    ._22cMG.fS1bA .nDKsM {
+      background-color: var(--accent) !important; }
+      /* Slider thumb. */
+    input[type=range]::-webkit-slider-thumb {
+      cursor: pointer;
+      background: var(--accent) !important; }
+    /* Audio length. */
+    ._3HwRC, ._1lxsr {
+      color: var(--light) !important; }
 
-/* Rounded buttons. */
-span svg > path[fill="#00BFA5"] {
+  /* Rounded buttons. */
+  span svg > path[fill="#00BFA5"] {
     fill: var(--accent) !important; }
 
-/*!* Disable background image on small resolutions. *!*/
-/*@media screen and (max-width: 1441px) {*/
-    /*._1FKgS::after {*/
-        /*display: none !important;*/
-    /*}*/
-/*}*/
+  /* Disable background image on small resolutions. */
+  @media screen and (max-width: 1441px) {
+    ._1FKgS::after {
+      display: none !important;
+    }
+  }
 
-/*@media screen and (min-width: 1441px) {*/
-    /*!* Animation. *!*/
-    /*html[dir=ltr] ._3dqpi {*/
-        /*!* display: none !important; *!*/
-        /*animation: _104Un 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.38); }*/
+  @media screen and (min-width: 1441px) {
+    /* Animation. */
+    html[dir=ltr] ._3dqpi {
+      /* display: none !important; */
+      animation: _104Un 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.38); }
 
-    /*!* App wrapper. *!*/
-    /*#app .app {*/
-        /*border-radius: 5px;*/
-        /*box-shadow: 0 4px 24px -2px var(--shadow); }*/
-/*}*/
+    /* App wrapper. */
+    #app .app {
+      border-radius: 8px;
+      box-shadow: 0 4px 24px -2px var(--shadow); }
+
+    /* Fullscreen. */
+    /* Fullscreen is disabled. */
+
+    /* App background. */
+      #app > div::after {
+    top: 0px; right: 0px;
+    bottom: 0px; left: 0px;
+    height: auto; width: auto;
+    background-color: var(--dark) !important;
+    background-image: var(--image) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+
+  }
+
+  /* "Privacy mode." */
+  /* Blurred contacts are disabled. */
+  /* Blurred images are disabled. */
+
+  /* Compact mode. */
+      /* Reset min app height/width reset. */
+    @media screen and (max-height: 500px) { #app > div > .app { min-height: auto; }}
+    @media screen and (max-width: 648px) { #app > div > .app { min-width: auto; }}
+    /* Custom compact mode. */
+    @media screen and (max-width:720px) {
+      /* .app > div div:hover { box-shadow: 0 0 0 2px inset crimson !important; } /**/
+      /* Fix header width hiding icons. */
+      #side > header { min-width: 240px; }
+      /* Hide notifications. */
+      #side > header + span { display: none }
+      /* Search bar width. */
+      .ZP8RM:not(._19OGD) label { padding: 0px; }
+      /* ? Reset panes. */
+      .three > div:nth-child(3),
+      .three > div:nth-child(2) > div:nth-child(1),
+      .two > div:nth-child(2) > div:nth-child(1),
+      .two > div:nth-child(3) {
+        flex: 0 0 75px !important; }
+      /* Settings/Starred/Etc. */
+      .two > div:nth-child(2) > div._3kF8H {
+        transition: 0.3s ease-in-out !important;
+        flex: 0 0 75px !important; }
+      .two > div:nth-child(2) > div._3kF8H:hover {
+        flex: 0 0 30% !important; }
+      /* Upload preview. */
+      .two > div:nth-child(2) > div._2rI9W {
+        flex: 0 0 calc(100% - 75px) !important; }
+      /* Don't expand contacts if there are 3 panes. */
+      .three > div:nth-child(3):hover {
+        flex: 0 0 75px !important; }
+      /* Expand contacts. */
+      .two > div:nth-child(3) {
+        min-width: 1px !important;
+        transition: 0.3s ease-in-out !important;
+        transition-delay: 0.2s !important; }
+      .two > div:nth-child(3):hover {
+        min-width: 400px !important;
+        transition-delay: var(--hover-delay) !important;
+        flex: 0 0 30% !important; }
+      /* Pane -> Chat. */
+      .three ._2rI9W { flex: 1 1 auto !important; }
+      /* Pane -> Info. */
+      .three ._1C9rS {
+        max-width: 400px;
+        width: calc(100% - 76px); }
+      /* ? Hack for positioning unread counter. */
+      ._2UaNq .xD91K {
+        z-index: 199 !important;
+        display: flex !important;
+        flex-direction: row-reverse !important; }
+      /* ? Unread counter. */
+      ._2UaNq .xD91K ._1ZMSM .P6z4j {
+        z-index: 999 !important;
+        line-height: 23px !important;
+        margin: 7px 00px 0px -60px !important;
+        transition: 0.15s ease !important;
+        box-shadow: 0 0 0 3px var(--darker) !important; }
+      /* On event. */
+      #side ._2UaNq._3mMX1 .xD91K .P6z4j, #side ._2UaNq:hover .xD91K .P6z4j {
+        /* color: var(--accent) !important;
+        background-color: var(--darker) !important; */
+        box-shadow: 0 0 0 3px var(--dark) !important; }
+      /* Reset text position. */
+      ._2UaNq .xD91K span[dir] { margin-left: 10px; }
+      /* Remove icons we don't need. */
+      #side ._1ZMSM > span:not(.P6z4j) { display: none !important }
+      /* Remove overflow for unread messages counter. */
+      #side ._0LqQ {
+        margin-left: -10px !important;
+        overflow: unset !important }
+      /* Message dropdown thing; fixes ticks jumping left and right. */
+      #side ._0LqQ > span:last-child:not(._17TaE) { display: none !important }
+      /* ? Hack for positioning message status. */
+      ._3VIru {
+        z-index: 101;
+        position: absolute;
+        margin: 5px 0 0 -20px;
+        border-radius: 50%;
+        transition: 0.15s ease !important;
+        background-color: var(--dark);
+        box-shadow: 0 0 0 3px var(--darker); }
+      /* Make SVG smaller. */
+      ._3VIru > span > svg {
+        padding: 2px;
+        height: 14px !important;
+        width: 14px !important; }
+      /* Background on event. */
+      ._2UaNq:hover ._3VIru, ._2UaNq._3mMX1 ._3VIru {
+        background-color: var(--darker);
+        box-shadow: 0 0 0 3px var(--dark) !important; }
+    }
+
+
+  /**
+   * Userstyles.org limitations prevent this;		
+   * Install UserCSS version from GitHub to use it.		
+   */
