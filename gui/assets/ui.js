@@ -4,6 +4,9 @@ let txtOL = document.querySelector('#txtOL');
 let btnRestore = document.querySelector('#btnRestore');
 let btnInstall = document.querySelector('#btnInstall');
 let btnClose = document.querySelector('#btnClose');
+let btnPaypal = document.querySelector('#btnPaypal');
+let btnKofi = document.querySelector('#btnKofi');
+let btnGithub = document.querySelector('#btnGithub');
 let lblVersion = document.querySelector('#lblVersion');
 let lnkCheckUpd = document.querySelector('#lnkCheckUpd');
 let cmbTheme = document.querySelector('#cmbTheme');
@@ -77,6 +80,18 @@ btnClose.addEventListener('click', function () {
     }
 });
 
+btnPaypal.addEventListener('click', function () {
+    window.open('https://www.paypal.me/mpwk?locale.x=en_US', '_blank')
+});
+
+btnKofi.addEventListener('click', function () {
+    window.open('https://ko-fi.com/m4heshd', '_blank')
+});
+
+btnGithub.addEventListener('click', function () {
+    window.open('https://github.com/m4heshd/whatsapp-desktop-dark', '_blank')
+});
+
 cmbTheme.addEventListener('change', function () {
     let selected = cmbTheme.options[cmbTheme.selectedIndex].value;
     let ovrdJSON = themes.find(x => x.themeName === selected);
@@ -87,6 +102,7 @@ cmbTheme.addEventListener('change', function () {
     document.documentElement.style.setProperty('--accent', ovrdJSON.accent);
     document.documentElement.style.setProperty('--msgout', ovrdJSON.msgout);
     document.documentElement.style.setProperty('--accent_hover', pSBC(-0.3, ovrdJSON.accent));
+    document.documentElement.style.setProperty('--border', pSBC(-0.7, ovrdJSON.lighter));
 });
 
 lnkCheckUpd.addEventListener('click', function () {

@@ -2,20 +2,12 @@
     --dark: #272c35;
     --dark_alpha: rgba(19, 19, 21, 0.93);
     --darker: #1f232a;
-    --bgcol: #101318;
     --light: #d1d1d1;
     --lighter: #e9e9e9;
     --accent: #5792ff;
-    --accent_hover: #4e76ff;
-    --accent2: #09d261;
-    --icon: #e1e1e1;
-    --shadow: rgba(0, 0, 0, 0.12);
-    --mred: #dd3b4f;
-    --mgreen: #70A352;
-    --mblue: #527AA3;
+    --accent_hover: #497ad5;
     --msgout: #131a25;
-    --win_title: var(--accent);
-    --ctl_hover: var(--darker);
+    --border: #808080;
 }
 
 @font-face {
@@ -38,6 +30,11 @@ body {
     background-repeat: repeat
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .link {
     color: var(--accent);
     cursor: pointer;
@@ -47,10 +44,17 @@ body {
     color: var(--accent_hover);
 }
 
+.secLabel {
+    text-align: left;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    font-size: 12px;
+}
+
 #pnlMainContainer {
     background: var(--darker);
     width: 400px;
-    height: 430px;
+    height: 470px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -105,7 +109,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 8px;
-    grid-template-areas: 'divCtl divCtl' 'divImgLogo divImgLogo' 'divLblVersion divLblVersion' 'divCmbTheme divCmbTheme' 'divTxtInfo divTxtInfo' 'divBtnRestore divBtnInstall';
+    grid-template-areas: 'divCtl divCtl' 'divImgLogo divImgLogo' 'divLblVersion divLblVersion' 'divCmbTheme divCmbTheme' 'divTxtInfo divTxtInfo' 'divBtnRestore divBtnInstall' 'divSupport divSupport';
 }
 
 #divCtl {
@@ -137,6 +141,11 @@ body {
     grid-area: divBtnInstall;
 }
 
+#divSupport {
+    grid-area: divSupport;
+    margin-top: 10px;
+}
+
 .btn {
     cursor: pointer;
     padding: 10px 24px;
@@ -162,6 +171,14 @@ body {
     color: darkgray;
 }
 
+.img-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 10px;
+}
+
 .cmb {
     display: block;
     font-size: 16px;
@@ -176,6 +193,7 @@ body {
     margin: 0;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
     border-radius: .5em;
+    border-color: var(--border);
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -212,6 +230,15 @@ body {
     font-size: 15px;
 }
 
+#divSupportContent {
+    border: var(--border) 1px solid;
+    border-radius: .5em;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* End screen */
 #endScrn {
     cursor: pointer;
@@ -232,9 +259,4 @@ body {
 
 #endTxt {
     font-size: 30px;
-}
-
-#endScrn a {
-    color: inherit;
-    text-decoration: none;
 }
