@@ -19,62 +19,64 @@ let bkPath = path.join(__dirname, 'backup', 'app.asar');
 let WAPath = null;
 
 //Backend setup
-xApp.use(express.static(path.join(__dirname, 'gui')));
+exports.startGUI = function () {
+    xApp.use(express.static(path.join(__dirname, 'gui')));
 
-let xServ = xApp.listen(3210, function () {
-    console.log('WADark GUI installer backend started');
-});
+    let xServ = xApp.listen(3210, function () {
+        console.log('WADark GUI installer backend started');
+    });
 
-io = io(xServ, {
-    pingTimeout: 90000
-});
+    io = io(xServ, {
+        pingTimeout: 90000
+    });
 
-io.on('connection', function (socket) {
-    if (!started) {
-        client = socket;
-        console.log('WADark installer client connected. ID - ' + socket.id);
+    io.on('connection', function (socket) {
+        if (!started) {
+            client = socket;
+            console.log('WADark installer client connected. ID - ' + socket.id);
 
-        //Incoming messages
-        client.on('startInstall', function () {
-            setOLTxt('Identifying process..');
-            if (fs.existsSync(bkPath)) {
-                ask('Current backup will be replaced and it cannot be undone. Are you sure want to continue?', function () {
+            //Incoming messages
+            client.on('startInstall', function () {
+                setOLTxt('Identifying process..');
+                if (fs.existsSync(bkPath)) {
+                    ask('Current backup will be replaced and it cannot be undone. Are you sure want to continue?', function () {
+                        startInstall(false);
+                    }, function () {
+                        say('Hope you\'re enjoying WhatsApp dark.. :)');
+                        hideOL();
+                    });
+                } else {
                     startInstall(false);
-                }, function () {
-                    say('Hope you\'re enjoying WhatsApp dark.. :)');
+                }
+            });
+
+            client.on('startRestore', function () {
+                setOLTxt('Identifying process..');
+                if (fs.existsSync(bkPath)) {
+                    startInstall(true);
+                } else {
+                    say('Unable to locate the backup file');
                     hideOL();
-                });
-            } else {
-                startInstall(false);
-            }
-        });
+                }
+            });
 
-        client.on('startRestore', function () {
-            setOLTxt('Identifying process..');
-            if (fs.existsSync(bkPath)) {
-                startInstall(true);
-            } else {
-                say('Unable to locate the backup file');
-                hideOL();
-            }
-        });
+            client.on('endApp', function () {
+                console.log('Quitting the installer..');
+                client.disconnect();
+                process.exit(0);
+            });
 
-        client.on('endApp', function () {
-            console.log('Quitting the installer..');
-            client.disconnect();
-            process.exit(0);
-        });
+            client.on('checkUpd', function () {
+                checkAppUpd(false);
+            });
 
-        client.on('checkUpd', function () {
-            checkAppUpd(false);
-        });
-
-        startInit();
-    } else {
-        console.log('Client connection rejected. ID - ' + socket.id);
-        socket.emit('setOLTxt', 'One instance of the process is already running.. Please restart if this is an error.');
-    }
-});
+            startInit();
+        } else {
+            console.log('Client connection rejected. ID - ' + socket.id);
+            socket.emit('setOLTxt', 'One instance of the process is already running.. Please restart if this is an error.');
+        }
+    });
+};
 
 //Backend functions
 function startInit() {
@@ -101,7 +103,7 @@ function checkAppUpd(isStart) {
             if (semver.lt(version, latest)) {
                 ask('A new update is available (v' + latest + '). Would you like to download?', openDownload, start);
             } else {
-                if (isStart){
+                if (isStart) {
                     start();
                 } else {
                     hideOL();
@@ -112,7 +114,7 @@ function checkAppUpd(isStart) {
 
     req.on('error', (e) => {
         console.log(e);
-        if (isStart){
+        if (isStart) {
             start();
         } else {
             hideOL();

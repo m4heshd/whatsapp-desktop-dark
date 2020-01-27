@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-win-gui": "node run-win32-gui.js",
+    "run-gui": "node index.js",
+    "run-cli": "node index.js cli",
     "dist-win": "node build.js win32",
     "dist-mac": "node build.js darwin"
   },
