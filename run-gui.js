@@ -34,6 +34,7 @@ exports.startGUI = function () {
 
     let xServ = xApp.listen(3210, function () {
         console.log('WADark GUI installer backend started');
+        openInstaller();
     });
 
     io = io(xServ, {
@@ -170,6 +171,7 @@ function startInstall(isRestore) {
                 } else {
                     say('WhatsApp process not found. Make sure WhatsApp desktop is running before installing dark mode.');
                     hideOL();
+                    started = false;
                 }
             }
 
@@ -352,6 +354,7 @@ function overrideStyles() {
 
 function restoreBackup(procPath) {
     setOLTxt('Restoring original version of the application...');
+    started = true;
     let dir = path.dirname(procPath);
     let fullpath = path.join(dir, 'resources', 'app.asar');
 
@@ -369,10 +372,12 @@ function restoreBackup(procPath) {
         });
         WAPP.unref();
         hideOL();
+        started = false;
     } catch (error) {
         say('An error occurred while restoring.');
         console.log(error);
         hideOL();
+        started = false;
     }
 }
 
@@ -393,6 +398,12 @@ function getThemes(callback) {
 function openDownload() {
     (async () => {
         await open('https://github.com/m4heshd/whatsapp-desktop-dark/releases/latest');
+    })();
+}
+
+function openInstaller() {
+    (async () => {
+        await open('http://127.0.0.1:3210/');
     })();
 }
 
