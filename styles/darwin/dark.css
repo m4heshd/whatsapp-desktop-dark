@@ -130,8 +130,13 @@ span[class="_3PxOr"] > svg > rect {
     background-color: var(--darker); }
 
 /* Chat list. */
+/* Chat header (settings buttons) */
 #side > header {
     background-color: var(--darker) !important; }
+/* Chat last message date/time */
+._0LqQ {
+    color: var(--light) !important;
+}
 
 /* Chat preloader */
 ._2sOZc {
@@ -149,22 +154,22 @@ span[class="_3PxOr"] > svg > rect {
     color: var(--lighter); }
 
 /* Search or start new chat. */
-#side ._2HS9r {
+#side > div._2vikl {
     border-bottom: 0px solid var(--dark);
     background-color: var(--darker) !important;
     background-color: transparent !important; }
 /* Label background. */
-#side ._2HS9r .ZP8RM label,
+#side > div._2vikl .ZP8RM label,
 .ZP8RM._19OGD,
 .-peIt ._1AxuS .ZP8RM {
     border: 0px solid var(--dark);
     background-color: var(--dark) !important; }
 /* Input element. */
-#side ._2HS9r .ZP8RM label input {
+#side > div._2vikl .ZP8RM label input {
     color: var(--light);
     background-color: transparent; }
 /* Active. */
-#side ._2HS9r .ZP8RM._19OGD {
+#side > div._2vikl .ZP8RM._19OGD {
     background-color: var(--dark) !important; }
 
 /* New group and group info buttons. */
@@ -497,7 +502,7 @@ html[dir] .FPZFa {
     background-color: var(--dark) !important; }
 
 /* Search messages. */
-#pane-side ._2UaNq {
+#pane-side {
     background-color: transparent !important; }
 
 /* Starred messages. */
