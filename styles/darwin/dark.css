@@ -99,23 +99,23 @@ span[class="_3PxOr"] > svg > rect {
 
 
 /* Landing page. */
-.app ._2rI9W .iFKgT {
+#app > div > div.app._1Jzz1.two > div._10V4p._1jxtm > div {
     /* box-shadow: 1px -3px 2px 0 var(--shadow) inset; */
     border: none;
     background-color: var(--dark); }
 /* Status update. */
-.app ._2rI9W .iFKgT ._1kdWs ._1wSzK {
+#app > div > div.app._1Jzz1.two > div._10V4p._1jxtm > div > div > div.HGVhc {
     max-width: 200px;
     max-height: 200px;
     border-radius: 50%; }
 /* Text color. */
-.app ._2rI9W .iFKgT ._35BbM * {
+#app > div > div.app._1Jzz1.two > div._10V4p._1jxtm > div ._18W8t * {
     color: var(--light) !important; }
 /* Accent bar. */
-.app ._2rI9W .iFKgT:after {
+#app > div > div.app._1Jzz1.two > div._10V4p._1jxtm > div:after {
     border-top-color: var(--accent); }
 /* Author info */
-._3mkas::after, ._357v7::after {
+.mOuAM::after, ._357v7::after {
     display: block !important;
     margin-top: 17px;
     padding-top: 10px;
@@ -1191,22 +1191,3 @@ html[dir] ._38Akx ._30LFW::-webkit-slider-runnable-track, html[dir] ._2PmJH ._30
 /* Rounded buttons. */
 span svg > path[fill="#00BFA5"] {
     fill: var(--accent) !important; }
-
-/*!* Disable background image on small resolutions. *!*/
-/*@media screen and (max-width: 1441px) {*/
-    /*._1FKgS::after {*/
-        /*display: none !important;*/
-    /*}*/
-/*}*/
-
-/*@media screen and (min-width: 1441px) {*/
-    /*!* Animation. *!*/
-    /*html[dir=ltr] ._3dqpi {*/
-        /*!* display: none !important; *!*/
-        /*animation: _104Un 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.38); }*/
-
-    /*!* App wrapper. *!*/
-    /*#app .app {*/
-        /*border-radius: 5px;*/
-        /*box-shadow: 0 4px 24px -2px var(--shadow); }*/
-/*}*/

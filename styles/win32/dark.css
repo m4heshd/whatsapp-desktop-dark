@@ -109,23 +109,23 @@ span[class="_1DOO2"] > svg > rect {
 
 
 /* Landing page. */
-.app .I3S-C .C7QbQ {
+#app > div > div > div.m016k._2NKxI > div {
     /* box-shadow: 1px -3px 2px 0 var(--shadow) inset; */
     border: none;
     background-color: var(--dark); }
 /* Status update. */
-.app .I3S-C .C7QbQ ._2gydQ .bklGI {
+#app > div > div > div.m016k._2NKxI > div > div > div._1w3BZ {
     max-width: 200px;
     max-height: 200px;
     border-radius: 50%; }
 /* Text color. */
-.app .I3S-C .C7QbQ ._3cyUx * {
+#app > div > div > div.m016k._2NKxI > div ._3iDzm * {
     color: var(--light) !important; }
 /* Accent bar. */
-.app .I3S-C .C7QbQ:after {
+#app > div > div > div.m016k._2NKxI > div:after {
     border-top-color: var(--accent); }
 /* Author info */
-._23fWC::after, ._1Aq73::after {
+._1HYGi::after, ._1Aq73::after {
     display: block !important;
     margin-top: 17px;
     padding-top: 10px;
