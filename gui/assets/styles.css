@@ -109,7 +109,7 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 8px;
-    grid-template-areas: 'divCtl divCtl' 'divImgLogo divImgLogo' 'divLblVersion divLblVersion' 'divCmbTheme divCmbTheme' 'divTxtInfo divTxtInfo' 'divBtnRestore divBtnInstall' 'divSupport divSupport';
+    grid-template-areas: 'divCtl divCtl' 'divImgLogo divImgLogo' 'divLblVersion divLblVersion' 'divCmbTheme divCmbTheme' 'divLblInfo divLblInfo' 'divBtnRestore divBtnInstall' 'divSupport divSupport';
 }
 
 #divCtl {
@@ -129,8 +129,8 @@ a {
     grid-area: divCmbTheme;
 }
 
-#divTxtInfo {
-    grid-area: divTxtInfo;
+#divLblInfo {
+    grid-area: divLblInfo;
 }
 
 #divBtnRestore {
@@ -218,7 +218,7 @@ a {
     outline: none;
 }
 
-#txtInfo {
+#lblInfo {
     color: var(--accent) !important;
 }
 

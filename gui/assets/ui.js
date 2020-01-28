@@ -8,6 +8,7 @@ let btnPaypal = document.querySelector('#btnPaypal');
 let btnKofi = document.querySelector('#btnKofi');
 let btnGithub = document.querySelector('#btnGithub');
 let lblVersion = document.querySelector('#lblVersion');
+let lblInfo = document.querySelector('#lblInfo');
 let lnkCheckUpd = document.querySelector('#lnkCheckUpd');
 let cmbTheme = document.querySelector('#cmbTheme');
 let themes = [
@@ -32,6 +33,10 @@ socket.on('hideOL', function () {
 
 socket.on('setOLTxt', function (data) {
     setOLTxt(data);
+});
+
+socket.on('setMacUI', function () {
+    lblInfo.innerHTML = '⚠ Make sure that you have WhatsApp Desktop installed in Applications directory';
 });
 
 socket.on('setVersion', function (data) {

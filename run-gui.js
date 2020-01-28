@@ -51,20 +51,20 @@ exports.startGUI = function () {
                 setOLTxt('Identifying process..');
                 if (fs.existsSync(bkPath)) {
                     ask('Current backup will be replaced and it cannot be undone. Are you sure want to continue?', function () {
-                        startInstall(false);
+                        validateAndStart(false);
                     }, function () {
                         say('Hope you\'re enjoying WhatsApp dark.. :)');
                         hideOL();
                     });
                 } else {
-                    startInstall(false);
+                    validateAndStart(false);
                 }
             });
 
             client.on('startRestore', function () {
                 setOLTxt('Identifying process..');
                 if (fs.existsSync(bkPath)) {
-                    startInstall(true);
+                    validateAndStart(true);
                 } else {
                     say('Unable to locate the backup file');
                     hideOL();
@@ -72,7 +72,7 @@ exports.startGUI = function () {
             });
 
             client.on('endApp', function () {
-                console.log('Quitting the installer..');
+                console.log('Quitting the installer..\n');
                 client.disconnect();
                 process.exit(0);
             });
@@ -80,6 +80,10 @@ exports.startGUI = function () {
             client.on('checkUpd', function () {
                 checkAppUpd(false);
             });
+
+            if (platform === 'darwin') {
+                setMacUI();
+            }
 
             startInit();
         } else {
@@ -118,6 +122,7 @@ function checkAppUpd(isStart) {
                     start();
                 } else {
                     hideOL();
+                    say('Your script copy is up to date.');
                 }
             }
         });
@@ -139,6 +144,19 @@ function start() {
     getThemes(function () {
         endInit(fs.existsSync(bkPath));
     });
+}
+
+function validateAndStart(isRestore) {
+    if (platform === 'darwin') {
+        if (fs.existsSync(WAPath)) {
+            startInstall(isRestore);
+        } else {
+            say('Unable to locate your WhatsApp Desktop installation. Check again and retry.');
+            hideOL();
+        }
+    } else {
+        startInstall(isRestore);
+    }
 }
 
 function startInstall(isRestore) {
@@ -418,6 +436,10 @@ function showOL(text) {
 
 function hideOL() {
     client.emit('hideOL');
+}
+
+function setMacUI() {
+    client.emit('setMacUI');
 }
 
 function setVersion(ver) {
