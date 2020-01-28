@@ -8,21 +8,40 @@ const open = require('open');
 let version = '0';
 let started = false;
 let updURL = 'https://raw.githubusercontent.com/m4heshd/whatsapp-desktop-dark/master/package.json';
+let arg = process.argv[2];
+arg ? arg.trim() : arg = null;
 
 console.log('\x1b[40m\x1b[4m\x1b[1m\x1b[36m%s\x1b[0m', '\n~~~~ WhatsApp Desktop Dark Mode by m4heshd ~~~~\n\n');
 
-fs.readJson(path.join(__dirname, 'info.json'), (error, infoJSON) => {
-    if (!error) {
-        version = infoJSON.version;
-        checkAppUpd();
-    } else {
-        console.log(error);
-        if (!started) {
-            start();
-            started = true;
-        }
+if (arg && arg === 'cli') {
+    startCLI();
+} else {
+    switch (process.platform) {
+        case 'win32':
+            require("./run-gui").startGUI();
+            break;
+        case 'darwin':
+            require("./run-gui").startGUI();
+            break;
+        default:
+            console.log('\x1b[31m%s\x1b[0m', 'This platform is not supported.\n');
     }
-});
+}
+
+function startCLI() {
+    fs.readJson(path.join(__dirname, 'info.json'), (error, infoJSON) => {
+        if (!error) {
+            version = infoJSON.version;
+            checkAppUpd();
+        } else {
+            console.log(error);
+            if (!started) {
+                start();
+                started = true;
+            }
+        }
+    });
+}
 
 function checkAppUpd() {
     console.log('Checking for dark mode updates.. (Current version - v' + version + ')\n');

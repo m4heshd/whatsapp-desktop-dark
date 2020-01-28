@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Desktop Dark Mode Installer</title>
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script> let socket = io(); </script>
+</head>
+<body>
+<div id="pnlMainContainer">
+    <div id="overlay">
+        <div id="olContent" class="grid-ol">
+            <div id="divTxtOL">
+                <span id="txtOL">Initializing...</span>
+            </div>
+            <div id="divImgOL">
+                <img id="imgOL" src="assets/loader.svg" alt="Working..">
+            </div>
+        </div>
+    </div>
+    <div id="divPnlMain" class="grid-main">
+        <div id="divCtl">
+            <div id="btnClose" class="btn">X</div>
+        </div>
+        <div id="divImgLogo">
+            <img src="assets/logo_mini.png" alt="WADark by m4heshd">
+        </div>
+        <div id="divLblVersion">
+            <span id="lblVersion">{wadark_version}</span>
+            <div>
+                (<span id="lnkCheckUpd" class="link">Check for updates</span>)
+            </div>
+        </div>
+        <div id="divCmbTheme">
+            <div class="secLabel">
+                <span>Select Theme:</span>
+            </div>
+            <select id="cmbTheme" class="cmb"></select>
+        </div>
+        <div id="divLblInfo">
+            <p id="lblInfo">&#9888; Make sure to keep WhatsApp Desktop running before starting the installation</p>
+        </div>
+        <div id="divBtnRestore">
+            <div id="btnRestore" class="btn" disabled="true">Restore</div>
+        </div>
+        <div id="divBtnInstall">
+            <div id="btnInstall" class="btn">Install</div>
+        </div>
+        <div id="divSupport">
+            <div class="secLabel">
+                <span>Support:</span>
+            </div>
+            <div id="divSupportContent">
+                <div id="btnPaypal" style="height: 30px; width: 95px;" class="btn img-btn">
+                    <img src="assets/pp.png" alt="Donate with PayPal">
+                </div>
+                <div id="btnKofi" style="height: 30px; width: 150px;" class="btn img-btn">
+                    <img src="assets/kofi.png" alt="Support on Ko-fi">
+                </div>
+                <div id="btnGithub" style="height: 30px; width: 80px;" class="btn img-btn">
+                    <img src="assets/ghub.png" alt="Contribute on GitHub">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/ui.js"></script>
+</div>
+</body>
+</html>
