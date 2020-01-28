@@ -351,16 +351,16 @@ html[dir] ._2UaNq._3fAgu {
     background-color: var(--accent) !important; }
 
 /* Header. */
-._2rI9W #main header {
+#main header {
     border: none;
     background-color: var(--darker);
     box-shadow: 0px 0px 3px 0px var(--accent); }
 /* Text color. */
-._2rI9W #main header ._2F-NA * {
+#main header ._2F-NA * {
     color: var(--light); }
 
 /* Footer. */
-._2rI9W #main footer {
+#main footer {
     background-color: var(--darker); }
 /* Input wrapper. */
 #main footer > div {
