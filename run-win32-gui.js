@@ -17,6 +17,16 @@ let started = false;
 let updURL = 'https://raw.githubusercontent.com/m4heshd/whatsapp-desktop-dark/master/package.json';
 let bkPath = path.join(__dirname, 'backup', 'app.asar');
 let WAPath = null;
+let platform = process.platform;
+let execPath = '/Applications/WhatsApp.app/Contents/MacOS/WhatsApp';
+let command = 'WhatsApp.exe';
+let psargs = 'ux';
+
+if (platform === 'darwin') {
+    WAPath = '/Applications/WhatsApp.app/Contents/Resources/app.asar';
+    command = execPath;
+    psargs = 'ax';
+}
 
 //Backend setup
 exports.startGUI = function () {
@@ -133,15 +143,18 @@ function start() {
 function startInstall(isRestore) {
     started = true;
     ps.lookup({
-        command: 'WhatsApp.exe',
-        psargs: 'ux'
+        command: command,
+        psargs: psargs
     }, function (err, resultList) {
         if (err) {
             console.log(err);
         } else {
             if (resultList.length) {
                 setOLTxt('Please close WhatsApp Desktop manually to continue installation.. </br>(Please wait if you already have)');
-                WAPath = resultList[0].command;
+                if (platform === 'win32') {
+                    WAPath = resultList[0].command;
+                    execPath = WAPath;
+                }
                 startInstall(isRestore);
             } else {
                 if (WAPath) {
@@ -171,6 +184,10 @@ function applyDarkStyles(procPath) {
         let dir = path.dirname(procPath);
         let fullpath = path.join(dir, 'resources', 'app.asar');
 
+        if (platform === 'darwin') {
+            fullpath = procPath;
+        }
+
         setOLTxt('Backing up..');
         fs.copySync(fullpath, bkPath);
 
@@ -179,7 +196,7 @@ function applyDarkStyles(procPath) {
         asar.extractAll(fullpath, extPath);
 
         setOLTxt('Injecting styles..');
-        let stylePath = path.join(__dirname, 'styles', 'win32');
+        let stylePath = path.join(__dirname, 'styles', platform);
         if (fs.existsSync(path.join(extPath, 'index.html'))) {
             try {
                 fs.copySync(stylePath, extPath);
@@ -193,7 +210,7 @@ function applyDarkStyles(procPath) {
                         fs.removeSync(extPath);
                         fs.removeSync(newAsar);
 
-                        let bkPath = path.join(__dirname, 'styles', 'win32', 'bk');
+                        let bkPath = path.join(__dirname, 'styles', platform, 'bk');
 
                         fs.copySync(path.join(bkPath, 'dark.css'), path.join(stylePath, 'dark.css'));
                         fs.copySync(path.join(bkPath, 'index.html'), path.join(stylePath, 'index.html'));
@@ -201,7 +218,7 @@ function applyDarkStyles(procPath) {
 
                         say('All done. May your beautiful eyes burn no more.. Enjoy WhatsApp Dark mode!! :)');
 
-                        let WAPP = spawn(procPath, [], {
+                        let WAPP = spawn(execPath, [], {
                             detached: true,
                             stdio: ['ignore', 'ignore', 'ignore']
                         });
@@ -235,9 +252,9 @@ function applyDarkStyles(procPath) {
 }
 
 function overrideStyles() {
-    let stylePath = path.join(__dirname, 'styles', 'win32', 'dark.css');
-    let htmlPath = path.join(__dirname, 'styles', 'win32', 'index.html');
-    let bkPath = path.join(__dirname, 'styles', 'win32', 'bk');
+    let stylePath = path.join(__dirname, 'styles', platform, 'dark.css');
+    let htmlPath = path.join(__dirname, 'styles', platform, 'index.html');
+    let bkPath = path.join(__dirname, 'styles', platform, 'bk');
 
     fs.copySync(stylePath, path.join(bkPath, 'dark.css'));
     fs.copySync(htmlPath, path.join(bkPath, 'index.html'));
@@ -337,11 +354,16 @@ function restoreBackup(procPath) {
     setOLTxt('Restoring original version of the application...');
     let dir = path.dirname(procPath);
     let fullpath = path.join(dir, 'resources', 'app.asar');
+
+    if (platform === 'darwin') {
+        fullpath = procPath;
+    }
+
     try {
         fs.copySync(bkPath, fullpath);
 
         say('All done. Make sure to let the developers know if something was wrong.. :)');
-        let WAPP = spawn(procPath, [], {
+        let WAPP = spawn(execPath, [], {
             detached: true,
             stdio: ['ignore', 'ignore', 'ignore']
         });

@@ -21,7 +21,7 @@ if (arg && arg === 'cli') {
             require("./run-win32-gui").startGUI();
             break;
         case 'darwin':
-            // require("./run-darwin").start();
+            require("./run-win32-gui").startGUI();
             break;
         default:
             console.log('\x1b[31m%s\x1b[0m', 'This platform is not supported.\n');
