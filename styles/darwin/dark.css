@@ -97,9 +97,8 @@ progress[value]::-webkit-progress-value {
 span[class="_3PxOr"] > svg > rect {
     fill: var(--dark) !important; }
 
-
-/* Landing page. */
-#app > div > div.app._1Jzz1.two > div._10V4p._1jxtm > div {
+/* Landing page and Chat area */
+#main, html[dir] ._1qNwV {
     /* box-shadow: 1px -3px 2px 0 var(--shadow) inset; */
     border: none;
     background-color: var(--dark); }
