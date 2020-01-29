@@ -1,0 +1,20 @@
+{
+  "themeName": "WhatsApp Android",
+  "dark": "#071820",
+  "dark_alpha": "rgba(39, 44, 53, 0.89)",
+  "darker": "#212e36",
+  "bgcol": "#101318",
+  "light": "#d1d1d1",
+  "lighter": "#e9e9e9",
+  "accent": "#00b09c",
+  "accent2": "#09d261",
+  "icon": "#e1e1e1",
+  "shadow": "rgba(0, 0, 0, 0.12)",
+  "mred": "#dd3b4f",
+  "mgreen": "#70A352",
+  "mblue": "#527AA3",
+  "msgout": "#054640",
+  "win_title": "var(--accent)",
+  "ctl_hover": "var(--darker)",
+  "dark_title": true
+}
