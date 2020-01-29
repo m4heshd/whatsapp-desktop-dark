@@ -372,8 +372,8 @@ html[dir] ._2UaNq._3fAgu {
     border: none !important;
     color: var(--light);
     background-color: var(--darker) !important; }
-/* Voice message duration. */
-._1lxsr {
+/* Voice/Video message duration. */
+._1lxsr, ._2HHbr {
     color: var(--light) !important; }
 
 /* Unknown contact. */
