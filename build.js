@@ -32,7 +32,8 @@ function runBuild() {
         input: path.join(__dirname, 'index.js'),
         build: false,
         output: out,
-        targets: target
+        targets: target,
+        resources: ['gui/**/*']
     }).then(() => {
         try {
             console.log('Copying resources..');
