@@ -212,8 +212,8 @@ html[dir] ._2Z5XD {
     transition: 200ms ease-in-out;
     background-color: transparent !important; }
 /* On event. */
-#side ._1RYPC ._2UaNq._3mMX1,
-#side ._1RYPC ._2UaNq:hover {
+html[dir] ._2UaNq._3mMX1,
+html[dir] ._2UaNq:hover {
     background-color: var(--dark) !important; }
 /* Text color. */
 #side ._1RYPC [class*="_2WP9Q"] * {
