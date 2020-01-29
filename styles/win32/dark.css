@@ -956,14 +956,14 @@ html[dir=ltr] ._3gNH7 {
     border-bottom: 1px solid var(--darker) !important;
     background-color: var(--darker) !important; }
 /* Emoji race color popup. */
-._1ArIP, ._1ArIP ._1v2rQ {
-    background-color: var(--dark); }
+html[dir] ._3pPw1 {
+    background-color: var(--darker); }
 /* Separator. */
-._1ArIP ._2WvMb:first-child {
+html[dir=ltr] ._11W8Z:first-child {
     border-right: 2px solid var(--accent) !important; }
 /* Emoji menu triangle. */
-._1v2rQ {
-    background-color: var(--dark) !important; }
+html[dir] ._3pPw1 ._2DUBZ {
+    background-color: var(--darker) !important; }
 
 
 

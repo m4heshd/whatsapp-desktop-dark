@@ -938,14 +938,14 @@ html[dir=ltr] ._2mlOb {
     border-bottom: 1px solid var(--darker) !important;
     background-color: var(--darker) !important; }
 /* Emoji race color popup. */
-._1ArIP, ._1ArIP ._1v2rQ {
-    background-color: var(--dark); }
+html[dir] ._1gFYk {
+    background-color: var(--darker); }
 /* Separator. */
-._1ArIP ._2WvMb:first-child {
+html[dir=ltr] ._1sHYl:first-child {
     border-right: 2px solid var(--accent) !important; }
 /* Emoji menu triangle. */
-._1v2rQ {
-    background-color: var(--dark) !important; }
+html[dir] ._1gFYk .iqJMX {
+    background-color: var(--darker) !important; }
 
 
 
