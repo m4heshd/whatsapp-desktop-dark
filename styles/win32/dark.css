@@ -87,14 +87,18 @@ progress[value]::-webkit-progress-value {
 .landing-wrapper:before {
     background-color: var(--accent) !important; }
 /* Reload QR code. */
-._2zufR {
+html[dir] ._1lwCi {
     background-color: var(--darker) !important; }
 /* Fix QR code. */
-.landing-window ._3qfVh {
+.landing-window ._1f7Gu {
     border: 3px solid white !important; }
 /* Tutorial. */
 .landing-window > div:last-child {
     background-color: var(--darker); }
+/* Tutorial icons */
+._1DiuS > svg > rect {
+    fill: var(--dark) !important;
+}
 /* Loader. */
 #startup svg > circle {
     stroke: var(--lighter) !important; }
@@ -1175,7 +1179,7 @@ span[data-icon="status-ptt-blue"] > svg > path {
 }
 
 /* Logo. */
-._1DOO2 > svg > path:first-child {
+._1DiuS > svg > path:first-child {
     fill: var(--accent) !important; }
 span[data-icon="logo"] svg path:nth-child(1) {
     fill: white !important; }
