@@ -1176,6 +1176,8 @@ span[data-icon="emoji-gifs"] svg path {
 span[data-icon="exit"] svg path,
 span[data-icon="thumbs-down"] svg path,
 span[data-icon="recalled-in"] svg path,
+span[data-icon="status-miss"] svg path,
+span[data-icon="miss"] svg path,
 span[data-icon="recalled-out"] svg path {
     fill: var(--mred) !important; }
 
