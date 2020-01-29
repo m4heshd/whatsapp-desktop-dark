@@ -19,6 +19,8 @@ let themes = [
         "lighter": "#e9e9e9",
         "accent": "#5792ff",
         "msgout": "#131a25",
+        "accent_hover": "#497ad5",
+        "border": "#808080",
     }
 ];
 
