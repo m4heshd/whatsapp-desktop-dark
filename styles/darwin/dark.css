@@ -534,13 +534,13 @@ html[dir] ._2AJf5, html[dir] ._19xqi {
 }
 
 /* Media/docs/links section. */
-._1C9rS ._27U_m {
+html[dir] ._27U_m {
     background-color: var(--darker) !important; }
 /* Active indicator. */
-._1C9rS ._27U_m:before {
+html[dir] ._27U_m:before {
     background-color: var(--accent) !important; }
 /* Selection Header. */
-html[dir] .yrOIH {
+html[dir] ._2XHj8 {
     background-color: var(--accent) !important; }
 /* Selected image. */
 .P85aN ._3xJ94 {

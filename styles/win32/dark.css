@@ -551,13 +551,13 @@ html[dir] .Och61 ._1Qelh {
 
 
 /* Media/docs/links section. */
-.Och61 ._1M44b {
+html[dir] ._1M44b {
     background-color: var(--darker) !important; }
 /* Active indicator. */
-.Och61 ._1M44b:before {
+html[dir] ._1M44b:before {
     background-color: var(--accent) !important; }
 /* Selection Header. */
-html[dir] ._2prFz {
+html[dir] ._1J_3Z {
     background-color: var(--accent) !important; }
 /* Selected image. */
 .P85aN ._3xJ94 {
