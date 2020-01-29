@@ -369,7 +369,7 @@ html[dir] ._2UaNq._3fAgu {
 #main footer > div {
     color: var(--light);
     border: none;
-    /* border-bottom: 2px solid var(--dark); */
+    border-top: 1px solid var(--darker);
     background-color: var(--dark); }
 /* Input element. */
 #main footer > div:nth-child(1) > div:nth-child(2) {
