@@ -552,6 +552,7 @@ html[dir] ._2FJOA {
     background-color: var(--darker) !important;
     border-top: 1px solid var(--dark) !important;
 }
+/* Forwarding info x selected */
 html[dir=ltr] ._2C9dW {
     color: var(--light) !important;
 }
@@ -922,6 +923,10 @@ html[dir=ltr] ._3gNH7 {
 ._3wfs2,
 ._3Ztfl {
     color: var(--light) !important; }
+/* Search bar overflow */
+html[dir=ltr] ._19iwE {
+    right: 8px !important;
+}
 
 /* Gif preloader background. */
 .zl5TR {
