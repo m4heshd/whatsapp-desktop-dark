@@ -38,7 +38,12 @@ function runBuild() {
             console.log('Copying resources..');
             fs.copySync(stylePath, distStylePath);
             fs.copySync(path.join(__dirname, 'info.json'), path.join(distDir, 'info.json'));
-            fs.copySync(path.join(__dirname, 'override.json'), path.join(distDir, 'override.json'));
+            let themes = fs.readdirSync(path.join(__dirname, 'themes')).filter(x => x !== 'README.md');
+            let themeObjects = [];
+            themes.forEach(themeDir => {
+                themeObjects.push(JSON.parse(fs.readFileSync(path.join(__dirname, 'themes', themeDir, 'override.json'), 'utf8')))
+            });
+            fs.writeFileSync(path.join(distDir, 'override.json'), JSON.stringify(themeObjects, null, "\t"));
             switch (platform) {
                 case 'win32':
                     setWinIcon();
