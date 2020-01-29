@@ -548,9 +548,12 @@ html[dir] .Och61 ._1Qelh {
     height: 72px !important;
 }
 /* Forwarding info */
-._faBY {
+html[dir] ._2FJOA {
     background-color: var(--darker) !important;
     border-top: 1px solid var(--dark) !important;
+}
+html[dir=ltr] ._2C9dW {
+    color: var(--light) !important;
 }
 
 

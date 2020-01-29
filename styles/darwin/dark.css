@@ -532,9 +532,13 @@ html[dir] .FPZFa {
 html[dir] ._2AJf5, html[dir] ._19xqi {
     background-color: var(--dark) !important; }
 /* Forwarding info */
-._3XHR- {
+html[dir=ltr] ._2aUit {
     background-color: var(--darker) !important;
     border-top: 1px solid var(--dark) !important;
+}
+/* Forwarding info x selected */
+html[dir=ltr] .nGgVY {
+    color: var(--light) !important;
 }
 
 /* Media/docs/links section. */
