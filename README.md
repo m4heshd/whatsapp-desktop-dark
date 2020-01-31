@@ -15,24 +15,24 @@ WhatsApp Desktop Dark Mode by <a href="https://github.com/m4heshd">m4heshd</a>
   <br>
 </h1>
 
-Stable version: [**`0.3.4941`**](https://github.com/m4heshd/whatsapp-desktop-dark/releases/tag/0.3.4941) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
+Stable version: [**`0.4.315`**](https://github.com/m4heshd/whatsapp-desktop-dark/releases/tag/0.4.315) (Check if this version matches with your version of WhatsApp. The mod will still work even if the versions doesn't match)
 
 This mod is a simple tweak for [WhatsApp Desktop **Official** version](https://www.whatsapp.com/download/) to make it look awesomely dark.
 
-**Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**
+<span color="red">⚠ **Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**  </span>
 <h4 align="center"> Windows <h4>
 
 ![WhatsApp Desktop Dark Mode Windows](https://i.ibb.co/fnrk4p4/Screenshot.png)
 
 <h4 align="center"> macOS <h4>
 
-![enter image description here](https://i.ibb.co/hy333DT/Screenshot-mac.png)
+![WhatsApp Desktop Dark Mode Mac](https://i.ibb.co/hy333DT/Screenshot-mac.png)
 
 ### DISCLAIMER:
 > **This is not an official version of WhatsApp Desktop Dark mode. So make sure to read through this document before you use this mod because i won't be responsible for any damage you've done yourself trying to install this mod (It's not even that hard 🙄). The coding/styling behind this tweak has full transparency since I've made it open-source right here.**
 
 # Is this safe?
-The answer is right there on the top. **This is an open source project**. which litterally means that you can see through the source code of this mod. So **I CANNOT STEAL YOUR MESSEGES, I CANNOT TAP INTO YOUR CALLS**. If you're like one of the "Anti-Vaccination" parents, please avoid using this mod. Wouldn't you rather use the official WhatsApp version with a simple tweak like this than using some random third-party app just to have a proper dark UI?
+The answer is right there on the top. **This is an open source project**. which literally means that you can see through the source code of this mod. So **I CANNOT STEAL YOUR MESSEGES, I CANNOT TAP INTO YOUR CALLS**. If you're like one of the "Anti-Vaccination" parents, please avoid using this mod. Wouldn't you rather use the official WhatsApp version with a simple tweak like this than using some random third-party app just to have a proper dark UI?
 
 **NOTE:** This script will not replace any of the functionality related coding inside WhatsApp. Just the styling.
 
@@ -41,16 +41,18 @@ The answer is right there on the top. **This is an open source project**. which 
 **NOTE:** *THIS IS NOT A MODDED VERSION OF WhatsApp*. WhatsApp Desktop Dark Mode is a simple set of styling that needs to be injected to the source files of your current installation of WhatsApp. I've made it much easier by creating a installation script using NodeJS and made it easier furthermore by creating simple executable files using [nexe](https://github.com/nexe/nexe). If you don't trust the executable files I've provided below, you can build and run it from the source code itself by following the instructions in the next section.
 
  - [All releases (with source)](https://github.com/m4heshd/whatsapp-desktop-dark/releases)
- - Windows (x86 & x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4941/WADark-0.3.4941-Windows.zip)
- -  macOS (x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.3.4941/WADark-0.3.4941-macOS.zip)
+ - Windows (x86 & x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.4.315/WADark-0.4.315-Windows.zip)
+ -  macOS (x64) - [Download](https://github.com/m4heshd/whatsapp-desktop-dark/releases/download/0.4.315/WADark-0.4.315-macOS.zip)
 
 ## Installation
 
 Make sure you have [WhatsApp Desktop](https://www.whatsapp.com/download/) installed in your PC or mac first.
 
-**Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**
+⚠ **Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**
 
 Simply extract the downloaded ZIP file and run `WADark.exe` or `WADark` in the root of extracted directory. Make sure WhatsApp Desktop is running before you start the installation. Then wait for the process to finish. That's it.
+
+⚠ **GUI installer is still in beta stage and might contain bugs. If you want to run the legacy commandline version, run with `cli` argument. `WADark.exe cli` for Windows and `WADark cli` for macOS.**
 
 **NOTE:** It's recommended not to delete the script folder after the installation because the script automatically creates a backup of your original WhatsApp source in case you need to revert back to the original version.
 
@@ -79,7 +81,7 @@ Clone or download this repository, `cd` to that directory and enter the followin
 **Method 2 (Run directly from source)**
 
  1. `npm install`  (Wait for this to finish)
- 2.  `node .`
+ 2. `npm run run-gui` for GUI installer or `npm run run-cli` for CLI installer
 
 Simple as that.
 
@@ -104,7 +106,6 @@ There can be a numerous amount of issues in the mod since I can't be testing eve
 **Windows:**
 
  - Automatically killing the WhatsApp process might take a little time or the process might repeat itself [`unfixable/SW-HW dependent`]
- - Console inputs might be typed twice [`NodeJS issue/Need to wait for an update`]
 
 # Changelog
 

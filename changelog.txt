@@ -1,5 +1,20 @@
 /* All the things that were broken and fixed in each version will go in here */
 
+----- v0.4.315 -----
+
+All platforms
+-------------
+* New GUI installer
+* Theme selection for CLI installer
+* Cross-platform compatible install script (Easier for contributors)
+* Mac version don't need to have WhatsApp running anymore
+* Fix login screen
+* Fix chat list styles
+* Fix chat area styles
+* Fix broken emojis
+* Fix emoji race/color selector
+
+
 ----- v0.3.4941 -----
 
 All platforms
