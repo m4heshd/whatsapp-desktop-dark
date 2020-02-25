@@ -23,6 +23,8 @@ function addBtn() {
         let isDisabled = document.styleSheets[1].disabled;
         document.styleSheets[1].disabled = !isDisabled;
     };
+
+    document.body.classList.add('dark');
 }
 
 waitFor('._3j8Pd').then(addBtn);
