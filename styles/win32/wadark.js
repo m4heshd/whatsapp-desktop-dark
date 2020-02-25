@@ -22,9 +22,13 @@ function addBtn() {
     document.getElementById("wadark").onclick = function () {
         let isDisabled = document.styleSheets[1].disabled;
         document.styleSheets[1].disabled = !isDisabled;
-    };
 
-    document.body.classList.add('dark');
+        if (isDisabled) {
+            document.body.classList.remove('dark');
+        } else {
+            document.body.classList.add('dark');
+        }
+    };
 }
 
 waitFor('.Hib4H').then(addBtn);
