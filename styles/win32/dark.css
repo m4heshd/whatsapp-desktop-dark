@@ -1175,7 +1175,9 @@ span[data-icon="status-check"] svg path {
 span[data-icon="msg-dblcheck-ack"] svg path,
 span[data-icon="status-dblcheck-ack"] svg path,
 span[data-icon="msg-dblcheck-ack-light"] svg path,
-span[data-icon="status-v3-unread"] > svg > path:last-child {
+span[data-icon="status-v3-unread"] > svg > path:last-child,
+span[data-icon="msg-dblcheck"].cw_cg svg path,
+.W9-2q span svg path {
     fill: var(--accent) !important;
     opacity: 1 !important; }
 

@@ -1154,7 +1154,9 @@ span[data-icon="status-check"] svg path {
 span[data-icon="msg-dblcheck-ack"] svg path,
 span[data-icon="status-dblcheck-ack"] svg path,
 span[data-icon="msg-dblcheck-ack-light"] svg path,
-span[data-icon="status-v3-unread"] > svg > path:last-child {
+span[data-icon="status-v3-unread"] > svg > path:last-child,
+span[data-icon="msg-dblcheck"].Ryz_m svg path,
+._1t84_ span svg path {
     fill: var(--accent) !important;
     opacity: 1 !important; }
 
