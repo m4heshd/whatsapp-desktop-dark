@@ -467,6 +467,10 @@ span[data-icon="dark-switch"] > svg > path:first-child {
 html[dir=ltr] ._1aUEJ {
     color: var(--light) !important;
 }
+/* Known user's name */
+._2I9z0 > ._2ZdUP {
+    color: inherit;
+}
 /* User's name. */
 .app .Och61 .copyable-text, .WygJD, ._2Kq5m {
     color: var(--light) !important; }
