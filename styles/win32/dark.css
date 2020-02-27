@@ -762,6 +762,11 @@ html[dir] ._20Hdr {
     background-color: var(--darker) !important;
 }
 
+/* Quoted reply message */
+html[dir] .message-in ._2gCZr, html[dir] .message-out ._2gCZr {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
 /* Reply section. (= */
 footer ._2EJZE {
     box-shadow: 0 0px 8px 0 var(--darker) !important;

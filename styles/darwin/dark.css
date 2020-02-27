@@ -744,6 +744,10 @@ html[dir] ._3_nIn {
     background-color: var(--darker) !important;
 }
 
+/* Quoted reply message */
+html[dir] .message-in ._2HTIU, html[dir] .message-out ._2HTIU {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
 
 /* Reply section. (= */
 footer ._1ebw2 {
