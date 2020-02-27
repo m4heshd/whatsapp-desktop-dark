@@ -794,6 +794,11 @@ footer ._1ebw2 > div:last-child > div svg {
     color: var(--accent); !important;
 }
 
+/* Group message colon after sender's name*/
+.xD91K {
+    color: var(--light) !important;
+}
+
 /* Wrapper. */
 .Uukb4 ._3v_lq {
     transition: 300ms ease-in-out !important;
