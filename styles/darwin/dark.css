@@ -914,6 +914,10 @@ footer ._1ebw2 > div:last-child > div svg {
 /* Sticker drawer scroll arrow */
 html[dir] ._26IFT {
     background-color: var(--darker) !important; }
+/* Emoji categories */
+._2lKjK {
+    color: var(--light) !important;
+}
 
 /* Search emojis. */
 .DWACj label,
