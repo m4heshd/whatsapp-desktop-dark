@@ -678,10 +678,13 @@ html[dir] ._2iTjt ._33TLc, html[dir] ._2e5OK ._33TLc {
     color: var(--lighter) !important; }
 
 /* Mentions. */
-.message-in .matched-mention,
+.message-in .matched-mention ,
 .message-out .matched-mention,
-.message-out .matched-mention .at-symbol {
+span[data-mention-jid],
+span[data-mention-jid] > span {
     color: var(--accent) !important; }
+.at-symbol {
+    color: inherit !important; }
 
 /* Message meta text color. */
 [class*="message-"] ._3wVZ5 *, [class*="message-"] ._3wVZ5 *,
