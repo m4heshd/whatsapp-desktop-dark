@@ -1269,3 +1269,9 @@ span svg > path[fill="#00BFA5"] {
         box-shadow: 0 4px 24px -2px var(--shadow); }
 }
 
+/* Fix white middle border on smaller resolutions*/
+@media screen and (max-width: 1024px) {
+    html[dir=ltr] .three .js4rn {
+        border-left-color: var(--dark);
+    }
+}

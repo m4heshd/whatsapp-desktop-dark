@@ -1228,3 +1228,10 @@ html[dir] ._38Akx ._30LFW::-webkit-slider-runnable-track, html[dir] ._2PmJH ._30
 /* Rounded buttons. */
 span svg > path[fill="#00BFA5"] {
     fill: var(--accent) !important; }
+
+/* Fix white middle border on smaller resolutions*/
+@media screen and (max-width: 1024px) {
+    html[dir=ltr] .three ._1mseJ {
+        border-left-color: var(--dark);
+    }
+}
