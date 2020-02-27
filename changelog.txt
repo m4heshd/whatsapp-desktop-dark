@@ -1,5 +1,20 @@
 /* All the things that were broken and fixed in each version will go in here */
 
+----- v0.4.930 -----
+
+All platforms
+-------------
+* Official dark theme support
+* Three-way theme switch (WADark/Official Dark/Light)
+* Fix input elements
+* Fix quote message bubble styles
+* Fix multi-colored sender names in group chat
+* Fix @ mention styles
+* Fix broken emojis
+* Fix low resolution separator
+* Misc style fixes
+
+
 ----- v0.4.315 -----
 
 All platforms
