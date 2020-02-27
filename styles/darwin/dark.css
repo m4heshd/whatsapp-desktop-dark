@@ -424,6 +424,11 @@ span[data-icon="dark-switch"] > svg > path:first-child {
 .pluggable-input.pluggable-input-compose > div:first-child {
     transition: 150ms ease-in-out !important; }
 
+/* Recording duration */
+._2NdXo {
+    color: var(--light) !important;
+}
+
 
 /* Right drawer. */
 .app ._1C9rS ._1KDYa {
