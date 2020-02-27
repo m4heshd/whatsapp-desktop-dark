@@ -65,6 +65,11 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
     background: var(--accent); }
 
+/* Editable input*/
+div[contenteditable="true"] {
+    color: var(--light) !important;
+}
+
 /* App wrapper. */
 #app .app {
     background: none;
