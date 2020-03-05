@@ -50,7 +50,9 @@ Make sure you have [WhatsApp Desktop](https://www.whatsapp.com/download/) instal
 
 ⚠ **Please note that this script won't work with Microsoft store or App store version of WhatsApp desktop. You need to use the direct downloaded version linked above**
 
-Simply extract the downloaded ZIP file and run `WADark.exe` or `WADark` in the root of extracted directory. Make sure WhatsApp Desktop is running before you start the installation. Then wait for the process to finish. That's it.
+Make sure WhatsApp Desktop is running before you start the installation. Then wait for the process to finish. That's it.
+
+Simply extract the downloaded ZIP file and run `WADark.exe` on windows. For macOS you'll need to make `WADark` executable first, by executing `chmod +x WADark` from the root of extracted directory. Then run it with `WADark` from the same directory.
 
 ⚠ **GUI installer is still in beta stage and might contain bugs. If you want to run the legacy commandline version, run with `cli` argument. `WADark.exe cli` for Windows and `WADark cli` for macOS.**
 
