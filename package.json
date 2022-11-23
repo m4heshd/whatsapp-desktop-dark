@@ -29,7 +29,7 @@
     "open": "6.4.0",
     "ps-node": "0.1.6",
     "semver": "6.3.0",
-    "socket.io": "2.3.0"
+    "socket.io": "2.5.0"
   },
   "devDependencies": {
     "nexe": "3.3.2",
